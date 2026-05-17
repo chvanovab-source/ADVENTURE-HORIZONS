@@ -132,61 +132,66 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
 .site-footer { margin-top: 4rem; padding: 1.2rem 0; background: #062033; color: #d8f2ff; }
 .footer-content { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .footer-actions { display: flex; align-items: center; gap: .7rem; }
-
 @media (max-width: 720px) {
   .hero { min-height: 74vh; }
   .top-nav { padding-top: 18px; flex-wrap: wrap; }
+}
 
-  /* Выравнивание текста «О канале» по обоим краям (по ширине) */
+/* ==========================================================================
+   ПЕРФЕКЦИОНИЗМ И СТИЛИЗАЦИЯ (Вне медиа-запросов, работает везде)
+   ========================================================================== */
+
+/* Выравнивание текста «О канале» по ширине */
 .about.container p {
     text-align: justify;
 }
-/* Общие стили для кнопок в футере, чтобы они не были просто текстом */
-.footer-links .footer-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+
+/* Общие стили для кнопок в футере (используем ваши классы .footer-actions и .btn) */
+.footer-actions .footer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem 1.2rem;
+    border-radius: 999px; /* Делаем круглыми, как кнопка на главном экране */
+    font-weight: 700;
+    font-size: .85rem;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
     transition: background-color 0.2s ease, transform 0.1s ease;
-    margin: 5px;
+    border: none;
 }
 
-/* Эффект легкого нажатия для всех кнопок футера */
-.footer-links .footer-btn:active {
-    transform: scale(0.98);
+/* Эффект нажатия */
+.footer-actions .footer-btn:active {
+    transform: scale(0.96);
 }
 
 /* Благородный красный для YouTube */
-.footer-links .footer-btn[data-i18n="footer_yt"] {
+.footer-actions .footer-btn[data-i18n="footer_yt"] {
     background-color: #dc1c1c; 
-    color: #ffffff !important; /* Принудительно белый текст без подчеркивания */
+    color: #ffffff !important;
 }
 
-.footer-links .footer-btn[data-i18n="footer_yt"]:hover {
+.footer-actions .footer-btn[data-i18n="footer_yt"]:hover {
     background-color: #b31212;
 }
 
 /* Фирменный синий для Telegram */
-.footer-links .footer-btn.tg-btn {
+.footer-actions .footer-btn.tg-btn {
     background-color: #24A1DE;
     color: #ffffff !important;
 }
 
-.footer-links .footer-btn.tg-btn:hover {
+.footer-actions .footer-btn.tg-btn:hover {
     background-color: #1d82b3;
 }
 
-/* Нейтральная серая кнопка "Наверх" для баланса */
-.footer-links .footer-btn[data-i18n="footer_top"] {
-    background-color: #f1f1f1;
-    color: #333333 !important;
-    border: 1px solid #cccccc;
+/* Кнопка "Наверх" (прозрачная с рамкой, в стиле сайта) */
+.footer-actions .footer-btn[data-i18n="footer_top"] {
+    background-color: transparent;
+    color: #bdefff !important;
+    border: 1px solid #7ccce5;
 }
 
-.footer-links .footer-btn[data-i18n="footer_top"]:hover {
-    background-color: #e1e1e1;
-}
-    background-color: #1e87c4; /* Чуть темнее при наведении */
+.footer-actions .footer-btn[data-i18n="footer_top"]:hover {
+    background-color: rgba(124, 204, 229, 0.15);
 }
