@@ -141,4 +141,24 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
 .about.container p {
     text-align: justify;
 }
+/* Фирменный стиль для кнопки YouTube в футере */
+.footer-btn[data-i18n="footer_yt"] {
+    background-color: #ff0000; /* Фирменный красный цвет YouTube */
+    color: #ffffff;
+    border: none;
+}
 
+.footer-btn[data-i18n="footer_yt"]:hover {
+    background-color: #cc0000; /* Чуть темнее при наведении */
+}
+
+/* Фирменный стиль для кнопки Telegram в футере */
+.footer-btn.tg-btn {
+    background-color: #26a5e4; /* Фирменный синий цвет Telegram */
+    color: #ffffff;
+    border: none;
+}
+
+.footer-btn.tg-btn:hover {
+    background-color: #1e87c4; /* Чуть темнее при наведении */
+}
