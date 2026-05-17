@@ -146,52 +146,61 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
     text-align: justify;
 }
 
-/* Общие стили для кнопок в футере (используем ваши классы .footer-actions и .btn) */
-.footer-actions .footer-btn {
-    display: inline-flex;
+/* ==========================================================================
+   УНИВЕРСАЛЬНЫЙ СТИЛЬ ДЛЯ КНОПОК В ФУТЕРЕ
+   ========================================================================== */
+
+/* Находим любые ссылки внутри тега footer */
+footer a, 
+.site-footer a, 
+.footer-actions a {
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    padding: .6rem 1.2rem;
-    border-radius: 999px; /* Делаем круглыми, как кнопка на главном экране */
-    font-weight: 700;
-    font-size: .85rem;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.1s ease;
-    border: none;
+    padding: 8px 18px !important;
+    border-radius: 999px !important; /* Круглые кнопки */
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    text-decoration: none !important; /* Убираем синее подчеркивание */
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+    margin: 5px !important;
+    border: none !important;
 }
 
-/* Эффект нажатия */
-.footer-actions .footer-btn:active {
-    transform: scale(0.96);
+/* Эффект клика */
+footer a:active {
+    transform: scale(0.96) !important;
 }
 
-/* Благородный красный для YouTube */
-.footer-actions .footer-btn[data-i18n="footer_yt"] {
-    background-color: #dc1c1c; 
+/* Фирменный красный для YouTube по атрибуту перевода */
+footer a[data-i18n="footer_yt"] {
+    background-color: #dc1c1c !important; 
     color: #ffffff !important;
 }
 
-.footer-actions .footer-btn[data-i18n="footer_yt"]:hover {
-    background-color: #b31212;
+footer a[data-i18n="footer_yt"]:hover {
+    background-color: #b31212 !important;
 }
 
-/* Фирменный синий для Telegram */
-.footer-actions .footer-btn.tg-btn {
-    background-color: #24A1DE;
+/* Фирменный синий для Telegram — ищем и по классу, и по атрибуту */
+footer a.tg-btn,
+footer a[data-i18n="footer_tg"] {
+    background-color: #24A1DE !important;
     color: #ffffff !important;
 }
 
-.footer-actions .footer-btn.tg-btn:hover {
-    background-color: #1d82b3;
+footer a.tg-btn:hover,
+footer a[data-i18n="footer_tg"]:hover {
+    background-color: #1d82b3 !important;
 }
 
-/* Кнопка "Наверх" (прозрачная с рамкой, в стиле сайта) */
-.footer-actions .footer-btn[data-i18n="footer_top"] {
-    background-color: transparent;
+/* Полупрозрачная морская кнопка "Наверх" в стиле сайта */
+footer a[data-i18n="footer_top"] {
+    background-color: transparent !important;
     color: #bdefff !important;
-    border: 1px solid #7ccce5;
+    border: 1px solid #7ccce5 !important;
 }
 
-.footer-actions .footer-btn[data-i18n="footer_top"]:hover {
-    background-color: rgba(124, 204, 229, 0.15);
+footer a[data-i18n="footer_top"]:hover {
+    background-color: rgba(124, 204, 229, 0.15) !important;
 }
