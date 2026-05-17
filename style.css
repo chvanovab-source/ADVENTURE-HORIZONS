@@ -113,6 +113,25 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
 @media (max-width: 720px) {
   .hero { min-height: 74vh; }
   .top-nav { padding-top: 18px; flex-wrap: wrap; }
+
+  /* Смещаем текстовый блок вправо и уменьшаем размер */
+.hero-content-container {
+    text-align: right;
+    max-width: 500px; /* Ограничим ширину, чтобы текст аккуратно ушёл в правую часть экрана */
+    margin-left: auto; /* Автоматический отступ слева прижмет блок к правому краю */
+    margin-right: 5%;  /* Небольшой отступ от самого правого края для красоты */
+}
+
+/* Уменьшаем главный заголовок (про права) примерно в 1.25 раза */
+.hero-content-container h1 {
+    font-size: 2.2rem !important; /* Было крупнее, теперь уменьшили */
+    line-height: 1.3;
+}
+
+/* Уменьшаем подзаголовок (про порт/манифест) */
+.hero-content-container .hero-text {
+    font-size: 1.1rem !important;
+}
   .nav-right { width: 100%; justify-content: space-between; }
   .footer-content { flex-direction: column; align-items: flex-start; }
   .footer-actions { width: 100%; flex-wrap: wrap; }
