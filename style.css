@@ -204,3 +204,72 @@ footer a[data-i18n="footer_top"] {
 footer a[data-i18n="footer_top"]:hover {
     background-color: rgba(124, 204, 229, 0.15) !important;
 }
+
+/* ==========================================================================
+   СТИЛИ ДЛЯ РАЗДЕЛА "О НАС" (THE 'ABOUT US' SECTION)
+   ========================================================================= */
+
+/* Общий контейнер блока */
+.about-us {
+    padding: 6rem 0; /* Хорошие отступы, чтобы блок "дышал" */
+    background-color: var(--surface); /* Используем фоновый цвет сайта */
+}
+
+/* Флекс-контейнер для двух колонок (фото + текст) */
+.about-us .about-us-container {
+    display: flex;
+    gap: 4rem; /* Отступ между двумя людьми */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Стиль одной колонки */
+.about-us-item {
+    flex: 1;
+    max-width: 450px; /* Ограничиваем ширину одной персоны */
+    text-align: center; /* Центрируем фото и текст внутри колонки */
+}
+
+/* Стиль для самой фотографии */
+.about-us-photo {
+    width: 250px; /* Делаем фото аккуратными, небольшими */
+    height: 250px;
+    border-radius: 999px; /* Скругление в круг */
+    object-fit: cover; /* Чтобы фото не растягивалось, а аккуратно вписывалось */
+    box-shadow: var(--shadow); /* Легкая тень, как у карточек */
+    margin-bottom: 2rem; /* Отступ до текста */
+    transition: transform 0.2s ease;
+}
+
+/* Эффект при наведении на фото */
+.about-us-photo:hover {
+    transform: scale(1.03);
+}
+
+/* Стиль заголовка (имя) */
+.about-us-item h4 {
+    margin: 0 0 .5rem;
+    color: var(--deep-sea);
+    font-size: 1.6rem;
+}
+
+/* Стиль подписи (описание) */
+.about-us-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Адаптация для мобильных (экраны меньше 720px) */
+@media (max-width: 720px) {
+    .about-us .about-us-container {
+        flex-direction: column; /* Колонки встают в ряд */
+        gap: 3rem; /* Чуть меньше отступ между ними */
+    }
+    
+    .about-us-photo {
+        width: 180px; /* Фото делаем чуть меньше на мобильных */
+        height: 180px;
+    }
+}
