@@ -137,3 +137,8 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
   .hero { min-height: 74vh; }
   .top-nav { padding-top: 18px; flex-wrap: wrap; }
 
+  /* Выравнивание текста «О канале» по обоим краям (по ширине) */
+.about.container p {
+    text-align: justify;
+}
+
