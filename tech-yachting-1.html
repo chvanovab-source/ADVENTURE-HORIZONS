@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Technical Yachting Case Study — Adventure Horizons" />
-  <title data-i18n="tech1_page_title">Технический яхтинг: Поломка вала и операция «Винт»</title>
+  <title data-i18n="tech1_page_title">Технический яхтинг: Поломка вала и operation «Винт»</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
@@ -50,17 +50,23 @@
 
         <section class="case-section">
           <h2 data-i18n="tech1_media_title">3. Видеохроника с места событий</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
             <div>
-              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea);" data-i18n="vid1_title">Часть 1: Демонтаж под водой</h4>
+              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea); font-size: 0.95rem;" data-i18n="vid1_title">Часть 1: Демонтаж под водой</h4>
               <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
                 <source src="video_2025-09-29_13-48-13.mp4" type="video/mp4">
               </video>
             </div>
             <div>
-              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea);" data-i18n="vid2_title">Часть 2: Дефектовка на палубе</h4>
+              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea); font-size: 0.95rem;" data-i18n="vid2_title">Часть 2: Дефектовка на палубе</h4>
               <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
                 <source src="video_2025-09-29_13-48-17.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea); font-size: 0.95rem;" data-i18n="vid3_title">Часть 3: Бикини-яхтинг</h4>
+              <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <source src="WASHING.mp4" type="video/mp4">
               </video>
             </div>
           </div>
@@ -75,28 +81,28 @@
           </div>
 
           <div class="sidebar-block">
-  <h3 data-i18n="tech1_side2_title">Спецификация судна</h3>
+            <h3 data-i18n="tech1_side2_title">Спецификация судна</h3>
 
-  <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
-    <strong data-i18n="tech1_vessel_type_label">Тип:</strong>
-    <span data-i18n="tech1_vessel_type">Парусный катамаран</span>
-  </p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              <strong data-i18n="tech1_vessel_type_label">Тип:</strong>
+              <span data-i18n="tech1_vessel_type">Парусный катамаран</span>
+            </p>
 
-  <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
-    <strong data-i18n="tech1_vessel_model_label">Модель:</strong>
-    <span data-i18n="tech1_vessel_model">Leopard 38</span>
-  </p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              <strong data-i18n="tech1_vessel_model_label">Модель:</strong>
+              <span data-i18n="tech1_vessel_model">Leopard 38</span>
+            </p>
 
-  <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
-    <strong data-i18n="tech1_vessel_problem_label">Проблема:</strong>
-    <span data-i18n="tech1_vessel_problem">Отказ правого привода</span>
-  </p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+              <strong data-i18n="tech1_vessel_problem_label">Проблема:</strong>
+              <span data-i18n="tech1_vessel_problem">Отказ правого привода</span>
+            </p>
 
-  <p style="font-size: 0.9rem;">
-    <strong data-i18n="tech1_vessel_root_label">Причина:</strong>
-    <span data-i18n="tech1_vessel_root">Срезанная шпонка вала</span>
-  </p>
-</div>
+            <p style="font-size: 0.9rem;">
+              <strong data-i18n="tech1_vessel_root_label">Причина:</strong>
+              <span data-i18n="tech1_vessel_root">Срезанная шпонка вала</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -127,6 +133,7 @@
         tech1_media_title: '3. Видеохроника с места событий',
         vid1_title: 'Часть 1: Демонтаж под водой',
         vid2_title: 'Часть 2: Дефектовка на палубе',
+        vid3_title: 'Часть 3: Бикини-яхтинг',
         tech1_side1_title: 'Шкиперский разбор (Debriefing)',
         tech1_side1_txt: 'Главный вывод: При переключении реверса с заднего хода на передний ВСЕГДА делайте четкую, осознанную паузу на нейтрали! Не вваливайте газ мгновенно. Именно резкая ударная нагрузка при быстрой смене направления вращения чаще всего срезает шпонку вала.',
         tech1_side2_title: 'Спецификация судна',
@@ -154,6 +161,7 @@
         tech1_media_title: '3. On-Scene Video Records',
         vid1_title: 'Part 1: Underwater Unbolting',
         vid2_title: 'Part 2: Inspection on Deck',
+        vid3_title: 'Part 3: Bikini Yachting',
         tech1_side1_title: 'Skipper\'s Debriefing',
         tech1_side1_txt: 'Key Takeaway: When shifting reverse to forward, ALWAYS maintain a distinct, conscious pause at neutral! Do not hammer the throttle instantly. The sudden torque shock during rapid rotation reversal is what shears the drive shaft key.',
         tech1_side2_title: 'Vessel Specification',
@@ -177,10 +185,11 @@
         tech1_sec1_txt1: 'En medio de las maniobras de navegación en un catamarán de vela, un fuerte chasquido metálico fue seguido por una pérdida completa de empuje del motor de estribor. El análisis sobre la marcha reveló la ausencia de estela de la hélice. El barco perdió instantáneamente la agilidad de maniobra, convirtiéndose en una "plancha" que se desviaba con fuerza hacia la derecha con el único motor de babor. El muelle principal estaba a tres cables de distancia, en una zona congestionada por lanchas turísticas.',
         tech1_sec1_txt2: 'Manteniendo el timón a la banda de babor, utilizando ráfagas cortas a bajas revoluciones, el catamarán llegó al pantalán. El atraque de popa estaba descartado. La tripulación amarró una línea de proa, saltó al muelle a través de barcos vecinos y, con la ayuda de los asistentes en tierra, arrastró el catamarán a mano al costado del muelle.',
         tech1_sec2_title: '2. Trabajos de Buceo y Diagnóstico Erróneo',
-        tech1_sec2_txt: 'El primer consenso de la tripulación apuntó a un fallo crítico de la hélice. A pesar de la fría temperatura del agua en otoño, el equipo se equipó con máscaras y se sumergió para desmontar el conjunto. Bajo el agua, con baja visibilidad, la hélice fue desmontada con éxito y llevada a cubierta para su limpieza e inspección. Sin embargo, el técnico marino certificado que llegó al día siguiente revisó la transmisión y concluyó: la hélice estaba impecable; el verdadero culpable era una chaveta del eje cizallada. Desmontar la hélice bajo el agua había sido un ejercicio completamente innecesario.',
+        tech1_sec2_txt: 'El primer consenso de la tripulación apuntó a un fallo crítico de la hélice. A pesar de la fría temperatura del agua en otoño, el equipo se equipo con máscaras y se sumergió para desmontar el conjunto. Bajo el agua, con baja visibilidad, la hélice fue desmontada con éxito y llevada a cubierta para su limpieza e inspección. Sin embargo, el técnico marino certificado que llegó al día siguiente revisó la transmisión y concluyó: la hélice estaba impecable; el verdadero culpable era una chaveta del eje cizallada. Desmontar la hélice bajo el agua había sido un ejercicio completamente innecesario.',
         tech1_media_title: '3. Registros de Video en la Escena',
         vid1_title: 'Parte 1: Desmontaje bajo el agua',
         vid2_title: 'Parte 2: Inspección en cubierta',
+        vid3_title: 'Parte 3: Bikini Yachting',
         tech1_side1_title: 'Análisis del Patrón (Debriefing)',
         tech1_side1_txt: 'Lección Clave: Al cambiar de marcha atrás a marcha adelante, ¡SIEMPRE mantenga una pausa clara y consciente en el punto muerto! No acelere instantáneamente. El impacto repentino del par motor durante la inversión rápida de la rotación es lo que corta la chaveta del eje de transmisión.',
         tech1_side2_title: 'Especificación del Buque',
