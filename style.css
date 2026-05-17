@@ -141,24 +141,52 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
 .about.container p {
     text-align: justify;
 }
-/* Фирменный стиль для кнопки YouTube в футере */
-.footer-btn[data-i18n="footer_yt"] {
-    background-color: #ff0000; /* Фирменный красный цвет YouTube */
-    color: #ffffff;
-    border: none;
+/* Общие стили для кнопок в футере, чтобы они не были просто текстом */
+.footer-links .footer-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin: 5px;
 }
 
-.footer-btn[data-i18n="footer_yt"]:hover {
-    background-color: #cc0000; /* Чуть темнее при наведении */
+/* Эффект легкого нажатия для всех кнопок футера */
+.footer-links .footer-btn:active {
+    transform: scale(0.98);
 }
 
-/* Фирменный стиль для кнопки Telegram в футере */
-.footer-btn.tg-btn {
-    background-color: #26a5e4; /* Фирменный синий цвет Telegram */
-    color: #ffffff;
-    border: none;
+/* Благородный красный для YouTube */
+.footer-links .footer-btn[data-i18n="footer_yt"] {
+    background-color: #dc1c1c; 
+    color: #ffffff !important; /* Принудительно белый текст без подчеркивания */
 }
 
-.footer-btn.tg-btn:hover {
+.footer-links .footer-btn[data-i18n="footer_yt"]:hover {
+    background-color: #b31212;
+}
+
+/* Фирменный синий для Telegram */
+.footer-links .footer-btn.tg-btn {
+    background-color: #24A1DE;
+    color: #ffffff !important;
+}
+
+.footer-links .footer-btn.tg-btn:hover {
+    background-color: #1d82b3;
+}
+
+/* Нейтральная серая кнопка "Наверх" для баланса */
+.footer-links .footer-btn[data-i18n="footer_top"] {
+    background-color: #f1f1f1;
+    color: #333333 !important;
+    border: 1px solid #cccccc;
+}
+
+.footer-links .footer-btn[data-i18n="footer_top"]:hover {
+    background-color: #e1e1e1;
+}
     background-color: #1e87c4; /* Чуть темнее при наведении */
 }
