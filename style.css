@@ -77,11 +77,34 @@ body {
   text-underline-offset: 0.2rem;
 }
 
-.hero-content { padding: 3rem 0 4rem; max-width: 760px; }
-.eyebrow { margin: 0 0 .8rem; font-size: .92rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #b6e8ff; }
-h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.6rem); line-height: 1.12; }
-.hero-text { margin-top: 1rem; font-size: clamp(1rem, 2vw, 1.2rem); color: #d7efff; max-width: 62ch; }
+.hero-content { 
+    padding: 3rem 0 4rem; 
+    max-width: 480px; /* Уменьшили ширину блока, чтобы он стал компактнее */
+    margin-left: auto; /* Этот авто-отступ слева железно прижмет весь блок к правому краю */
+    margin-right: 5%; /* Небольшой отступ от правого края, чтобы текст не лип к рамке */
+    text-align: right; /* Выравниваем сам текст по правому краю */
+}
 
+.eyebrow { 
+    margin: 0 0 .8rem; 
+    font-size: .92rem; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: .1em; 
+    color: #b6e8ff; 
+}
+
+h1 { 
+    margin: 0; 
+    font-size: clamp(1.6rem, 4vw, 2.3rem); /* Уменьшили размер шрифта примерно в 1.25 раза */
+    line-height: 1.2; 
+}
+
+.hero-text { 
+    margin-top: 1rem; 
+    font-size: 1.05rem; /* Сделали шрифт манифеста чуть аккуратнее */
+    color: #d7efff; 
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -114,33 +137,3 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
   .hero { min-height: 74vh; }
   .top-nav { padding-top: 18px; flex-wrap: wrap; }
 
-/* Жестко позиционируем контейнер с текстом справа */
-.hero-content-container {
-    text-align: right !important;
-    max-width: 500px !important;
-    margin-left: auto !important;
-    margin-right: 8% !important;
-}
-
-/* Уменьшаем размер главного шрифта в 1.25 раза и прижимаем текст вправо */
-.hero-content-container h1 {
-    font-size: 2.2rem !important;
-    line-height: 1.3 !important;
-    text-align: right !important;
-}
-
-/* Уменьшаем и выравниваем подзаголовок */
-.hero-content-container .hero-text {
-    font-size: 1.1rem !important;
-    text-align: right !important;
-}
-
-/* Смещаем маленькую надпись над заголовком */
-.hero-content-container .eyebrow {
-    text-align: right !important;
-}
-
-/* Выравниваем кнопку «Смотреть на YouTube» по правому краю */
-.hero-content-container .btn {
-    display: inline-block !important;
-}
