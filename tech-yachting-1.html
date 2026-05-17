@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical Yachting Case Study — Adventure Horizons" />
+  <title data-i18n="tech1_page_title">Технический яхтинг: Поломка вала и операция «Винт»</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #fff3cd; color: #856404;">Technical Module #1</span>
+      <h1 data-i18n="tech1_main_title">Потеря тяги правого двигателя на катамаране и ложный след</h1>
+      <p class="case-intro" data-i18n="tech1_intro">Реальная хроника одной технической ошибки: экстренная швартовка «на руках» при отказе мотора, подводные работы в холодной воде и главный инженерный урок шкиперу.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        <section class="case-section">
+          <h2 data-i18n="tech1_sec1_title">1. Развитие аварийной ситуации</h2>
+          <p data-i18n="tech1_sec1_txt1">В разгар навигации при отработке маневров на парусном катамаране после резкого металлического щелчка полностью пропала тяга правого двигателя (starboard engine). Экспресс-анализ на ходу показал отсутствие кильватерной струи. Судно мгновенно потеряло управляемость, превратившись в «утюг», который на одном левом моторе упорно уводило вправо. До домашнего причала оставалось около трех кабельтовых, а акватория была перегружена хаотично курсирующими туристическими катерами.</p>
+          <p data-i18n="tech1_sec1_txt2" style="margin-top: 1rem;">Удерживая руль в крайнем левом положении, короткими импульсами малого хода катамаран удалось дотащить до понтона. О швартовке кормой в таких условиях не могло быть и речи. Команда экстренно завела носовой швартов на утку, часть экипажа десантировалась на пирс через соседние лодки, и с помощью береговых помощников судно буквально «на руках» прижали к причалу.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech1_sec2_title">2. Подводные работы и ложный диагноз</h2>
+          <p data-i18n="tech1_sec2_txt">Первым коллективным подозрением стал критический дефект гребного винта. Несмотря на бодрящую температуру осенней воды, экипаж экипировался масками и начал погружение для демонтажа узла. Под водой, в условиях ограниченной видимости, винт был успешно откручен и поднят на палубу для инспекции и очистки. Однако прибывший на следующий день сертифицированный техник, заглянув в трансмиссию, констатировал: винт в идеальном порядке, а причиной аварии стал срезанный шпоночный паз на валу. Физический демонтаж винта силами экипажа оказался абсолютно лишней работой.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech1_media_title">3. Видеохроника с места событий</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea);" data-i18n="vid1_title">Часть 1: Демонтаж под водой</h4>
+              <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <source src="video_2025-09-29_13-48-13.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <h4 style="margin-bottom: 0.5rem; color: var(--deep-sea);" data-i18n="vid2_title">Часть 2: Дефектовка на палубе</h4>
+              <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <source src="video_2025-09-29_13-48-17.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid #ffc107;">
+            <h3 data-i18n="tech1_side1_title">Шкиперский разбор (Debriefing)</h3>
+            <p data-i18n="tech1_side1_txt"><strong>Главный вывод:</strong> При переключении реверса с заднего хода на передний ВСЕГДА делайте четкую, осознанную паузу на нейтрали! Не вваливайте газ мгновенно. Именно резкая ударная нагрузка при быстрой смене направления вращения чаще всего срезает шпонку вала.</p>
+          </div>
+
+          <div class="sidebar-block">
+            <h3 data-i18n="tech1_side2_title">Спецификация судна</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Type:</strong> Sailing Catamaran</p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Model:</strong> Leopard 38</p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Problem:</strong> Starboard Drive Failure</p>
+            <p style="font-size: 0.9rem;"><strong>Root Cause:</strong> Sheared Shaft Key (Шпонка)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        tech1_page_title: 'Технический яхтинг: Поломка вала и операция «Винт»',
+        tech1_main_title: 'Потеря тяги правого двигателя на катамаране и ложный след',
+        tech1_intro: 'Реальная хроника одной технической ошибки: экстренная швартовка «на руках» при отказе мотора, подводные работы в холодной воде и главный инженерный урок шкиперу.',
+        tech1_sec1_title: '1. Развитие аварийной ситуации',
+        tech1_sec1_txt1: 'В разгар навигации при отработке маневров на парусном катамаране после резкого металлического щелчка полностью пропала тяга правого двигателя (starboard engine). Экспресс-анализ на ходу показал отсутствие кильватерной струи. Судно мгновенно потеряло управляемость, превратившись в «утюг», который на одном левом моторе упорно уводило вправо. До домашнего причала оставалось около трех кабельтовых, а акватория была перегружена хаотично курсирующими туристическими катерами.',
+        tech1_sec1_txt2: 'Удерживая руль в крайнем левом положении, короткими импульсами малого хода катамаран удалось дотащить до понтона. О швартовке кормой в таких условиях не могло быть и речи. Команда экстренно завела носовой швартов на утку, часть экипажа десантировалась на пирс через соседние лодки, и с помощью береговых помощников судно буквально «на руках» прижали к причалу.',
+        tech1_sec2_title: '2. Подводные работы и ложный диагноз',
+        tech1_sec2_txt: 'Первым коллективным подозрением стал критический дефект гребного винта. Несмотря на бодрящую температуру осенней воды, экипаж экипировался масками и начал погружение для демонтажа узла. Под водой, в условиях ограниченной видимости, винт был успешно откручен и поднят на палубу для инспекции и очистки. Однако прибывший на следующий день сертифицированный техник, заглянув в трансмиссию, констатировал: винт в идеальном порядке, а причиной аварии стал срезанный шпоночный паз на валу. Физический демонтаж винта силами экипажа оказался абсолютно лишней работой.',
+        tech1_media_title: '3. Видеохроника с места событий',
+        vid1_title: 'Часть 1: Демонтаж под водой',
+        vid2_title: 'Часть 2: Дефектовка на палубе',
+        tech1_side1_title: 'Шкиперский разбор (Debriefing)',
+        tech1_side1_txt: 'Главный вывод: При переключении реверса с заднего хода на передний ВСЕГДА делайте четкую, осознанную паузу на нейтрали! Не вваливайте газ мгновенно. Именно резкая ударная нагрузка при быстрой смене направления вращения чаще всего срезает шпонку вала.',
+        tech1_side2_title: 'Спецификация судна',
+        footer_yt: 'YouTube-канал',
+        footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        tech1_page_title: 'Technical Yachting: Shaft Failure & Operation "Propeller"',
+        tech1_main_title: 'Catamaran Starboard Engine Power Loss & The Wrong Trail',
+        tech1_intro: 'A real chronicle of a technical misdiagnosis: emergency docking by hand under single-engine failure, underwater works in cold water, and the ultimate engineering lesson for a skipper.',
+        tech1_sec1_title: '1. Emergency Development',
+        tech1_sec1_txt1: 'In the midst of navigating maneuvers on a sailing catamaran, a sharp metallic click was followed by a complete loss of thrust from the starboard engine. On-the-go analysis revealed no propeller wash. The vessel instantly lost agile handling, turning into a stubborn "iron" that pulled hard to the right on the remaining port engine. The home dock lay three cable lengths away, through an area packed with chaotic tourist tour boats.',
+        tech1_sec1_txt2: 'Keeping the rudder hard-a-port, using short low-RPM bursts, the catamaran was limped back to the pontoon. Stern-to docking was out of the question. The crew rigged a bow line, jumped onto the pier via neighboring boats, and with the help of bystanders on the dock, literally wrestled the catamaran alongside by hand.',
+        tech1_sec2_title: '2. Diving Works & Misdiagnosis',
+        tech1_sec2_txt: 'The first consensus among the crew pointed to a catastrophic propeller failure. Despite the chilling autumn water temperature, the crew geared up with masks and dove to unbolt the assembly. Underwater, under low visibility, the propeller was successfully detached and brought on deck for cleaning and inspection. However, the certified marine technician who arrived the next day inspected the transmission and concluded: the prop was flawless; the actual culprit was a sheared shaft key. Pulling the propeller underwater had been a completely unnecessary exercise.',
+        tech1_media_title: '3. On-Scene Video Records',
+        vid1_title: 'Part 1: Underwater Unbolting',
+        vid2_title: 'Part 2: Inspection on Deck',
+        tech1_side1_title: 'Skipper\'s Debriefing',
+        tech1_side1_txt: 'Key Takeaway: When shifting reverse to forward, ALWAYS maintain a distinct, conscious pause at neutral! Do not hammer the throttle instantly. The sudden torque shock during rapid rotation reversal is what shears the drive shaft key.',
+        tech1_side2_title: 'Vessel Specification',
+        footer_yt: 'YouTube Channel',
+        footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        tech1_page_title: 'Yachting Técnico: Fallo del Eje y Operación «Hélice»',
+        tech1_main_title: 'Pérdida de Potencia del Motor de Estribor y un Diagnóstico Erróneo',
+        tech1_intro: 'Crónica real de un error técnico: atraque de emergencia "a mano" tras el fallo del motor, trabajos submarinos en agua fría y la lección de ingeniería definitiva para el patrón.',
+        tech1_sec1_title: '1. Desarrollo de la Emergencia',
+        tech1_sec1_txt1: 'En medio de las maniobras de navegación en un catamarán de vela, un fuerte chasquido metálico fue seguido por una pérdida completa de empuje del motor de estribor. El análisis sobre la marcha reveló la ausencia de estela de la hélice. El barco perdió instantáneamente la agilidad de maniobra, convirtiéndose en una "plancha" que se desviaba con fuerza hacia la derecha con el único motor de babor. El muelle principal estaba a tres cables de distancia, en una zona congestionada por lanchas turísticas.',
+        tech1_sec1_txt2: 'Manteniendo el timón a la banda de babor, utilizando ráfagas cortas a bajas revoluciones, el catamarán llegó al pantalán. El atraque de popa estaba descartado. La tripulación amarró una línea de proa, saltó al muelle a través de barcos vecinos y, con la ayuda de los asistentes en tierra, arrastró el catamarán a mano al costado del muelle.',
+        tech1_sec2_title: '2. Trabajos de Buceo y Diagnóstico Erróneo',
+        tech1_sec2_txt: 'El primer consenso de la tripulación apuntó a un fallo crítico de la hélice. A pesar de la fría temperatura del agua en otoño, el equipo se equipó con máscaras y se sumergió para desmontar el conjunto. Bajo el agua, con baja visibilidad, la hélice fue desmontada con éxito y llevada a cubierta para su limpieza e inspección. Sin embargo, el técnico marino certificado que llegó al día siguiente revisó la transmisión y concluyó: la hélice estaba impecable; el verdadero culpable era una chaveta del eje cizallada. Desmontar la hélice bajo el agua había sido un ejercicio completamente innecesario.',
+        tech1_media_title: '3. Registros de Video en la Escena',
+        vid1_title: 'Parte 1: Desmontaje bajo el agua',
+        vid2_title: 'Parte 2: Inspección en cubierta',
+        tech1_side1_title: 'Análisis del Patrón',
+        tech1_side1_txt: 'Lección Clave: Al cambiar de marcha atrás a marcha adelante, ¡SIEMPRE mantenga una pausa clara y consciente en el punto muerto! No acelere instantáneamente. El impacto repentino del par motor durante la inversión rápida de la rotación es lo que corta la chaveta del eje de transmisión.',
+        tech1_side2_title: 'Especificación del Buque',
+        footer_yt: 'Canal de YouTube',
+        footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
