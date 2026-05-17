@@ -30,21 +30,34 @@
     <header class="case-header">
       <span class="tag" style="background: #e2f7ed; color: #15803d;">Voyage Note #1</span>
       <h1 data-i18n="diary1_main_title">Зарисовка из перехода: Динамика катамарана на волне</h1>
-      <p class="case-intro" data-i18n="diary1_intro">Короткий живой момент из жизни экипажа под парусами. Ветер, скорость, шлейф за кормой и брызги, накрывающие носовую сетку.</p>
+      <p class="case-intro" data-i18n="diary1_intro">Короткие живые моменты из жизни экипажа под парусами. Скорость, шлейф за кормой и резкая смена погоды на переходе.</p>
     </header>
 
     <hr class="case-divider">
 
-    <div class="case-grid" style="grid-template-columns: 1fr 1fr;">
-      <div>
-        <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
-          <source src="SAILS.mp4" type="video/mp4">
-        </video>
+    <div class="case-grid">
+      <div class="case-content-left" style="display: flex; flex-direction: column; gap: 2rem;">
+        <div>
+          <h4 style="margin-bottom: 0.6rem; color: var(--deep-sea);" data-i18n="diary1_vid1_title">Часть 1: Динамика на волне</h4>
+          <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+            <source src="SAILS.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 0.6rem; color: var(--deep-sea);" data-i18n="diary1_vid2_title">Часть 2: Надвигающийся фронт</h4>
+          <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+            <source src="CLOUD.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
 
-      <div class="case-section" style="padding-top: 1rem;">
-        <h2 data-i18n="diary1_sec_title">Атмосфера на борту</h2>
-        <p data-i18n="diary1_text_block">Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка ловит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну, отправляя облака соленых брызг на трамплин. В такие минуты на баке становится по-настоящему скользко, держаться почти не за что, но именно эта живая динамика и эмоции экипажа передают подлинный дух морского похода.</p>
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block">
+            <h2 style="font-size: 1.3rem; margin-top: 0;" data-i18n="diary1_sec_title">Атмосфера на борту</h2>
+            <p data-i18n="diary1_text_block">Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка лочит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну. В такие минуты погода на море может измениться за считанные мили: еще полчаса назад над палубой было синее безоблачное небо, а уже сейчас лодка идет прямиком под тяжелый, свинцовый грозовой фронт, зацепившийся за прибрежные горы. Именно эта живая динамика передает подлинный дух морского похода.</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -65,9 +78,11 @@
         back_to_main: '← На главную',
         diary1_page_title: 'Путевые дневники: Будни под парусом',
         diary1_main_title: 'Зарисовка из перехода: Динамика катамарана на волне',
-        diary1_intro: 'Короткий живой момент из жизни экипажа под парусами. Ветер, скорость, шлейф за кормой и брызги, накрывающие носовую сетку.',
+        diary1_intro: 'Короткие живые моменты из жизни экипажа под парусами. Скорость, шлейф за кормой и резкая смена погоды на переходе.',
+        diary1_vid1_title: 'Часть 1: Динамика на волне',
+        diary1_vid2_title: 'Часть 2: Надвигающийся фронт',
         diary1_sec_title: 'Атмосфера на борту',
-        diary1_text_block: 'Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка ловит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну, отправляя облака соленых брызг на трамплин. В такие минуты на баке становится по-настоящему скользко, держаться почти не за что, но именно эта живая динамика и эмоции экипажа передают подлинный дух морского похода.',
+        diary1_text_block: 'Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка ловит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну. В такие минуты погода на море может измениться за считанные мили: еще полчаса назад над палубой было синее безоблачное небо, а уже сейчас лодка идет прямиком под тяжелый, свинцовый грозовой фронт, зацепившийся за прибрежные горы. Именно эта живая динамика передает подлинный дух морского похода.',
         footer_yt: 'YouTube-канал',
         footer_top: 'Наверх'
       },
@@ -75,19 +90,23 @@
         back_to_main: '← Main Page',
         diary1_page_title: 'Voyage Diaries: Under Sail',
         diary1_main_title: 'Passage Sketch: Catamaran Dynamics on a Wave',
-        diary1_intro: 'A brief, lively moment of the crew under sail. Wind, speed, wake trailing astern, and spray washing over the bow trampoline netting.',
+        diary1_intro: 'Brief, lively moments of the crew under sail. Speed, wake trailing astern, and a rapid change of weather during the passage.',
+        diary1_vid1_title: 'Part 1: Wave Dynamics',
+        diary1_vid2_title: 'Part 2: Approaching Weather Front',
         diary1_sec_title: 'Onboard Atmosphere',
-        diary1_text_block: 'Sailing is not just about blue prints, technical systems, and legal documents. It is, above all, about those moments when the boat catches a steady breeze, locks onto its cruising course, and the hulls of the catamaran start slicing through the waves, throwing salty spray onto the trampoline. It gets slippery on the bow netting, with barely anything to hold onto, but this raw energy and the genuine emotions of the crew capture the true spirit of a sea voyage.',
+        diary1_text_block: 'Sailing is not just about blueprints, technical systems, and legal documents. It is, above all, about those moments when the boat catches a steady breeze, locks onto its cruising course, and the hulls of the catamaran start slicing through the waves. Weather at sea can shift within a few miles: just half an hour ago there was a clear blue sky above the deck, and now the boat is heading straight beneath a heavy, leaden storm front gripping the coastal mountains. This raw energy captures the true spirit of a voyage.',
         footer_yt: 'YouTube Channel',
         footer_top: 'Top'
       },
       es: {
         back_to_main: '← Inicio',
         diary1_page_title: 'Diarios de Travesía: Vida a Vela',
-        diary1_main_title: 'Apunte de Navegación: Dinámica de un Catamarán en la Ola',
-        diary1_intro: 'Un breve y animado momento de la tripulación a vela. Viento, velocidad, la estela que queda por la popa y las olas salpicando la red de proa.',
+        diary1_main_title: 'Apunte de Travesía: Dinámica de un Catamarán en la Ola',
+        diary1_intro: 'Breves y animados momentos de la tripulación a vela. Velocidad, la estela por la popa y un cambio repentino de tiempo en la travesía.',
+        diary1_vid1_title: 'Parte 1: Dinámica de olas',
+        diary1_vid2_title: 'Parte 2: Frente tormentoso en camino',
         diary1_sec_title: 'Ambiente a bordo',
-        diary1_text_block: 'La navegación no es solo planos, sistemas técnicos y documentos legales. Es, ante todo, esos momentos en los que el barco atrapa una brisa constante, se estabiliza en su rumbo de crucero y los cascos del catamarán comienzan a cortar las olas, lanzando agua salada sobre el trampolín. Se vuelve muy resbaladizo en la proa, casi sin nada a lo que agarrarse, pero esta energía pura y las emociones genuinas de la tripulación capturan el verdadero espíritu de una travesía marítima.',
+        diary1_text_block: 'La navegación no es solo planos, sistemas técnicos y documentos legales. Es, ante todo, esos momentos en los que el barco atrapa una brisa constante, se estabiliza en su rumbo y los cascos del catamarán comienzan a cortar las olas. El tiempo en el mar puede cambiar en pocas millas: hace solo media hora había un cielo azul despejado sobre la cubierta, y ahora el barco se dirige directo bajo un frente tormentoso pesado y plomizo sujeto a las montañas costeras. Esta energía pura captura el verdadero espíritu de una travesía.',
         footer_yt: 'Canal de YouTube',
         footer_top: 'Volver arriba'
       }
