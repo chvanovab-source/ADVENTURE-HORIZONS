@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Voyage Diaries — Adventure Horizons" />
+  <title data-i18n="diary1_page_title">Путевые дневники: Будни под парусом</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #e2f7ed; color: #15803d;">Voyage Note #1</span>
+      <h1 data-i18n="diary1_main_title">Зарисовка из перехода: Динамика катамарана на волне</h1>
+      <p class="case-intro" data-i18n="diary1_intro">Короткий живой момент из жизни экипажа под парусами. Ветер, скорость, шлейф за кормой и брызги, накрывающие носовую сетку.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid" style="grid-template-columns: 1fr 1fr;">
+      <div>
+        <video controls style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+          <source src="video_2025-09-29_13-46-17.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="case-section" style="padding-top: 1rem;">
+        <h2 data-i18n="diary1_sec_title">Атмосфера на борту</h2>
+        <p data-i18n="diary1_text_block">Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка ловит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну, отправляя облака соленых брызг на трамплин. В такие минуты на баке становится по-настоящему скользко, держаться почти не за что, но именно эта живая динамика и эмоции экипажа передают подлинный дух морского похода.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        diary1_page_title: 'Путевые дневники: Будни под парусом',
+        diary1_main_title: 'Зарисовка из перехода: Динамика катамарана на волне',
+        diary1_intro: 'Короткий живой момент из жизни экипажа под парусами. Ветер, скорость, шлейф за кормой и брызги, накрывающие носовую сетку.',
+        diary1_sec_title: 'Атмосфера на борту',
+        diary1_text_block: 'Яхтинг — это не только чертежи, схемы и юридические документы. Это прежде всего моменты, когда лодка ловит стабильный ветер, выходит на рабочий курс, а носовые поплавки катамарана начинают резать волну, отправляя облака соленых брызг на трамплин. В такие минуты на баке становится по-настоящему скользко, держаться почти не за что, но именно эта живая динамика и эмоции экипажа передают подлинный дух морского похода.',
+        footer_yt: 'YouTube-канал',
+        footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        diary1_page_title: 'Voyage Diaries: Under Sail',
+        diary1_main_title: 'Passage Sketch: Catamaran Dynamics on a Wave',
+        diary1_intro: 'A brief, lively moment of the crew under sail. Wind, speed, wake trailing astern, and spray washing over the bow trampoline netting.',
+        diary1_sec_title: 'Onboard Atmosphere',
+        diary1_text_block: 'Sailing is not just about blue prints, technical systems, and legal documents. It is, above all, about those moments when the boat catches a steady breeze, locks onto its cruising course, and the hulls of the catamaran start slicing through the waves, throwing salty spray onto the trampoline. It gets slippery on the bow netting, with barely anything to hold onto, but this raw energy and the genuine emotions of the crew capture the true spirit of a sea voyage.',
+        footer_yt: 'YouTube Channel',
+        footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        diary1_page_title: 'Diarios de Travesía: Vida a Vela',
+        diary1_main_title: 'Apunte de Navegación: Dinámica de un Catamarán en la Ola',
+        diary1_intro: 'Un breve y animado momento de la tripulación a vela. Viento, velocidad, la estela que queda por la popa y las olas salpicando la red de proa.',
+        diary1_sec_title: 'Ambiente a bordo',
+        diary1_text_block: 'La navegación no es solo planos, sistemas técnicos y documentos legales. Es, ante todo, esos momentos en los que el barco atrapa una brisa constante, se estabiliza en su rumbo de crucero y los cascos del catamarán comienzan a cortar las olas, lanzando agua salada sobre el trampolín. Se vuelve muy resbaladizo en la proa, casi sin nada a lo que agarrarse, pero esta energía pura y las emociones genuinas de la tripulación capturan el verdadero espíritu de una travesía marítima.',
+        footer_yt: 'Canal de YouTube',
+        footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
