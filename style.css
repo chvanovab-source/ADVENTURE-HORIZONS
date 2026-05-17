@@ -23,31 +23,52 @@ body {
 
 .container { width: min(1120px, 92vw); margin-inline: auto; }
 
+/* ==========================================================================
+   ГЛАВНЫЙ ЭКРАН С ВИДЕОФОНОМ (ИСПРАВЛЕННЫЙ)
+   ========================================================================== */
 .hero {
   position: relative;
-  min-height: 80vh;
+  width: 100%;
+  min-height: 100vh; /* Растягивает экран ровно на 100% высоты монитора */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("banner_1.png") !important;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  isolation: isolate;
+  overflow: hidden;
+  background-color: #000; /* Черный фон, пока грузится видео */
 }
 
-.hero > *:not(.overlay) {
-  position: relative;
-  z-index: 1;
+/* Наше фоновое видео марины */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); /* Выравнивает видео строго по центру */
+  object-fit: cover; /* Растягивает видео без искажений пропорций */
+  z-index: 0; /* Прячет видео на самый задний план */
 }
 
+/* Темная маска-фильтр поверх видео, чтобы белый текст легко читался */
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3) !important;
-  z-index: 0;
+  background: rgba(4, 21, 33, 0.5) !important; /* Приглушающий темно-синий тон */
+  z-index: 1; /* Ложится поверх видео, но под текст */
 }
 
+/* Поднимаем меню и текст над видео и маской */
+.hero .top-nav,
+.hero .hero-content {
+  position: relative;
+  z-index: 2; /* Самый верхний слой, чтобы кнопки нажимались */
+}
+
+/* ==========================================================================
+   НАВИГАЦИЯ И ТЕКСТЫ НА ГЛАВНОМ ЭКРАНЕ
+   ========================================================================== */
 .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; gap: 1rem; }
 .logo { text-decoration: none; color: #fff; font-weight: 800; letter-spacing: 0.5px; }
 .nav-right { display: flex; align-items: center; gap: 1rem; }
@@ -78,33 +99,38 @@ body {
 }
 
 .hero-content { 
-    padding: 3rem 0 4rem; 
-    max-width: 480px; /* Уменьшили ширину блока, чтобы он стал компактнее */
-    margin-left: auto; /* Этот авто-отступ слева железно прижмет весь блок к правому краю */
-    margin-right: 5%; /* Небольшой отступ от правого края, чтобы текст не лип к рамке */
-    text-align: right; /* Выравниваем сам текст по правому краю */
+  padding: 3rem 0 4rem; 
+  max-width: 480px; 
+  margin-left: auto; /* Прижимает блок к правому краю */
+  margin-right: 5%; 
+  text-align: right; /* Выравнивает текст по правому краю */
 }
 
 .eyebrow { 
-    margin: 0 0 .8rem; 
-    font-size: .92rem; 
-    font-weight: 700; 
-    text-transform: uppercase; 
-    letter-spacing: .1em; 
-    color: #b6e8ff; 
+  margin: 0 0 .8rem; 
+  font-size: .92rem; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: .1em; 
+  color: #b6e8ff; 
 }
 
 h1 { 
-    margin: 0; 
-    font-size: clamp(1.6rem, 4vw, 2.3rem); /* Уменьшили размер шрифта примерно в 1.25 раза */
-    line-height: 1.2; 
+  margin: 0; 
+  font-size: clamp(1.6rem, 4vw, 2.3rem); 
+  line-height: 1.2; 
+  color: #ffffff;
 }
 
 .hero-text { 
-    margin-top: 1rem; 
-    font-size: 1.05rem; /* Сделали шрифт манифеста чуть аккуратнее */
-    color: #d7efff; 
+  margin-top: 1rem; 
+  font-size: 1.05rem; 
+  color: #d7efff; 
 }
+
+/* ==========================================================================
+   КНОПКИ
+   ========================================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -119,9 +145,13 @@ h1 {
 .btn-secondary { background: var(--accent); color: #fff; }
 .btn-ghost { border-color: #7ccce5; color: #bdefff; }
 
+/* ==========================================================================
+   БЛОКИ СТРАНИЦЫ И КАРТОЧКИ ГАЛЕРЕИ
+   ========================================================================== */
 .about, .gallery { padding: 4.5rem 0 1rem; }
 h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep-sea); }
 .about p, .section-head p { margin: 0; color: var(--muted); max-width: 72ch; }
+.about.container p { text-align: justify; }
 
 .cards-grid { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; box-shadow: var(--shadow); }
@@ -129,334 +159,131 @@ h2 { margin: 0 0 .8rem; font-size: clamp(1.6rem, 4vw, 2.2rem); color: var(--deep
 .card h3 { margin: .2rem 0 .6rem; color: var(--deep-sea); }
 .card p { margin: 0; color: var(--muted); }
 
+/* ==========================================================================
+   РАЗДЕЛ "О НАС" (ДЛЯ АЛЕКСЕЯ И НАТАЛЬИ)
+   ========================================================================== */
+.about-us {
+  padding: 6rem 0;
+  background-color: var(--surface);
+}
+
+.about-us .about-us-container {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-item {
+  flex: 1;
+  max-width: 450px;
+  text-align: center;
+}
+
+.about-us-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.about-us-photo:hover {
+  transform: scale(1.03);
+}
+
+.about-us-item h4 {
+  margin: 0 0 .5rem;
+  color: var(--deep-sea);
+  font-size: 1.6rem;
+}
+
+.about-us-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   ПОДВАЛ САЙТА (ФУТЕР) И ЕГО КНОПКИ
+   ========================================================================== */
 .site-footer { margin-top: 4rem; padding: 1.2rem 0; background: #062033; color: #d8f2ff; }
 .footer-content { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .footer-actions { display: flex; align-items: center; gap: .7rem; }
-@media (max-width: 720px) {
-  .hero { min-height: 74vh; }
-  .top-nav { padding-top: 18px; flex-wrap: wrap; }
-}
 
-/* ==========================================================================
-   ПЕРФЕКЦИОНИЗМ И СТИЛИЗАЦИЯ (Вне медиа-запросов, работает везде)
-   ========================================================================== */
-
-/* Выравнивание текста «О канале» по ширине */
-.about.container p {
-    text-align: justify;
-}
-
-/* ==========================================================================
-   УНИВЕРСАЛЬНЫЙ СТИЛЬ ДЛЯ КНОПОК В ФУТЕРЕ
-   ========================================================================== */
-
-/* Находим любые ссылки внутри тега footer */
 footer a, 
 .site-footer a, 
 .footer-actions a {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 18px !important;
-    border-radius: 999px !important; /* Круглые кнопки */
-    font-weight: 700 !important;
-    font-size: 13px !important;
-    text-decoration: none !important; /* Убираем синее подчеркивание */
-    transition: background-color 0.2s ease, transform 0.1s ease !important;
-    margin: 5px !important;
-    border: none !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.1s ease !important;
+  margin: 5px !important;
+  border: none !important;
 }
 
-/* Эффект клика */
-footer a:active {
-    transform: scale(0.96) !important;
-}
+footer a:active { transform: scale(0.96) !important; }
 
-/* Фирменный красный для YouTube по атрибуту перевода */
-footer a[data-i18n="footer_yt"] {
-    background-color: #dc1c1c !important; 
-    color: #ffffff !important;
-}
+footer a[data-i18n="footer_yt"] { background-color: #dc1c1c !important; color: #ffffff !important; }
+footer a[data-i18n="footer_yt"]:hover { background-color: #b31212 !important; }
 
-footer a[data-i18n="footer_yt"]:hover {
-    background-color: #b31212 !important;
-}
-
-/* Фирменный синий для Telegram — ищем и по классу, и по атрибуту */
 footer a.tg-btn,
-footer a[data-i18n="footer_tg"] {
-    background-color: #24A1DE !important;
-    color: #ffffff !important;
-}
-
+footer a[data-i18n="footer_tg"] { background-color: #24A1DE !important; color: #ffffff !important; }
 footer a.tg-btn:hover,
-footer a[data-i18n="footer_tg"]:hover {
-    background-color: #1d82b3 !important;
-}
+footer a[data-i18n="footer_tg"]:hover { background-color: #1d82b3 !important; }
 
-/* Полупрозрачная морская кнопка "Наверх" в стиле сайта */
-footer a[data-i18n="footer_top"] {
-    background-color: transparent !important;
-    color: #bdefff !important;
-    border: 1px solid #7ccce5 !important;
-}
-
-footer a[data-i18n="footer_top"]:hover {
-    background-color: rgba(124, 204, 229, 0.15) !important;
-}
+footer a[data-i18n="footer_top"] { background-color: transparent !important; color: #bdefff !important; border: 1px solid #7ccce5 !important; }
+footer a[data-i18n="footer_top"]:hover { background-color: rgba(124, 204, 229, 0.15) !important; }
 
 /* ==========================================================================
-   СТИЛИ ДЛЯ РАЗДЕЛА "О НАС" (THE 'ABOUT US' SECTION)
-   ========================================================================= */
-
-/* Общий контейнер блока */
-.about-us {
-    padding: 6rem 0; /* Хорошие отступы, чтобы блок "дышал" */
-    background-color: var(--surface); /* Используем фоновый цвет сайта */
-}
-
-/* Флекс-контейнер для двух колонок (фото + текст) */
-.about-us .about-us-container {
-    display: flex;
-    gap: 4rem; /* Отступ между двумя людьми */
-    align-items: center;
-    justify-content: center;
-}
-
-/* Стиль одной колонки */
-.about-us-item {
-    flex: 1;
-    max-width: 450px; /* Ограничиваем ширину одной персоны */
-    text-align: center; /* Центрируем фото и текст внутри колонки */
-}
-
-/* Стиль для самой фотографии */
-.about-us-photo {
-    width: 250px; /* Делаем фото аккуратными, небольшими */
-    height: 250px;
-    border-radius: 999px; /* Скругление в круг */
-    object-fit: cover; /* Чтобы фото не растягивалось, а аккуратно вписывалось */
-    box-shadow: var(--shadow); /* Легкая тень, как у карточек */
-    margin-bottom: 2rem; /* Отступ до текста */
-    transition: transform 0.2s ease;
-}
-
-/* Эффект при наведении на фото */
-.about-us-photo:hover {
-    transform: scale(1.03);
-}
-
-/* Стиль заголовка (имя) */
-.about-us-item h4 {
-    margin: 0 0 .5rem;
-    color: var(--deep-sea);
-    font-size: 1.6rem;
-}
-
-/* Стиль подписи (описание) */
-.about-us-item p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Адаптация для мобильных (экраны меньше 720px) */
-@media (max-width: 720px) {
-    .about-us .about-us-container {
-        flex-direction: column; /* Колонки встают в ряд */
-        gap: 3rem; /* Чуть меньше отступ между ними */
-    }
-    
-    .about-us-photo {
-        width: 180px; /* Фото делаем чуть меньше на мобильных */
-        height: 180px;
-    }
-}
-/* ==========================================================================
-   СТИЛИ ДЛЯ СТРАНИЦ КЕЙСОВ (LEGAL STORIES PAGES)
+   СТИЛИ ДЛЯ СТРАНИЦ КЕЙСОВ (ЮРИДИЧЕСКИЕ ШТОРМА)
    ========================================================================== */
-.case-page {
-    background-color: #fafafa;
-    color: #333;
-}
+.case-page { background-color: #fafafa; color: #333; }
+.case-main { padding: 3rem 0 6rem; }
+.case-header { margin-bottom: 2rem; }
+.case-header h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); color: var(--deep-sea); margin: 0.5rem 0 1rem; line-height: 1.2; }
+.case-intro { font-size: 1.15rem; color: var(--muted); max-width: 80ch; line-height: 1.6; }
+.case-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0 3rem; }
 
-.case-main {
-    padding: 3rem 0 6rem;
-}
+.case-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3.5rem; align-items: start; }
+.case-section { margin-bottom: 3rem; }
+.case-section h2 { font-size: 1.4rem; color: var(--deep-sea); margin-bottom: 1.2rem; border-left: 4px solid var(--accent); padding-left: 0.8rem; }
+.case-section p { line-height: 1.7; color: #444; text-align: justify; }
 
-.case-header {
-    margin-bottom: 2rem;
-}
+.roadmap-list { list-style: none; padding: 0; margin: 0; }
+.roadmap-list li { position: relative; padding-left: 2rem; margin-bottom: 2rem; }
+.roadmap-list li::before { content: "•"; position: absolute; left: 0; top: -2px; color: var(--accent); font-size: 2rem; }
+.roadmap-list li strong { display: block; font-size: 1.1rem; color: var(--deep-sea); margin-bottom: 0.4rem; }
+.roadmap-list li span { line-height: 1.6; color: #555; display: block; text-align: justify; }
 
-.case-header h1 {
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    color: var(--deep-sea);
-    margin: 0.5rem 0 1rem;
-    line-height: 1.2;
-}
+.sticky-sidebar { position: sticky; top: 2rem; }
+.sidebar-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); margin-bottom: 1.5rem; }
+.sidebar-block h3 { margin: 0 0 0.8rem; font-size: 1.1rem; color: var(--deep-sea); }
+.sidebar-block p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--muted); }
 
-.case-intro {
-    font-size: 1.15rem;
-    color: var(--muted);
-    max-width: 80ch;
-    line-height: 1.6;
-}
+.payment-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.payment-table td { padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; font-size: 0.95rem; }
+.payment-table tr:last-child td { border-bottom: none; }
+.payment-table td.price { text-align: right; font-weight: 700; color: var(--accent); }
 
-.case-divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 2rem 0 3rem;
-}
-
-/* Сетка для разбора кейса */
-.case-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3.5rem;
-    align-items: start;
-}
-
-.case-section {
-    margin-bottom: 3rem;
-}
-
-.case-section h2 {
-    font-size: 1.4rem;
-    color: var(--deep-sea);
-    margin-bottom: 1.2rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 0.8rem;
-}
-
-.case-section p {
-    line-height: 1.7;
-    color: #444;
-    text-align: justify;
-}
-
-/* Красивый список дорожной карты */
-.roadmap-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.roadmap-list li {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
-}
-
-.roadmap-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: -2px;
-    color: var(--accent);
-    font-size: 2rem;
-}
-
-.roadmap-list li strong {
-    display: block;
-    font-size: 1.1rem;
-    color: var(--deep-sea);
-    margin-bottom: 0.4rem;
-}
-
-.roadmap-list li span {
-    line-height: 1.6;
-    color: #555;
-    display: block;
-    text-align: justify;
-}
-
-/* Боковая колонка безопасности */
-.sticky-sidebar {
-    position: sticky;
-    top: 2rem;
-}
-
-.sidebar-block {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
-}
-
-.sidebar-block h3 {
-    margin: 0 0 0.8rem;
-    font-size: 1.1rem;
-    color: var(--deep-sea);
-}
-
-.sidebar-block p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--muted);
-}
-
-/* Таблица платежей */
-.payment-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5rem;
-}
-
-.payment-table td {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
-}
-
-.payment-table tr:last-child td {
-    border-bottom: none;
-}
-
-.payment-table td.price {
-    text-align: right;
-    font-weight: 700;
-    color: var(--accent);
-}
-
-/* Смартфонная адаптация */
+/* ==========================================================================
+   АДАПТАЦИЯ ПОД СМАРТФОНЫ И МОБИЛЬНЫЕ ЭКРАНЫ
+   ========================================================================== */
 @media (max-width: 900px) {
-    .case-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-/* ==========================================================================
-   ФОНОВОЕ ВИДЕО ДЛЯ ГЛАВНОГО ЭКРАНА (HERO VIDEO BACKGROUND)
-   ========================================================================== */
-.hero {
-    position: relative;
-    overflow: hidden; /* Чтобы видео не вылезало за пределы экрана */
+  .case-grid { grid-template-columns: 1fr; gap: 2rem; }
 }
 
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%); /* Идеальное центрирование фонового видео */
-    object-fit: cover; /* Видео масштабируется без искажений, как фоновое фото */
-    z-index: 0; /* Уводим на задний план */
-}
-
-/* Гарантируем, что маска затемнения и весь контент будут поверх видео */
-.hero .overlay {
-    z-index: 1;
-}
-
-.hero .top-nav,
-.hero .hero-content {
-    position: relative;
-    z-index: 2;
+@media (max-width: 720px) {
+  .hero { min-height: 100vh; }
+  .top-nav { padding-top: 18px; flex-wrap: wrap; }
+  .about-us .about-us-container { flex-direction: column; gap: 3rem; }
+  .about-us-photo { width: 180px; height: 180px; }
 }
