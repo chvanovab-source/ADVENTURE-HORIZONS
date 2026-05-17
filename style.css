@@ -429,3 +429,34 @@ footer a[data-i18n="footer_top"]:hover {
         gap: 2rem;
     }
 }
+/* ==========================================================================
+   ФОНОВОЕ ВИДЕО ДЛЯ ГЛАВНОГО ЭКРАНА (HERO VIDEO BACKGROUND)
+   ========================================================================== */
+.hero {
+    position: relative;
+    overflow: hidden; /* Чтобы видео не вылезало за пределы экрана */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Идеальное центрирование фонового видео */
+    object-fit: cover; /* Видео масштабируется без искажений, как фоновое фото */
+    z-index: 0; /* Уводим на задний план */
+}
+
+/* Гарантируем, что маска затемнения и весь контент будут поверх видео */
+.hero .overlay {
+    z-index: 1;
+}
+
+.hero .top-nav,
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
