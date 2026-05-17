@@ -29,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("https://github.com/user-attachments/assets/c99d303c-24ff-42fc-be7a-1060b09fa6cf") !important;
+  background-image: url("banner_1.png") !important;
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -44,7 +44,7 @@ body {
 .hero .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   z-index: 0;
 }
 
