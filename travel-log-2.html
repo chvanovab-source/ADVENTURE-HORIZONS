@@ -10,44 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Стили для хронологического мультимедиа-таймлайна */
-    .timeline {
-      position: relative;
-      margin: 2rem 0;
-      padding-left: 2rem;
-      border-left: 2px solid var(--border);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 4rem;
-    }
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-    .timeline-marker {
-      position: absolute;
-      left: calc(-2rem - 6px);
-      top: 4px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #d97706;
-      border: 2px solid var(--background);
-      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
-    }
-    .timeline-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--deep-sea);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+    /* Стили для видеоплееров в журнальной верстке */
     .video-container {
       width: 100%;
       max-width: 640px;
-      margin: 1rem 0;
+      margin: 1.2rem 0 2rem 0;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -64,10 +31,15 @@
       background: var(--surface);
       border-left: 3px solid #d97706;
       padding: 0.8rem 1rem;
-      margin: 0.8rem 0;
+      margin: 0.8rem 0 1.5rem 0;
       font-style: italic;
       font-size: 0.95rem;
       color: var(--text);
+    }
+    .case-section h2 {
+      border-left: 3px solid #d97706;
+      padding-left: 12px;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -87,7 +59,7 @@
     </div>
   </nav>
 
-  <main class="case-main container" style="max-width: 800px;">
+  <main class="case-main container">
     <header class="case-header">
       <span class="tag" style="background: #fef3c7; color: #d97706;">Catamaran Log 2025</span>
       <h1 data-i18n="log2_main_title">Хроника похода 2025: Свобода двух корпусов и штормовые горизонты</h1>
@@ -96,34 +68,49 @@
 
     <hr class="case-divider">
 
-    <div class="timeline">
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <section class="case-section">
+          <h2 data-i18n="log2_ch1_title">1. Граница стихий: Наступление штормового фронта</h2>
+          <p data-i18n="log2_ch1_desc">Удивительный панорамный кадр контраста природы: катамаран идет под чистым, мирным лазурным небом, но прямо по курсу над горным хребтом побережья разворачивается монументальная, тяжелая, черная как свинец грозовая шельфовая стена.</p>
+          <div class="video-container">
+            <video src="CLOUD.mp4" controls preload="metadata"></video>
+          </div>
+        </section>
 
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <h3 class="timeline-title"><span>Chapter 1:</span> <span data-i18n="log2_ch1_title">Граница стихий: Наступление штормового фронта</span></h3>
-        <p data-i18n="log2_ch1_desc">Удивительный панорамный кадр контраста природы: катамаран идет под чистым, мирным лазурным небом, но прямо по курсу над горным хребтом побережья разворачивается монументальная, тяжелая, черная как свинец грозовая шельфовая стена.</p>
-        <div class="video-container">
-          <video src="CLOUD.mp4" controls preload="metadata"></video>
-        </div>
+        <section class="case-section">
+          <h2 data-i18n="log2_ch2_title">2. Стремительный полет: Настоящая парусная картина</h2>
+          <p data-i18n="log2_ch2_desc">Чистый гоночный драйв многокорпусного судна. Катамаран на отличном ходу уверенно режет штормовую волну. Встречные брызги с грохотом взлетают сквозь носовую сетку-трамплин. Ветер свистит в такелаже, а два корпуса обеспечивают ту жесткую остойчивость, за которую так ценят мультихоллы в свежую погоду.</p>
+          <div class="video-container">
+            <video src="SAILS.mp4" controls preload="metadata"></video>
+          </div>
+          <div class="quote-block">
+            <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="log2_ch2_quote">«Ну там не очень хорошо, там очень скользко! И держаться там не за что... Волнá!... Оха было!... Чего ты туда хочешь?»</span>
+          </div>
+        </section>
+
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <h3 class="timeline-title"><span>Chapter 2:</span> <span data-i18n="log2_ch2_title">Стремительный полет: Настоящая парусная картина</span></h3>
-        <p data-i18n="log2_ch2_desc">Чистый гоночный драйв многокорпусного судна. Катамаран на отличном ходу уверенно режет штормовую волну. Встречные брызги с грохотом взлетают сквозь носовую сетку-трамплин. Ветер свистит в такелаже, а два корпуса обеспечивают ту жесткую остойчивость, за которую так ценят мультихоллы в свежую погоду.</p>
-        <div class="video-container">
-          <video src="SAILS.mp4" controls preload="metadata"></video>
-        </div>
-        <div class="quote-block">
-          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="log2_ch2_quote">«Ну там не очень хорошо, там очень скользко! И держаться там не за что... Волнá!... Оха было!... Чего ты туда хочешь?»</span>
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          
+          <div class="sidebar-block" style="border-left: 4px solid #d97706; margin-bottom: 1.5rem;">
+            <h3 data-i18n="log2_v_title">Заметки на полях трамплина</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 0;" data-i18n="log2_v_txt">Катамаран дарит обманчивое ощущение пляжного комфорта на стоянке, но в море на шквалах он раскрывает свой истинный характер. Скорость на двух корпусах ощущается острее: когда под сеткой на полной скорости закипает и взрывается пена, ты понимаешь всю первозданную силу стихии.</p>
+          </div>
+
+          <div class="sidebar-block" style="border-left: 4px solid var(--accent);">
+            <h3 data-i18n="log1_spec_title">Спецификация судна</h3>
+            <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">
+              <strong data-i18n="spec_year">Год:</strong> 2025<br>
+              <strong>Тип:</strong> Парусный катамаран<br>
+              <strong data-i18n="spec_cond">Условия:</strong> Грозовой фронт / Шквал
+            </p>
+          </div>
+
         </div>
       </div>
-
-    </div>
-
-    <div style="background: var(--surface); border-left: 4px solid #d97706; padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); margin-top: 3rem;">
-      <h3 style="margin-top: 0; color: var(--deep-sea);" data-i18n="log2_v_title">💎 Заметки на полях трамплина</h3>
-      <p style="font-size: 1.05rem; line-height: 1.6; font-style: italic; margin-bottom: 0;" data-i18n="log2_v_txt">Катамаран дарит обманчивое ощущение пляжного комфорта на стоянке, но в море на шквалах он раскрывает свой истинный характер. Скорость на двух корпусах ощущается острее: когда под сеткой на полной скорости закипает и взрывается пена, ты понимаешь всю первозданную силу стихии и прощаешь этой лодке любые капризы.</p>
     </div>
   </main>
 
@@ -138,21 +125,22 @@
   </footer>
 
   <script>
-    // База данных переводов локализации
     const translations = {
       ru: {
         back_to_main: '← На главную',
         log2_page_title: 'Путевые дневники: Под парусами катамарана (2025)',
         log2_main_title: 'Хроника похода 2025: Свобода двух корпусов и штормовые горизонты',
         log2_intro: 'Медиазарисовка из экспедиции на парусном катамаране. Контраст между лазурным чистым небом и стремительно наступающей грозовой стеной над побережьем, переходящий в яростный полет по штормовой волне.',
-        log2_ch1_title: 'Граница стихий: Наступление штормового фронта',
+        log2_ch1_title: '1. Граница стихий: Наступление штормового фронта',
         log2_ch1_desc: 'Удивительный кадр: лодка идет под ясным лазурным небом, но прямо по курсу над горным хребтом побережья разворачивается монументальная, черная как свинец грозовая шельфовая стена.',
-        log2_ch2_title: 'Стремительный полет: Настоящая парусная картина',
+        log2_ch2_title: '2. Стремительный полет: Настоящая парусная картина',
         log2_ch2_desc: 'Настоящий парусный драйв многокорпусного судна. Катамаран на отличном ходу уверенно режет волну. Встречные брызги с грохотом взлетают сквозь носовую сетку-трамплин. Ветер свистит в такелаже, а два корпуса обеспечивают ту жесткую остойчивость, за которую так ценят мультихоллы.',
         quote_label: 'Бортовой журнал:',
         log2_ch2_quote: '«Ну там не очень хорошо, там очень скользко! И держаться там не за что... Волнá!... Оха было!... Чего ты туда хочешь?»',
-        log2_v_title: '💎 Заметки на полях трамплина',
+        log2_v_title: 'Заметки на полях трамплина',
         log2_v_txt: 'Катамаран дарит обманчивое ощущение пляжного комфорта на стоянке, но в море на шквалах он раскрывает свой истинный характер. Скорость на двух корпусах ощущается острее: когда под сеткой на полной скорости закипает и взрывается пена, ты понимаешь всю первозданную силу стихии и прощаешь этой лодке любые капризы.',
+        log1_spec_title: 'Спецификация судна',
+        spec_year: 'Год:', spec_cond: 'Условия:',
         footer_yt: 'YouTube-канал', footer_top: 'Наверх'
       },
       en: {
@@ -160,29 +148,33 @@
         log2_page_title: 'Sailing Logs: Under Catamaran Sails (2025)',
         log2_main_title: '2025 Cruise Chronicle: Twin-Hull Freedom & Ominous Horizons',
         log2_intro: 'A visual media log from the sailing catamaran expedition. The stark contrast between pristine blue skies and an advancing storm wall over the coast, shifting into a high-speed flight across rolling waves.',
-        log2_ch1_title: 'The Edge of Elements: Advancing Storm Front',
+        log2_ch1_title: '1. The Edge of Elements: Advancing Storm Front',
         log2_ch1_desc: 'An incredible contrast capture: the vessel cruises under clear blue skies, while directly ahead over the coastal mountain ridge, a massive, lead-black storm shelf unfolds.',
-        log2_ch2_title: 'High-Velocity Flight: Pure Sailing Adrenaline',
+        log2_ch2_title: '2. High-Velocity Flight: Pure Sailing Adrenaline',
         log2_ch2_desc: 'Pure multi-hull performance drive. The catamaran slices through rolling crests at full speed. Heavy spray hits the bow trampoline net with a roar, the wind howls through the rigging, and the twin hulls deliver that signature rigid stability multihulls are praised for.',
         quote_label: 'Logbook Entry:',
         log2_ch2_quote: '"Well, it\'s not very safe out there, it\'s very slippery! And there\'s nothing to hold onto... Wave!... Oh, that was huge!... Why do you want to go there anyway?"',
-        log2_v_title: '💎 Trampoline Edge Reflections',
+        log2_v_title: 'Trampoline Edge Reflections',
         log2_v_txt: 'A catamaran offers an illusion of beach club comfort at anchor, but out at sea under heavy squalls, it reveals its raw mechanical character. Velocity over twin hulls feels sharper: when the white foam boils and explodes directly under the net at full speed, you grasp the primal power of the elements.',
+        log1_spec_title: 'Vessel Specifications',
+        spec_year: 'Year:', spec_cond: 'Conditions:',
         footer_yt: 'YouTube Channel', footer_top: 'Top'
       },
       es: {
         back_to_main: '← Inicio',
         log2_page_title: 'Diarios de Viaje: Bajo las velas del catamarán (2025)',
         log2_main_title: 'Crónica 2025: Libertad de dos cascos y horizontes de tormenta',
-        log2_intro: 'Un relato visual de la expedición en catamarán de 2025. El asombroso contraste entre cielos azules limpios и un imponente frente de tormenta sobre la costa, que da paso a una navegación a alta velocidad.',
-        log2_ch1_title: 'El límite de los elementos: El frente de tormenta',
+        log2_intro: 'Un relato visual de la expedición en catamarán de 2025. El asombroso contraste entre cielos azules limpios y un imponente frente de tormenta sobre la costa, que da paso a una navegación a alta velocidad.',
+        log2_ch1_title: '1. El límite de los elementos: El frente de tormenta',
         log2_ch1_desc: 'Una captura de contraste increíble: el barco navega bajo cielos azules despejados, mientras que justo al frente, sobre la cordillera costera, se despliega una enorme barrera de tormenta negra como el plomo.',
-        log2_ch2_title: 'Vuelo veloz: Pura adrenalina multicasco',
+        log2_ch2_title: '2. Vuelo veloz: Pura adrenalina multicasco',
         log2_ch2_desc: 'Puro rendimiento y dinamismo a vela. El catamarán corta las olas a gran velocidad. Los rociones golpean la red del trampolín con fuerza, el viento silba en la jarcia y los dos cascos ofrecen la estabilidad firme típica de los multicascos.',
         quote_label: 'Cuaderno de Bitácora:',
         log2_ch2_quote: '"¡No es muy seguro ahí fuera, está muy resbaladizo! Y no hay de dónde agarrarse... ¡Ola!... ¡Eso ha sido enorme!... ¿Por qué quieres ir allí de todos modos?"',
-        log2_v_title: '💎 Reflexiones desde el Trampolín',
+        log2_v_title: 'Reflexiones desde el Trampolín',
         log2_v_txt: 'Un catamarán ofrece una ilusión de comodidad de club de playa en el fondeo, pero en el mar bajo fuertes rachas revela su auténtico carácter mecánico. La velocidad se siente más viva: cuando la espuma ruge y explota directamente bajo la red, comprendes el poder de los elementos.',
+        log1_spec_title: 'Especificaciones del Buque',
+        spec_year: 'Año:', spec_cond: 'Condiciones:',
         footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
       }
     };
