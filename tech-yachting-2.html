@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical Rigging: Lewmar Forward Hatch Leak Repair — Adventure Horizons" />
+  <title data-i18n="tech2_page_title">Технический яхтинг: Ремонт переднего люка Lewmar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Специфические стили для технического лога */
+    .featured-image-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0;
+      width: 100%;
+      max-height: 480px;
+    }
+    .featured-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+    .featured-image-wrapper:hover img {
+      transform: scale(1.01);
+    }
+    /* Модальное окно лайтбокса */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    .tech-step-list {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    .tech-step-list li {
+      margin-bottom: 0.8rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #fee2e2; color: #991b1b;">Technical Rigging Log</span>
+      <h1 data-i18n="tech2_main_title">Передний люк в чартерной эксплуатации: как спасти Lewmar и нервы экипажа</h1>
+      <p class="case-intro" data-i18n="tech2_intro">Практическое руководство по борьбе с протечками носового люка на Elan 45.1. Пошаговая диагностика уплотнителей, устранение люфтов петель, регулировка пластиковых зажимов и превентивная инженерная защита.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec1_title">⚓️ В двух словах: Проблема и контекст</h2>
+          <p data-i18n="tech2_sec1_p1">Две мои Elan 45.1 Impression 2020 года прошли шесть сезонов активной работы в чартере. Обе лодки — систершипы, и болячки проявляются абсолютно одинаково. Самая дорогая и обидная — течь переднего люка. И дело тут вовсе не в качестве Lewmar, комплектующие у них отличные. Виной всему человеческий фактор.</p>
+          <p style="margin-top: 1rem;" data-i18n="tech2_sec1_p2">Типичный сценарий: экипаж вышел в море, раздуло, свежо, а носовой люк оставили открытым для проветривания. На лавировке нижняя шкаторина генуи намертво цепляется за открытую крышку. Закрывают её в спешке, сильными рывками, когда внутрь каюты уже летят встречные брызги. За шесть лет таких издевательств расшатывается всё: геометрия петель, зажимы, прижимной уплотнитель. В дождливую погоду или на косой волне вода начинает капать прямо на спальные места носовой каюты, вызывая недоумение у экипажа. Ниже делюсь опытом, как мы вылечили эту системную болячку без вывода лодок из эксплуатации посреди сезона.</p>
+        </section>
+
+        <div class="featured-image-wrapper">
+          <img src="Люк.webp" alt="Lewmar Forward Deck Hatch Elan 45.1 Repair">
+        </div>
+
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec2_title">🩺 Диагностика: откуда течет на самом деле</h2>
+          <p data-i18n="tech2_sec2_p1">Первое правило — не спешить заказывать новый люк в сборе, это всегда успеется. Часто течет не само акриловое стекло и не треснувшая рамка, а вполне ремонтопригодные элементы. На наших Lewmar после детальной дефектовки трещин в алюминиевом профиле рамы не обнаружилось. Это сразу исключило худший сценарий. Путей для проникновения воды оставалось всего три:</p>
+          <ul class="tech-step-list">
+            <li data-i18n="tech2_diag_1"><strong>Уплотнитель по периметру:</strong> Резина со временем теряет эластичность, сохнет от соли или неплотно сидит в посадочном пазу.</li>
+            <li data-i18n="tech2_diag_2"><strong>Зажимы (ручки-задрайки):</strong> Критический узел. На моделях Low Profile тех лет они пластиковые. Эксцентрик со временем стачивается, и прижимной контакт ослабевает.</li>
+            <li data-i18n="tech2_diag_3"><strong>Шарниры петель:</strong> Микролюфт даже в 1–2 мм на корне петли не дает уплотнителю лечь ровно в носовой части рамы, куда и приходится основной удар встречной штормовой волны.</li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec3_title">🛠️ Быстрый ремонт «на коленке» посреди сезона</h2>
+          <p data-i18n="tech2_sec3_p1">Когда лодки расписаны по заездам на недели вперед, замена люка целиком — это финансовый срыв графиков. Наш экспресс-метод позволил вернуть герметичность и спокойно доходить до осеннего слота на верфи.</p>
+          
+          <h4 style="margin-top: 1rem; color: var(--deep-sea);" data-i18n="tech2_sub1">Восстановление прижима зажимов:</h4>
+          <p data-i18n="tech2_sub1_p">Снимите пластиковую ручку-задрайку с акриловой крышки (крепится на двух винтах). На основании пластика почти всегда видна выработка — канавка от трения о металлический «язычок» рамы. Нам нужно компенсировать этот износ. Вырежьте аккуратную подкладку из тонкого (0.5–1 мм) фторопласта или нержавейки по форме основания зажима. Установите её между зажимом и резиновой шайбой крышки. Это сместит эксцентрик ручки глубже внутрь и полностью вернет заводское усилие прижима. Закрываться люк должен плотно, но от руки, без экстремальных усилий колена.</p>
+
+          <h4 style="margin-top: 1rem; color: var(--deep-sea);" data-i18n="tech2_sub2">Переклейка уплотнителя:</h4>
+          <p data-i18n="tech2_sub2_p">Часто вода просачивается под саму резиновую ленту. Извлеките старый уплотнитель, тщательно зачистите паз в алюминиевом профиле рамы от соли и старого клея. Перед укладкой нового оригинального уплотнителя (артикул Lewmar ZSP25253 для Low Profile Size 70) аккуратно промажьте паз тонким слоем нейтрального силиконового герметика. Это на 100% исключит капиллярный подсос воды под резину.</p>
+
+          <h4 style="margin-top: 1rem; color: var(--deep-sea);" data-i18n="tech2_sub3">Устранение люфта петель:</h4>
+          <p data-i18n="tech2_sub3_p">Приоткройте люк и покачайте крышку вверх-вниз. Если чувствуется люфт в шарнирах — уплотнитель на носу не сожмется как надо. Используйте фирменный ремкомплект петель Lewmar (hinge repair kit). Выбивается фиксирующий штифт, извлекаются разбитые нейлоновые втулки, ставятся новые с добавлением тефлоновой смазки — и геометрия крышки восстановлена.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec4_title">🧱 Инженерная защита от «дурака»: краш-бар</h2>
+          <p data-i18n="tech2_sec4_p1">Лечить следствие проще, когда устранена коренная причина. Чтобы шкаторина генуи при поворотах оверштаг или фордевинд больше никогда не ломала открытую крышку, мы сварили и установили перед люком краш-бар (crash bar) — защитную дугу из полированной нержавеющей трубы AISI 316 диаметром 22 мм. Высота дуги над палубой делается на 20 мм выше максимального угла открытия крышки люка. Монтируется дуга строго на сквозные болты через палубу с усиленными подкладочными шайбами изнутри. Теперь косой удар стакселя принимает на себя стальная дуга, а люк остается в полной безопасности.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec5_title">📦 Стратегия на два систершипа: склад запчастей</h2>
+          <p data-i18n="tech2_sec5_p1">Имея две одинаковые лодки, мы сформировали единый аварийный комплект на базе, который ликвидирует простои за пару часов: пара пластиковых ручек-задраек, один ремкомплект шарниров петель и бухта оригинального уплотнителя. При первой же возможности на обеих яхтах пластиковые зажимы были заменены на опциональные металлические из нержавеющей стали от Lewmar. Да, они дороже, но стальной эксцентрик не изнашивается и держит прижим вечно.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech2_sec6_title">💎 Вывод</h2>
+          <p data-i18n="tech2_verdict">Течь носового люка в условиях интенсивного чартера — это не повод для паники или дорогостоящей замены узла целиком. Болячка является системной и полностью лечится точечным рефитом ручек, втулок петель и правильной посадкой резины на силикон. А установка защитного краш-бара навсегда закрывает этот вопрос, прощая экипажу любые ошибки в штормовом море.</p>
+        </section>
+
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid #b91c1c;">
+            <h3 data-i18n="tech2_side_title">Технический вердикт</h3>
+            <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="tech2_side_txt">Узел: Носовой люк Lewmar Low Profile (Elan 45.1). Причина течи: Износ зажимов и люфт петель из-за ударов шкаторины генуи. Решение: Установка фторопластовых прокладок под ручки, замена втулок петель и превентивный монтаж палубного краш-бара.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size Hatch Repair Picture">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Логика Лайтбокса
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelector('.featured-image-wrapper img').addEventListener('click', (e) => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = e.target.src;
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Языковые базы данных локализации
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        tech2_page_title: 'Технический яхтинг: Ремонт переднего люка Lewmar',
+        tech2_main_title: 'Передний люк в чартерной эксплуатации: как спасти Lewmar и нервы экипажа',
+        tech2_intro: 'Практическое руководство по борьбе с протечками носового люка на Elan 45.1. Пошаговая диагностика уплотнителей, устранение люфтов петель, регулировка пластиковых зажимов и превентивная инженерная защита.',
+        tech2_sec1_title: '⚓️ В двух словах: Проблема и контекст',
+        tech2_sec1_p1: 'Две мои Elan 45.1 Impression 2020 года прошли шесть сезонов активной работы в чартере. Обе лодки — систершипы, и болячки проявляются абсолютно одинаково. Самая дорогая и обидная — течь переднего люка. И дело тут вовсе не в качестве Lewmar, комплектующие у них отличные. Виной всему человеческий фактор.',
+        tech2_sec1_p2: 'Типичный сценарий: экипаж вышел в море, раздуло, свежо, а носовой люк оставили открытым для проветривания. На лавировке нижняя шкаторина генуи намертво цепляется за открытую крышку. Закрывают её в спешке, сильными рывками, когда внутрь каюты уже летят встречные брызги. За шесть лет таких издевательств расшатывается всё: геометрия петель, зажимы, прижимной уплотнитель. В дождливую погоду или на косой волне вода начинает капать прямо на спальные места носовой каюты, вызывая недоумение у экипажа. Ниже делюсь опытом, как мы вылечили эту системную болячку без вывода лодок из эксплуатации посреди сезона.',
+        tech2_sec2_title: '🩺 Диагностика: откуда течет на самом деле',
+        tech2_sec2_p1: 'Первое правило — не спешить заказывать новый люк в сборе, это всегда успеется. Часто течет не само акриловое стекло и не треснувшая рамка, а вполне ремонтопригодные элементы. На наших Lewmar после детальной дефектовки трещин в алюминиевом профиле рамы не обнаружилось. Это сразу исключило худший сценарий. Путей для проникновения воды оставалось всего три:',
+        tech2_diag_1: 'Уплотнитель по периметру: Резина со временем теряет эластичность, сохнет от соли или неплотно сидит в посадочном пазу.',
+        tech2_diag_2: 'Зажимы (ручки-задрайки): Критический узел. На моделях Low Profile тех лет они пластиковые. Эксцентрик со временем стачивается, и прижимной контакт ослабевает.',
+        tech2_diag_3: 'Шарниры петель: Микролюфт даже в 1–2 мм на корне петли не дает уплотнителю лечь ровно в носовой части рамы, куда и приходится основной удар встречной штормовой волны.',
+        tech2_sec3_title: '🛠️ Быстрый ремонт «на коленке» посреди сезона',
+        tech2_sec3_p1: 'Когда лодки расписаны по заездам на недели вперед, замена люка целиком — это финансовый срыв графиков. Наш экспресс-метод позволил вернуть герметичность и спокойно доходить до осеннего слота на верфи.',
+        tech2_sub1: 'Восстановление прижима зажимов:',
+        tech2_sub1_p: 'Снимите пластиковую ручку-задрайку с акриловой крышки (крепится на двух винтах). На основании пластика почти всегда видна выработка — канавка от трения о металлический «язычок» рамы. Нам нужно компенсировать этот износ. Вырежьте аккуратную подкладку из тонкого (0.5–1 мм) фторопласта или нержавейки по форме основания зажима. Установите её между зажимом и резиновой шайбой крышки. Это сместит эксцентрик ручки глубже внутрь и полностью вернет заводское усилие прижима. Закрываться люк должен плотно, но от руки, без экстремальных усилий колена.',
+        tech2_sub2: 'Переклейка уплотнителя:',
+        tech2_sub2_p: 'Часто вода просачивается под саму резиновую ленту. Извлеките старый уплотнитель, тщательно зачистите паз в алюминиевом профиле рамы от соли и старого клея. Перед укладкой нового оригинального уплотнителя (артикул Lewmar ZSP25253 для Low Profile Size 70) аккуратно промажьте паз тонким слоем нейтрального силиконового герметика. Это на 100% исключит капиллярный подсос воды под резину.',
+        tech2_sub3: 'Устранение люфта петель:',
+        tech2_sub3_p: 'Приоткройте люк и покачайте крышку вверх-вниз. Если чувствуется люфт в шарнирах — уплотнитель на носу не сожмется как надо. Используйте фирменный ремкомплект петель Lewmar (hinge repair kit). Выбивается фиксирующий штифт, извлекаются разбитые нейлоновые втулки, ставятся новые с добавлением тефлоновой смазки — и геометрия крышки восстановлена.',
+        tech2_sec4_title: '🧱 Инженерная защита от «дурака»: краш-бар',
+        tech2_sec4_p1: 'Лечить следствие проще, когда устранена коренная причина. Чтобы шкаторина генуи при поворотах оверштаг или фордевинд больше никогда не ломала открытую крышку, мы сварили и установили перед люком краш-бар (crash bar) — защитную дугу из полированной нержавеющей трубы AISI 316 диаметром 22 мм. Высота дуги над палубой делается на 20 мм выше максимального угла открытия крышки люка. Монтируется дуга строго на сквозные болты через палубу с усиленными подкладочными шайбами изнутри. Теперь косой удар стакселя принимает на себя стальная дуга, а люк остается в полной безопасности.',
+        tech2_sec5_title: '📦 Стратегия на два систершипа: склад запчастей',
+        tech2_sec5_p1: 'Имея две одинаковые лодки, мы сформировали единый аварийный комплект на базе, который ликвидирует простои за пару часов: пара пластиковых ручек-задраек, один ремкомплект шарниров петель и бухта оригинального уплотнителя. При первой же возможности на обеих яхтах пластиковые зажимы были заменены на опциональные металлические из нержавеющей стали от Lewmar. Да, они дороже, но стальной эксцентрик не изнашивается и держит прижим вечно.',
+        tech2_sec6_title: '💎 Вывод',
+        tech2_verdict: 'Течь носового люка в условиях интенсивного чартера — это не повод для паники или дорогостоящей замены узла целиком. Болячка является системной и полностью лечится точечным рефитом ручек, втулок петель и правильной посадкой резины на силикон. А установка защитного краш-бара навсегда закрывает этот вопрос, прощая экипажу любые ошибки в штормовом море.',
+        tech2_side_title: 'Технический вердикт',
+        tech2_side_txt: 'Узел: Носовой люк Lewmar Low Profile (Elan 45.1). Причина течи: Износ зажимов и люфт петель из-за ударов шкаторины генуи. Решение: Установка фторопластовых прокладок под ручки, замена втулок петель и превентивный монтаж палубного краш-бара.',
+        unit_m: 'м', unit_kg: 'кг', unit_hp: 'л.с.', unit_l: 'л', unit_pers: 'чел', cat_ocean: 'A — Ocean',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        tech2_page_title: 'Technical Rigging: Lewmar Forward Hatch Repair',
+        tech2_main_title: 'Forward Deck Hatch in Charter Operations: Saving Lewmar and Crew Sanity',
+        tech2_intro: 'A practical guide to curing forward hatch leaks on the Elan 45.1. Step-by-step gasket diagnostics, hinge play elimination, plastic latch adjustments, and preventative engineering protection.',
+        tech2_sec1_title: '⚓️ In a Nutshell: Context & Issue',
+        tech2_sec1_p1: 'My two 2020 Elan 45.1 Impression units have logged six rigorous seasons in active charter fleets. Being sisterships, technical problems replicate identically. The most frustrating issue is water tracking via the forward deck hatch. This is not due to Lewmar component layout quality, which is robust, but sheer human error.',
+        tech2_sec1_p2: 'The typical scenario: the crew heads offshore, the wind freshens, head seas build, yet the bow hatch is left flipped open for interior ventilation. During tacking maneuvers, the genoa foot lines aggressively snag the open plexiglass lid. It gets slammed shut under sudden pressure when spray is already pounding the cabin. Over six years, this structural stress degrades everything: hinge frames, compression alignment, and rubber profiles. Water tracks right into the forward berth. Here is how we resolved this recurring system failure without canceling charter blocks mid-season.',
+        tech2_sec2_title: '🩺 Diagnostics: Tracking the Real Source',
+        tech2_sec2_p1: 'The primary rule is to avoid immediately ordering an entire hatch replacement kit. Most often, the failure lies not within the acrylic pane or cracked cast frames, but repairable sub-assemblies. Defect tracing across our Lewmar hatches showed zero fractures in the perimeter aluminum profile. This eliminated the worst-case refit cost. Water could only bypass along three specific points:',
+        tech2_diag_1: 'Perimeter Seals: The rubber profile loses elasticity over time, breaking down from salt crystals or shifting away from its seating channel groove.',
+        tech2_diag_2: 'Locking Latches (Handles): The critical stress node. On Low Profile series of that era, these are plastic. The internal eccentric cam wears down, weakening seal compression.',
+        tech2_diag_3: 'Hinge Pins: Micro-play of just 1–2 mm at the hinge base prevents uniform gasket seating at the forward frame radius, right where head seas impact hardest.',
+        tech2_sec3_title: '🛠️ Quick Field Repairs Mid-Season',
+        tech2_sec3_p1: 'When vessels are fully booked for consecutive charter runs, pulling a boat out for fiberglass yard work means financial cancellation. Our field methods successfully restored structural tightness to see out the season.',
+        tech2_sub1: 'Restoring Latch Cam Compression:',
+        tech2_sub1_p: 'Unbolt the plastic handle assembly from the acrylic cover frame (secured by two screws). A deep wear track is typically visible on the plastic interface where it rubs the aluminum frame lip. We must offset this material loss. Cut a precise shim out of thin (0.5–1 mm) PTFE (Teflon) or stainless steel stock matching the handle base footprint. Fit it beneath the latch block against the acrylic washer. This shifts the handle mechanism deeper, fully restoring factory compression depth. The latch should close firmly under hand pressure without requiring assistance from your knee.',
+        tech2_sub2: 'Re-sealing the Gasket Channel:',
+        tech2_sub2_p: 'Water frequently tracks beneath the rubber seal strip itself. Pull the old gasket out, entirely scraping the aluminum seating channel clean of salt scale and deteriorated adhesives. Before fitting the new original profile (Lewmar part ZSP25253 for Low Profile Size 70), coat the channel groove with a bead of neutral cure marine silicone. This prevents capillary tracking under the rubber rubber.',
+        tech2_sub3: 'Eliminating Hinge Frame Play:',
+        tech2_sub3_p: 'Crack the hatch open and rock the lid vertically. If play is detected in the hinge blocks, the forward seal boundary cannot seat squarely. Use an authentic Lewmar hinge repair kit. Drive out the locking pins, pull the worn nylon bushings, and press new sleeves in coated with Teflon marine grease to restore precise hinge alignment.',
+        tech2_sec4_title: '🧱 Engineering Protection: The Crash Bar',
+        tech2_sec4_p1: 'Mitigating wear is straightforward once you isolate the structural root cause. To stop overlapping genoa canvas sheets from ripping the open hatch frame apart during gybes or tacks, we welded a deck crash bar. Fabricated from 22 mm polished AISI 316 stainless steel tubing, the guard arch stands 20 mm higher than the hatch lid at its maximum open angle. Mount the frame strictly via through-bolts backed by substantial stainless backing washers under the deck core. Now, lines impact the steel arch, leaving the hatch frame isolated and secure.',
+        tech2_sec5_title: '📦 Fleet Strategy: Emergency Spare Parts',
+        tech2_sec5_p1: 'Operating identical sisterships allowed us to stock a common emergency parts kit at the base, dropping downtime to a couple of hours: a pair of spare latches, a hinge pin sleeve set, and a roll of raw gasket profile. At the first yard refit window, we replaced all plastic handles with optional stainless steel handle upgrades from Lewmar. They carry higher costs but eliminate eccentric wear permanently.',
+        tech2_sec6_title: '💎 Verdict',
+        tech2_verdict: 'A leaking forward deck hatch under intense charter operations is no reason to scrap the entire frame or spend thousands on new assemblies. The issue is a systematic breakdown easily corrected by targeted handle shimming, bushing updates, and clean silicone bedding. Installing a preventative crash bar solves this interface issue long-term, forgiving crew error in rough conditions.',
+        tech2_side_title: 'Technical Verdict',
+        tech2_side_txt: 'Component: Lewmar Low Profile Forward Hatch (Elan 45.1). Leaking Cause: Latch cam wear and hinge sleeve play induced by genoa sheet impact forces. Remedy: PTFE handle shimming, nylon bushing replacement, and preventative deck crash bar installation.',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'hp', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Ocean',
+        footer_yt: 'YouTube Channel', footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        tech2_page_title: 'Rigging Técnico: Reparación de Escotilla Lewmar',
+        tech2_main_title: 'La Escotilla de Proa en Operación de Chárter: Cómo salvar a Lewmar y la cordura de la tripulación',
+        tech2_intro: 'Manual práctico para solucionar filtraciones de la escotilla de proa en el Elan 45.1. Diagnóstico de juntas, eliminación de holguras en bisagras, ajuste de cierres plásticos y protección preventiva.',
+        tech2_sec1_title: '⚓️ En pocas palabras: Contexto y Problema',
+        tech2_sec1_p1: 'Mis dos unidades Elan 45.1 Impression del año 2020 han completado seis duras temporadas de chárter activo. Al ser barcos gemelos, los fallos técnicos se repiten de forma idéntica. El problema más molesto es la entrada de agua por la escotilla de proa; un fallo que no se debe a la calidad estructural de Lewmar, sino puramente al factor humano.',
+        tech2_sec1_p2: 'El escenario clásico: la tripulación navega en ceñida, el viento refresca, hay mar de proa, pero dejan la escotilla abierta para ventilar el interior. Al virar, el pujamen del génova se engancha con violencia en la tapa de metacrilato. La tripulación la cierra a la fuerza y de forma apresurada cuando los rociones ya inundan el camarote. Tras seis años de este trato, todo cede: la geometría de las bisagras, los cierres y la junta de goma. El agua empieza a gotear sobre las camas de proa. Aquí explico cómo solucionamos este problema recurrente sin retirar los barcos de la temporada.',
+        tech2_sec2_title: '🩺 Diagnóstico: Localizando el origen real',
+        tech2_sec2_p1: 'La regla de oro es no apresurarse a pedir una escotilla nueva completa; siempre habrá tiempo para eso. A menudo, la filtración no proviene del acrílico ni de un marco de aluminio agrietado, sino de componentes reparables. Tras desmontar nuestros Lewmar Low Profile, no hallamos fisuras estructurales en el metal. Esto descartó el peor escenario, reduciendo las vías de agua a tres puntos críticos:',
+        tech2_diag_1: 'Junta perimetral: Con el tiempo, la goma pierde elasticidad, se reseca por la sal o se desplaza de su canal de asiento.',
+        tech2_diag_2: 'Cierres (manetas de presión): Un nodo de estrés crítico. En los modelos de esos años, son de plástico. La leva excéntrica se desgasta, debilitando la presión de la junta.',
+        tech2_diag_3: 'Ejes de las bisagras: Una holgura microscópica de solo 1–2 mm en la base de la bisagra impide que la goma asiente de forma uniforme en la sección de proa, donde impacta la ola con más fuerza.',
+        tech2_sec3_title: '🛠️ Reparaciones rápidas en plena temporada',
+        tech2_sec3_p1: 'Con los barcos reservados semana tras semana, un cambio de escotilla completo implica cancelaciones costosas. Nuestro método de emergencia permitió recuperar la estanqueidad para terminar la temporada sin pasar por el astillero.',
+        tech2_sub1: 'Recuperación de la presión de la maneta:',
+        tech2_sub1_p: 'Desmonte la maneta plástica de la tapa de metacrilato (fijada por dos tornillos). En la base del plástico siempre se aprecia un surco de desgaste debido al roce con el marco de aluminio. Para compensar esta pérdida de material, corte una arandela a medida de teflón (PTFE) o acero inoxidable fino (0.5–1 mm) que replique la base del cierre. Instálela entre la maneta y la junta de goma del acrílico. Esto desplazará el mecanismo excéntrico hacia el interior, recuperando toda la fuerza de compresión de fábrica. La escotilla debe cerrar con firmeza a mano, sin obligar a presionar con la rodilla.',
+        tech2_sub2: 'Sellado del canal de la junta:',
+        tech2_sub2_p: 'A menudo, el agua se filtra por debajo de la propia tira de goma. Extraiga la junta vieja y limpie por completo el canal de aluminio de incrustaciones salinas y adhesivos viejos. Antes de colocar el perfil nuevo (repuesto original Lewmar ZSP25253 para Low Profile Tamaño 70), aplique un cordón fino de silicona marina neutra en el fondo del canal. Esto evita filtraciones capilares bajo la goma.',
+        tech2_sub3: 'Eliminación de holguras en bisagras:',
+        tech2_sub3_p: 'Abra la escotilla y mueva la tapa verticalmente. Si nota juego en los soportes, la sección delantera no sellará escuadra. Utilice un kit de reparación de bisagras Lewmar original. Extraiga los pasadores, retire los casquillos de nylon desgastados y monte los casquillos nuevos aplicando grasa marina de teflón para recuperar la alineación.',
+        tech2_sec4_title: '🧱 Protección de ingeniería: El Crash Bar',
+        tech2_sec4_p1: 'Solucionar el desgaste es fácil si elimina la causa raíz. Para evitar que las escotas y el tejido del génova vuelvan a destrozar la tapa abierta al virar o trasluchar, instalamos un crash bar en cubierta. Fabricado en tubo de acero inoxidable pulido AISI 316 de 22 mm, este arco de protección se eleva 20 mm por encima de la tapa en su ángulo máximo de apertura. Se monta fijado rígidamente mediante pernos pasantes reforzados con arandelas de ala ancha por el interior del contramolde. Ahora, los golpes de la vela impactan en el arco de acero, manteniendo la escotilla a salvo.',
+        tech2_sec5_title: '📦 Estrategia de flota: Repuestos de emergencia',
+        tech2_sec5_p1: 'Al operar barcos gemelos idénticos, unificamos un kit de repuestos en la base que soluciona el problema en un par de horas: un juego de manetas plásticas, casquillos de bisagras y un rollo de junta original. En la siguiente varada de mantenimiento general, sustituimos todos los cierres plásticos por las manetas de acero inoxidable opcionales de Lewmar. Tienen un coste superior, pero la leva de metal no sufre desgaste y mantiene la estanqueidad de por vida.',
+        tech2_sec6_title: '💎 Veredicto',
+        tech2_verdict: 'Una filtración en la escotilla de proa bajo uso intensivo de chárter не es motivo para sustituir todo el marco ni realizar reparaciones de miles de euros. El fallo es sistémico y se corrige ajustando la presión de las manetas, renovando casquillos y asentando la junta con silicona. La instalación de un crash bar de protección soluciona este problema a largo plazo, tolerando los descuidos de la tripulación en condiciones duras.',
+        tech2_side_title: 'Veredicto Técnico',
+        tech2_side_txt: 'Componente: Escotilla de proa Lewmar Low Profile (Elan 45.1). Causa de filtración: Desgaste en leva de maneta y juego en casquillos de bisagra por impacto del pujamen del génova. Solución: Suplemento de maneta con PTFE, cambio de casquillos de nylon e instalación de arco protector (crash bar) en cubierta.',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'cv', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Océano',
+        footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
