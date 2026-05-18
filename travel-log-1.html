@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Стиль для видеоплееров в журнальной верстке */
     .video-container {
       width: 100%;
       max-width: 640px;
@@ -36,7 +35,6 @@
       font-size: 0.95rem;
       color: var(--text);
     }
-    /* Акцентная линия у заголовков разделов, как в техническом модуле */
     .case-section h2 {
       border-left: 3px solid var(--accent);
       padding-left: 12px;
@@ -134,12 +132,10 @@
             <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch6_quote">«В общем дошли-то нормально. Но чуть не потеряли вот этот документ. Он правда нашелся... Но осадочек остался. Чего вы ржете? Осадочек! Спасите четверых товарищей...»</span>
           </div>
         </section>
-
       </div>
 
       <div class="case-content-right">
         <div class="sticky-sidebar">
-          
           <div class="sidebar-block" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
             <h3 data-i18n="log1_side_title">Шкиперский разбор (Debriefing)</h3>
             <p style="font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 0;" data-i18n="log1_side_txt">«В море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов.»</p>
@@ -149,12 +145,11 @@
             <h3 data-i18n="log1_spec_title">Спецификация похода</h3>
             <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">
               <strong data-i18n="spec_year">Год:</strong> 2021<br>
-              <strong data-i18n="spec_team">Наставник:</strong> В. Елагин<br>
-              <strong data-i18n="spec_cond">Условия:</strong> Штормовое предупреждение<br>
-              <strong data-i18n="spec_status">Акватория:</strong> Стрелецкая бухта
+              <strong data-i18n="spec_team">Наставник:</strong> <span data-i18n="spec_val_mentor">В. Елагин</span><br>
+              <strong data-i18n="spec_cond">Условия:</strong> <span data-i18n="spec_val_cond">Штормовое предупреждение</span><br>
+              <strong data-i18n="spec_status">Акватория:</strong> <span data-i18n="spec_val_loc">Стрелецкая бухта</span>
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -199,6 +194,7 @@
         log1_side_txt: '«В море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов.»',
         log1_spec_title: 'Спецификация похода',
         spec_year: 'Год:', spec_team: 'Наставник:', spec_cond: 'Условия:', spec_status: 'Акватория:',
+        spec_val_mentor: 'В. Елагин', spec_val_cond: 'Штормовое предупреждение', spec_val_loc: 'Стрелецкая бухта',
         footer_yt: 'YouTube-канал', footer_top: 'Наверх'
       },
       en: {
@@ -228,6 +224,7 @@
         log1_side_txt: '"At sea, you can only rely on the person right next to you. Just as that person relies entirely on you. No options around it."',
         log1_spec_title: 'Voyage Specifications',
         spec_year: 'Year:', spec_team: 'Mentor:', spec_cond: 'Conditions:', spec_status: 'Location:',
+        spec_val_mentor: 'V. Elagin', spec_val_cond: 'Storm Warning', spec_val_loc: 'Streletskaya Bay',
         footer_yt: 'YouTube Channel', footer_top: 'Top'
       },
       es: {
@@ -238,25 +235,26 @@
         ch1_title: '1. Preparativos de Salida y Captura de Entorno',
         ch1_desc: 'El momento exacto del reinicio tras un largo letargo en tierra. El primer encuentro con mi futuro mentor, gran amigo y leyenda del mundo de la vela: Vitaliy Elagin.',
         quote_label: 'Cuaderno de Bitácora:',
-        ch1_quote: '"Bueno, este soy yo, listo para zarpar... Voy a registrar la situación actual y nos ponen en marcha."',
+        ch1_quote: '"Bueno, este soy yo, listo para zarpar... Voy a registrar la situación actual y nos ponemos en marcha."',
         ch2_title: '2. Alerta de Temporal Repentina',
         ch2_desc: 'El mar pone a prueba de inmediato a quienes cruzan la bocana. Justo al pasar el espigón, los servicios emitieron un aviso por tormenta. El oleaje crece, revisamos arneses.',
         ch2_quote: '"¡Apenas salimos y ya dieron aviso de temporal! ¡Atención, sujétense con cuidado todos! En realidad, el panorama está... bastante feo, para ser sinceros. Bueno, al menos ha sido un buen entrenamiento."',
-        ch3_title: '3. Compañeros de Rumbo en Mar Abierto',
+        ch3_title: '3. Companeros de Rumbo en Mar Abierto',
         ch3_desc: 'Un breve respiro entre las crestas. Una manada de delfines intercepta nuestro rumbo, jugando a surfear la ola de proa directamente bajo el botalón durante un largo tramo.',
         ch4_title: '4. Aproximación a la Bahía de Streletskaya',
-        ch4_desc: 'El temporal arrecia y nubes bajas de tormenta cubren el cielo. Avanzamos contra la ola buscando el refugio de la bahía. Observamos a los pescadores locales en botes expuestos.',
+        ch4_desc: 'El temporal arrecia и nubes bajas de tormenta cubren el cielo. Avanzamos contra la ola buscando el refugio de la bahía. Observamos a los pescadores locales en botes expuestos.',
         ch4_quote: '"Nos acercamos a la bahía de Streletskaya. Miren a los pescadores aquí... gente realmente heroica para estar fuera con este clima..."',
         ch5_title: '5. Atraque de Costado Crítico con Viento de Través',
-        ch5_desc: 'Un examen puro de pericia al timón. Aproximación al muelle de costado (abarloado). Rachas fuertes golpean la banda, empujando el casco de 12 toneladas contra el hormigón. Coordinación milimétrica.',
+        ch5_desc: 'Un examen puro de pericia al timón. Approximación al muelle de costado (abarloado). Rachas fuertes golpean la banda, empujando el casco de 12 toneladas contra el hormigón. Coordinación milimétrica.',
         ch5_quote: '"Vamos a amarrar de costado. El viento es completamente racheado hacia el muelle... ¡Distancia! ¡Distancia! ¡Cinco!... ¡Tres!... ¡Atento a la línea de proa!"',
-        ch6_title: '6. Debriefing Nocturno en el Salón y "El Regusto"',
+        ch6_title: '6. Debriefing Nocturno en el Salón и "El Regusto"',
         ch6_desc: 'Cabos firmes, el yate está a salvo. Análisis de la jornada en la calidez de la cabina con humor marinero. Casi perdemos un documento crucial del barco, pero todo acabó bien.',
         ch6_quote: '"En general, la travesía fue bien. Pero casi perdemos este documento de aquí. Apareció al final... pero queda un cierto regusto. ¿De qué se ríen? ¡Un regusto! Vayan a salvar a cuatro camarotas cuya quilla..."',
         log1_side_title: 'Análisis del Patrón (Debriefing)',
         log1_side_txt: '"En el mar solo puedes confiar en la persona que está a tu lado. De la misma manera que ella confía plenamente en ti. No hay más opciones."',
         log1_spec_title: 'Especificaciones del Viaje',
         spec_year: 'Año:', spec_team: 'Mentor:', spec_cond: 'Condiciones:', spec_status: 'Localización:',
+        spec_val_mentor: 'V. Elagin', spec_val_cond: 'Alerta de temporal', spec_val_loc: 'Bahía de Streletskaya',
         footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
       }
     };
