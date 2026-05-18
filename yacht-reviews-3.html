@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yacht Review: Beneteau Oceanis 46.1 — Adventure Horizons" />
+  <title data-i18n="rev3_page_title">Обзор яхты: Beneteau Oceanis 46.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Интерактивная галерея обзора */
+    .review-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-img-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+      aspect-ratio: 16 / 10;
+    }
+    .gallery-img-wrapper:hover {
+      transform: scale(1.03);
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Модальное окно лайтбокса */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    /* Список характеристик без использования таблиц */
+    .specs-list {
+      margin-top: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .specs-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .specs-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #daf4ff; color: #006a8f;">Yacht Review #3</span>
+      <h1 data-i18n="rev3_main_title">Честный тест-драйв Beneteau Oceanis 46.1: Французский шарм и гоночные гены</h1>
+      <p class="case-intro" data-i18n="rev3_intro">Детальный разбор сильных и слабых сторон «Европейской яхты 2019 года». Взгляд инженера на качество сборки Finot-Conq, итальянский стиль Nauta Design и реальные чартерные болячки.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <section class="case-section">
+          <h2 data-i18n="rev3_sec1_title">⚓️ В двух словах: кто есть кто</h2>
+          <p data-i18n="rev3_sec1_p1">Beneteau Oceanis 46 (2017–2020) — это 46-футовая (14.4 м) крейсерская яхта, ставшая прямым наследником сверхуспешной модели Oceanis 45. Этот период интересен тем, что в 2018 году модель сменила поколение, превратившись в революционную Oceanis 46.1, которая в том же году получила престижную награду «European Yacht of the Year» в категории «Семейный круизёр».</p>
+          <p data-i18n="rev3_sec1_p2" style="margin-top: 1rem;">В отличие от Bavaria, ориентированной на чартерную прагматичность, и Elan с его трепетным отношением к традиционному управлению парусами, француз сделал ставку на то, чтобы объединить необъединимое: гоночный характер и комфорт полноценного плавучего дома. За корпус отвечало легендарное бюро Finot-Conq, а за интерьер — итальянское ателье Nauta Design. Результат — одна из самых продаваемых лодок в своём классе и настоящий хит вторичного рынка.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev3_tab_title">📊 Технические характеристики</h2>
+          <div class="specs-list">
+            <div class="specs-row"><strong data-i18n="tab_loa">Длина (LOA)</strong><span style="color: var(--text);">14.60 м (47'11")</span></div>
+            <div class="specs-row"><strong data-i18n="tab_beam">Ширина</strong><span style="color: var(--text);">4.50 м</span></div>
+            <div class="specs-row"><strong data-i18n="tab_draft">Осадка (ст/глубокая)</strong><span style="color: var(--text);">2.10 м / 2.35 м</span></div>
+            <div class="specs-row"><strong data-i18n="tab_disp">Водоизмещение</strong><span style="color: var(--text);">10 597 кг</span></div>
+            <div class="specs-row"><strong data-i18n="tab_eng">Двигатель</strong><span style="color: var(--text);">Yanmar 57 л.с. / 80 л.с.</span></div>
+            <div class="specs-row"><strong data-i18n="tab_cat">Категория CE</strong><span style="color: var(--text);">A — Ocean</span></div>
+            <div class="specs-row"><strong data-i18n="tab_cab">Каюты</strong><span style="color: var(--text);">от 3 до 5</span></div>
+            <div class="specs-row"><strong data-i18n="tab_tanks">Баки (вода/топливо)</strong><span style="color: var(--text);">370 л / 200 л</span></div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev3_gal_title">📸 Фотохроника и интерьер</h2>
+          <div class="review-gallery">
+            <div class="gallery-img-wrapper"><img src="oceanis_3.jpg" alt="Beneteau Oceanis 46 Exterior Under Sail"></div>
+            <div class="gallery-img-wrapper"><img src="oceanis_1.jpg" alt="Beneteau Oceanis 46 Interior Saloon"></div>
+            <div class="gallery-img-wrapper"><img src="oceanis_2.jpg" alt="Beneteau Oceanis 46 Cockpit Layout"></div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev3_sec2_title">👍 Сильные стороны: за что мы ценим Oceanis 46</h2>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev3_h_sail">Ходовые качества и управляемость:</strong> <span data-i18n="rev3_p_sail">Это не просто «крейсер», а настоящий **Performance Cruiser**. Finot-Conq создали корпус с характерными «скулами» (ступенчатый корпус) и широкой кормой, что обеспечивает невероятную остойчивость формы. Яхта отлично держит курс, оставаясь сбалансированной и отзывчивой на порывы. На галфвинде при 10–15 узлах она уверенно держит **6.5–7.5 узлов** и способна разгоняться до **9+ узлов** на порывах.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev3_h_comf">Интерьер и жилое пространство:</strong> <span data-i18n="rev3_p_comf">Интерьер, разработанный итальянским ателье Nauta Design, кардинально отличается от спартанских Bavaria или традиционных Elan. Огромные панорамные окна по бортам («picture windows») наполняют салон дневным светом. Владельческая каюта в носу предлагает полноценный островной блок и раздельный санузел. Узлы и механизмы (например, закрутка грота в мачте) продуманы так, чтобы вы тратили время на отдых, а не на возню с парусами.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev3_h_build">Конструкция и эргономика:</strong> <span data-i18n="rev3_p_build">Корпус изготавливается из стеклопластика со структурной сеткой внутри для жёсткости. Управление вынесено на посты рулевого: все шкоты и фалы заведены на лебёдки у штурвалов. Электрическая открывающаяся транцевая платформа превращает корму в просторную террасу, идеальную для выходов в море.</span></p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev3_sec3_title">👎 Слабые стороны и болевые точки</h2>
+          <ul>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev3_bad1_h">⚠️ Проблемы рулевого:</strong> <span data-i18n="rev3_bad1_p">Известны проблемы с перьями руля и румпельным устройством, особенно при интенсивной чартерной эксплуатации.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev3_bad2_h">⚠️ Фурнитура и электроника:</strong> <span data-i18n="rev3_bad2_p">Мелкая фурнитура (защёлки, замки) выходит из строя довольно быстро. Встречаются жалобы на неисправные индикаторы на панели управления и некорректную заводскую разводку. Подруливающее устройство — необходимость.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev3_bad3_h">⚠️ Чартерная усталость:</strong> <span data-i18n="rev3_bad3_p">Яхты из аренды часто имеют изношенную обивку, подтекающие краны и неработающие холодильники.</span></li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev3_sec4_title">💎 Вердикт</h2>
+          <p data-i18n="rev3_verdict">Beneteau Oceanis 46.1 — это «идеальный шторм» на рынке круизных яхт. Она создана для тех, кто не готов выбирать между скоростью и комфортом, попытка создать «спорткар для всей семьи». Если вы планируете частые выходы в море с семьёй, но при этом хотите лихо обходить соперников на любительских регатах — ваш выбор очевиден.</p>
+          <p style="margin-top: 1rem; font-style: italic;" data-i18n="rev3_ps">PS: При осмотре ищите версию **«First Line»** с более мощным вооружением и глубоким килем. Эта яхта остаётся одной из самых желанных на вторичном рынке — приходится платить премию.</p>
+        </section>
+
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid var(--accent);">
+            <h3 data-i18n="rev3_side_title">Бортовой вердикт</h3>
+            <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="rev3_side_txt">«Спорткар для всей семьи». Идеальный баланс гоночного корпуса Finot-Conq, панорамных окон Nauta Design и океанского комфорта CE A.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size Review Picture">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Логика Лайтбокса
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.review-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Языковые базы данных
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        rev3_page_title: 'Обзор яхты: Beneteau Oceanis 46.1',
+        rev3_main_title: 'Честный тест-драйв Beneteau Oceanis 46.1: Французский шарм и гоночные гены',
+        rev3_intro: 'Детальный разбор сильных и слабых сторон «Европейской яхты 2019 года». Взгляд инженера на качество сборки Finot-Conq, итальянский стиль Nauta Design и реальные чартерные болячки.',
+        rev3_sec1_title: '⚓️ В двух словах: кто есть кто',
+        rev3_sec1_p1: 'Beneteau Oceanis 46 (2017–2020) — это 46-футовая (14.4 м) крейсерская яхта, ставшая прямым наследником сверхуспешной модели Oceanis 45. Этот период интересен тем, что в 2018 году модель сменила поколение, превратившись в революционную Oceanis 46.1, которая в том же году получила престижную награду «European Yacht of the Year» в категории «Семейный круизёр».',
+        rev3_sec1_p2: 'В отличие от Bavaria, ориентированной на чартерную прагматичность, и Elan с его трепетным отношением к традиционному управлению парусами, француз сделал ставку на то, чтобы объединить необъединимое: гоночный характер и комфорт полноценного плавучего дома. За корпус отвечало легендарное бюро Finot-Conq, а за интерьер — итальянское ателье Nauta Design. Результат — одна из самых продаваемых лодок в своём классе и настоящий хит вторичного рынка.',
+        rev3_tab_title: '📊 Технические характеристики',
+        tab_loa: 'Длина (LOA)', tab_beam: 'Ширина', tab_draft: 'Осадка (ст/глубокая)', tab_disp: 'Водоизмещение', tab_eng: 'Двигатель', tab_cat: 'Категория CE', tab_cab: 'Каюты', tab_tanks: 'Баки (вода/топливо)',
+        rev3_gal_title: '📸 Фотохроника и интерьер',
+        rev3_sec2_title: '👍 Сильные стороны: за что мы ценим Oceanis 46',
+        rev3_h_sail: 'Ходовые качества и управляемость:',
+        rev3_p_sail: 'Это не просто «крейсер», а настоящий **Performance Cruiser**. Finot-Conq создали корпус с характерными «скулами» (ступенчатый корпус) и широкой кормой, что обеспечивает невероятную остойчивость формы. Яхта отлично держит курс, оставаясь сбалансированной и отзывчивой на порывы. На галфвинде при 10–15 узлах она уверенно держит **6.5–7.5 узлов** и способна разгоняться до **9+ узлов** на порывах.',
+        rev3_h_comf: 'Интерьер и жилое пространство:',
+        rev3_p_comf: 'Интерьер, разработанный итальянским ателье Nauta Design, кардинально отличается от спартанских Bavaria или традиционных Elan. Огромные панорамные окна по бортам («picture windows») наполняют салон дневным светом. Владельческая каюта в носу предлагает полноценный островной блок и раздельный санузел. Узлы и механизмы (например, закрутка грота в мачте) продуманы так, чтобы вы тратили время на отдых, а не на возню с парусами.',
+        rev3_h_build: 'Конструкция и эргономика:',
+        rev3_p_build: 'Корпус изготавливается из стеклопластика со структурной сеткой внутри для жёсткости. Управление вынесено на посты рулевого: все шкоты и фалы заведены на лебёдки у штурвалов. Электрическая открывающаяся транцевая платформа превращает корму в просторную террасу, идеальную для выходов в море.',
+        rev3_sec3_title: '👎 Слабые стороны и болевые точки',
+        rev3_bad1_h: '⚠️ Проблемы рулевого:',
+        rev3_bad1_p: 'Известны проблемы с перьями руля и румпельным устройством, особенно при интенсивной чартерной эксплуатации.',
+        rev3_bad2_h: '⚠️ Фурнитура и электроника:',
+        rev3_bad2_p: 'Мелкая фурнитура (защёлки, замки) выходит из строя довольно быстро. Встречаются жалобы на неисправные индикаторы на панели управления и некорректную заводскую разводку. Подруливающее устройство — необходимость.',
+        rev3_bad3_h: '⚠️ Чартерная усталость:',
+        rev3_bad3_p: 'Яхты из аренды часто имеют изношенную обивку, подтекающие краны и неработающие холодильники.',
+        rev3_sec4_title: '💎 Вердикт',
+        rev3_verdict: 'Beneteau Oceanis 46.1 — это «идеальный шторм» на рынке круизных яхт. Она создана для тех, кто не готов выбирать между скоростью и комфортом, попытка создать «спорткар для всей семьи». Если вы планируете частые выходы в море с семьёй, но при этом хотите лихо обходить соперников на любительских регатах — ваш выбор очевиден.',
+        rev3_ps: 'PS: При осмотре ищите версию **«First Line»** с более мощным вооружением и глубоким килем. Эта яхта остаётся одной из самых желанных на вторичном рынке — приходится платить премию.',
+        rev3_side_title: 'Бортовой вердикт',
+        rev3_side_txt: '«Спорткар для всей семьи». Идеальный баланс гоночного корпуса Finot-Conq, панорамных окон Nauta Design и океанского комфорта CE A.',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        rev3_page_title: 'Yacht Review: Beneteau Oceanis 46.1',
+        rev3_main_title: 'Beneteau Oceanis 46.1 Honest Test Drive: French Charm & Racing Genes',
+        rev3_intro: 'A detailed breakdown of the pros and cons of the "2019 European Yacht of the Year". An engineer\'s look at Finot-Conq build quality, Nauta Design Italian style, and real-world charter issues.',
+        rev3_sec1_title: '⚓️ In a Nutshell: Who is Who',
+        rev3_sec1_p1: 'The Beneteau Oceanis 46 (2017–2020) is a 46-foot (14.4 m) cruising yacht that became the direct heir to the highly successful Oceanis 45. This period is interesting because in 2018 the model changed generations, turning into the revolutionary Oceanis 46.1, which in the same year received the prestigious "European Yacht of the Year" award in the "Family Cruiser" category.',
+        rev3_sec1_p2: 'Unlike Bavaria, which focuses on charter pragmatism, and Elan, with its reverence for traditional sail handling, the Frenchman gambled on combining the uncombinable: a racing character and the comfort of a full-fledged floating home. The legendary Finot-Conq bureau was responsible for the hull, while the interior was handled by the Italian studio Nauta Design. The result is one of the best-selling boats in its class and a real hit on the secondary market.',
+        rev3_tab_title: '📊 Technical Specifications',
+        tab_loa: 'Length (LOA)', tab_beam: 'Beam', tab_draft: 'Draft (std/deep)', tab_disp: 'Displacement', tab_eng: 'Engine', tab_cat: 'CE Category', tab_cab: 'Cabins', tab_tanks: 'Tanks (water/fuel)',
+        rev3_gal_title: '📸 Photo Log & Interior',
+        rev3_sec2_title: '👍 Strengths: What We Value in Oceanis 46',
+        rev3_h_sail: 'Sailing Performance & Handling:',
+        rev3_p_sail: 'This is not just a "cruiser", but a real **Performance Cruiser**. Finot-Conq created a hull with characteristic "chines" (stepped hull) and a wide stern, which provides incredible initial stability. The yacht holds her course perfectly, remaining balanced and responsive to gusts. On a beam reach in 10–15 knots, she confidently holds **6.5–7.5 knots** and is capable of accelerating to **9+ knots** in gusts.',
+        rev3_h_comf: 'Interior & Living Space:',
+        rev3_p_comf: 'The interior, developed by the Italian studio Nauta Design, is radically different from the spartan Bavarias or traditional Elans. Huge panoramic windows along the sides ("picture windows") fill the saloon with daylight. The owner\'s cabin in the bow offers a proper island berth and a separate head and shower. Units and mechanisms (for example, furling mainsail in the mast) are designed so that you spend time resting, not fussing with sails.',
+        rev3_h_build: 'Construction & Ergonomics:',
+        rev3_p_build: 'The hull is made of fiberglass with a structural grid inside for rigidity. Control is carried out to the helm stations: all sheets and halyards are led to winches at the wheels. An electric opening transom platform turns the stern into a spacious terrace, perfect for going out to sea.',
+        rev3_sec3_title: '👎 Weaknesses & Pain Points',
+        rev3_bad1_h: '⚠️ Steering Issues:',
+        rev3_bad1_p: 'Known problems with rudders and steering gear, especially during intense charter use.',
+        rev3_bad2_h: '⚠️ Hardware & Electronics:',
+        rev3_bad2_p: 'Small hardware (latches, locks) fails quite quickly. There are complaints about faulty indicators on the control panel and incorrect factory wiring. A bow thruster is a necessity.',
+        rev3_bad3_h: '⚠️ Charter Fatigue:',
+        rev3_bad3_p: 'Ex-rental yachts often have worn upholstery, leaking faucets, and non-working refrigerators.',
+        rev3_sec4_title: '💎 Verdict',
+        rev3_verdict: 'The Beneteau Oceanis 46.1 is the "perfect storm" in the cruising yacht market. She is created for those who are not ready to choose between speed and comfort, an attempt to create a "sports car for the whole family." If you plan frequent trips to sea with your family, but at the same time want to dashingly bypass opponents in amateur regattas, your choice is obvious.',
+        rev3_ps: 'PS: When inspecting, look for the **"First Line"** version with more powerful rigging and a deep keel. This yacht remains one of the most desirable on the secondary market—you have to pay a premium.',
+        rev3_side_title: 'Shipboard Verdict',
+        rev3_side_txt: '"A sports car for the whole family." Perfect balance of Finot-Conq racing hull, Nauta Design panoramic windows, and CE A ocean comfort.',
+        footer_yt: 'YouTube Channel',
+        footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        rev3_page_title: 'Reseña de yate: Beneteau Oceanis 46.1',
+        rev3_main_title: 'Prueba de fuego del Beneteau Oceanis 46.1: Encanto francés y genes de regata',
+        rev3_intro: 'Un desglose detallado de los pros y contras del "Yate Europeo del Año 2019". Una mirada de ingeniero a la calidad de construcción de Finot-Conq, el estilo italiano de Nauta Design y los problemas reales en chárter.',
+        rev3_sec1_title: '⚓️ En pocas palabras: Quién es quién',
+        rev3_sec1_p1: 'El Beneteau Oceanis 46 (2017–2020) es un yate de crucero de 46 pies (14,4 m) que se convirtió en el heredero directo del exitoso Oceanis 45. Este período es interesante porque en 2018 el modelo cambió de generación, convirtiéndose en el revolucionario Oceanis 46.1, que ese mismo año recibió el prestigioso premio "European Yacht of the Year" en la categoría "Family Cruiser".',
+        rev3_sec1_p2: 'A diferencia de Bavaria, centrada en el pragmatismo del chárter, и Elan, con su reverencia por el manejo tradicional de las velas, el francés apostó por combinar lo incombinable: un carácter de regata и la comodidad de un verdadero hogar flotante. El legendario estudio Finot-Conq se encargó del casco, mientras que el interior corrió a cargo del estudio italiano Nauta Design. El resultado es uno de los barcos más vendidos en su clase и un verdadero éxito en el mercado de ocasión.',
+        rev3_tab_title: '📊 Especificaciones Técnicas',
+        tab_loa: 'Eslora (LOA)', tab_beam: 'Manga', tab_draft: 'Calado (std/profundo)', tab_disp: 'Desplazamiento', tab_eng: 'Motor', tab_cat: 'Categoría', tab_cab: 'Camarotes', tab_tanks: 'Tanques (agua/combustible)',
+        rev3_gal_title: '📸 Bitácora de fotos e interior',
+        rev3_sec2_title: '👍 Puntos fuertes: Lo que valoramos в el Oceanis 46',
+        rev3_h_sail: 'Rendimiento a vela и manejo:',
+        rev3_p_sail: 'No es solo un "crucero", sino un verdadero **Performance Cruiser**. Finot-Conq creó un casco con características "pantoques" (casco escalonado) и una popa ancha, lo que proporciona una increíble estabilidad de forma. El yate mantiene el rumbo perfectamente, manteniéndose equilibrado и sensible a las rachas. Con viento de través de 10-15 nudos, mantiene con confianza **6.5-7.5 nudos** и es capaz de acelerar a **más de 9 nudos** en las rachas.',
+        rev3_h_comf: 'Interior y espacio habitable:',
+        rev3_p_comf: 'El interior, desarrollado por el estudio italiano Nauta Design, es radicalmente diferente de los espartanos Bavaria o los tradicionales Elan. Grandes ventanas panorámicas a lo largo de los costados ("picture windows") llenan el salón con luz diurna. El camarote del armador en la proa ofrece una verdadera cama isla y un baño y ducha separados. Las unidades и mecanismos (por ejemplo, la mayor enrollable en el máст) están diseñados para que pases el tiempo descansando, no lidiando con las velas.',
+        rev3_h_build: 'Construcción и ergonomía:',
+        rev3_p_build: 'El casco está fabricado en fibra de vidrio con una rejilla estructural en su interior para mayor rigidez. El control se lleva a los puestos de mando: todas las escotas и drizas se dirigen a los winches en las ruedas. Una plataforma de popa de apertura eléctrica convierte la popa en una espaciosa terraza, perfecta para salir al mar.',
+        rev3_sec3_title: '👎 Puntos débiles и detalles de mantenimiento',
+        rev3_bad1_h: '⚠️ Problemas de timón:',
+        rev3_bad1_p: 'Se conocen problemas con los timones и el sistema de gobierno, especialmente durante un uso intensivo en chárter.',
+        rev3_bad2_h: '⚠️ Herrajes и electrónica:',
+        rev3_bad2_p: 'Los herrajes pequeños (cierres, cerraduras) fallan bastante rápido. Hay quejas sobre indicadores defectuosos en el panel de control и cableado de fábrica incorrecto. Una hélice de proa es una necesidad.',
+        rev3_bad3_h: '⚠️ Fatiga de chárter:',
+        rev3_bad3_p: 'Los yates de alquiler a menudo tienen tapicería desgastada, grifos con fugas и refrigeradores que no funcionan.',
+        rev3_sec4_title: '💎 Veredicto',
+        rev3_verdict: 'El Beneteau Oceanis 46.1 es la "tormenta perfecta" en el mercado de yates de crucero. Se crea para aquellos que no están dispuestos a elegir entre velocidad и comodidad, un intento de crear un "coche deportivo para toda la familia." Si planeas salidas frecuentes al mar con tu familia, pero al mismo tiempo quieres adelantar con elegancia a tus oponentes en regatas amateur, tu elección es obvia.',
+        rev3_ps: 'PS: Al inspeccionar, busque la versión **"First Line"** con aparejos más potentes и quilla profunda. Este yate sigue siendo uno de los más deseados en el mercado de ocasión; hay que pagar una prima.',
+        rev3_side_title: 'Veredicto de a bordo',
+        rev3_side_txt: '«Un coche deportivo para toda la familia». Equilibrio perfecto entre el casco de regata Finot-Conq, las ventanas panorámicas Nauta Design и la comodidad oceánica CE A.',
+        footer_yt: 'Canal de YouTube',
+        footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
