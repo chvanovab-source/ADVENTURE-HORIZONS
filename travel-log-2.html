@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Стили для видеоплееров в журнальной верстке */
     .video-container {
       width: 100%;
       max-width: 640px;
@@ -70,10 +69,9 @@
 
     <div class="case-grid">
       <div class="case-content-left">
-        
         <section class="case-section">
           <h2 data-i18n="log2_ch1_title">1. Граница стихий: Наступление штормового фронта</h2>
-          <p data-i18n="log2_ch1_desc">Удивительный панорамный кадр контраста природы: катамаран идет под чистым, мирным лазурным небом, но прямо по курсу над горным хребтом побережья разворачивается монументальная, тяжелая, черная как свинец грозовая шельфовая стена.</p>
+          <p data-i18n="log2_ch1_desc">Удивительный кадр контраста природы: катамаран идет под чистым, мирным лазурным небом, но прямо по курсу над горным хребтом побережья разворачивается монументальная, тяжелая, черная как свинец грозовая шельфовая стена.</p>
           <div class="video-container">
             <video src="CLOUD.mp4" controls preload="metadata"></video>
           </div>
@@ -89,12 +87,10 @@
             <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="log2_ch2_quote">«Ну там не очень хорошо, там очень скользко! И держаться там не за что... Волнá!... Оха было!... Чего ты туда хочешь?»</span>
           </div>
         </section>
-
       </div>
 
       <div class="case-content-right">
         <div class="sticky-sidebar">
-          
           <div class="sidebar-block" style="border-left: 4px solid #d97706; margin-bottom: 1.5rem;">
             <h3 data-i18n="log2_v_title">Заметки на полях трамплина</h3>
             <p style="font-size: 0.95rem; line-height: 1.6; font-style: italic; margin-bottom: 0;" data-i18n="log2_v_txt">Катамаран дарит обманчивое ощущение пляжного комфорта на стоянке, но в море на шквалах он раскрывает свой истинный характер. Скорость на двух корпусах ощущается острее: когда под сеткой на полной скорости закипает и взрывается пена, ты понимаешь всю первозданную силу стихии.</p>
@@ -104,11 +100,10 @@
             <h3 data-i18n="log1_spec_title">Спецификация судна</h3>
             <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0;">
               <strong data-i18n="spec_year">Год:</strong> 2025<br>
-              <strong>Тип:</strong> Парусный катамаран<br>
-              <strong data-i18n="spec_cond">Условия:</strong> Грозовой фронт / Шквал
+              <strong data-i18n="spec_type_label">Тип:</strong> <span data-i18n="spec_val_cat">Парусный катамаран</span><br>
+              <strong data-i18n="spec_cond">Условия:</strong> <span data-i18n="spec_val_front">Грозовой фронт / Шквал</span>
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -140,7 +135,8 @@
         log2_v_title: 'Заметки на полях трамплина',
         log2_v_txt: 'Катамаран дарит обманчивое ощущение пляжного комфорта на стоянке, но в море на шквалах он раскрывает свой истинный характер. Скорость на двух корпусах ощущается острее: когда под сеткой на полной скорости закипает и взрывается пена, ты понимаешь всю первозданную силу стихии и прощаешь этой лодке любые капризы.',
         log1_spec_title: 'Спецификация судна',
-        spec_year: 'Год:', spec_cond: 'Условия:',
+        spec_year: 'Год:', spec_cond: 'Условия:', spec_type_label: 'Тип:',
+        spec_val_cat: 'Парусный катамаран', spec_val_front: 'Грозовой фронт / Шквал',
         footer_yt: 'YouTube-канал', footer_top: 'Наверх'
       },
       en: {
@@ -157,7 +153,8 @@
         log2_v_title: 'Trampoline Edge Reflections',
         log2_v_txt: 'A catamaran offers an illusion of beach club comfort at anchor, but out at sea under heavy squalls, it reveals its raw mechanical character. Velocity over twin hulls feels sharper: when the white foam boils and explodes directly under the net at full speed, you grasp the primal power of the elements.',
         log1_spec_title: 'Vessel Specifications',
-        spec_year: 'Year:', spec_cond: 'Conditions:',
+        spec_year: 'Year:', spec_cond: 'Conditions:', spec_type_label: 'Type:',
+        spec_val_cat: 'Sailing Catamaran', spec_val_front: 'Storm Front / Squall',
         footer_yt: 'YouTube Channel', footer_top: 'Top'
       },
       es: {
@@ -174,7 +171,8 @@
         log2_v_title: 'Reflexiones desde el Trampolín',
         log2_v_txt: 'Un catamarán ofrece una ilusión de comodidad de club de playa en el fondeo, pero en el mar bajo fuertes rachas revela su auténtico carácter mecánico. La velocidad se siente más viva: cuando la espuma ruge y explota directamente bajo la red, comprendes el poder de los elementos.',
         log1_spec_title: 'Especificaciones del Buque',
-        spec_year: 'Año:', spec_cond: 'Condiciones:',
+        spec_year: 'Año:', spec_cond: 'Condiciones:', spec_type_label: 'Tipo:',
+        spec_val_cat: 'Catamarán de Vela', spec_val_front: 'Frente de tormenta / Turbonada',
         footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
       }
     };
