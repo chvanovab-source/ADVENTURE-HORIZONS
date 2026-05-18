@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yacht Review: Elan 45.1 Impression — Adventure Horizons" />
+  <title data-i18n="rev1_page_title">Обзор яхты: Elan 45.1 Impression</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Стили для интерактивной галереи */
+    .review-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .gallery-img-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+      aspect-ratio: 4 / 3;
+    }
+    .gallery-img-wrapper:hover {
+      transform: scale(1.03);
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Стили для всплывающего окна (модалки) */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #daf4ff; color: #006a8f;">Yacht Review #1</span>
+      <h1 data-i18n="rev1_main_title">Честный тест-драйв Elan 45.1 Impression: Инженерный разбор крейсера</h1>
+      <p class="case-intro" data-i18n="rev1_intro">Детальный разбор сильных и слабых сторон словенского парусника без прикрас. Взгляд через призму управляемости, качества сборки и реальных морских рисков.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <div style="margin-bottom: 2.5rem;">
+          <video autoplay loop muted playsinline style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border);">
+            <source src="Animacija_jedrilice_u_tmurnom_vremenu.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_sec1_title">⚓️ В двух словах: кто есть кто</h2>
+          <p data-i18n="rev1_sec1_p1">Эта статья написана как навигатор для тех, кто, как и мы, предпочитает за штурвалом не просто красивые картинки, а инженерную ясность и прозрачную оценку рисков. Сегодня под нашим прицелом — словенский крейсер Elan 45.1 Impression. Это детальный разбор его сильных и слабых сторон без прикрас.</p>
+          <p data-i18n="rev1_sec1_p2" style="margin-top: 1rem;">Elan Impression 45.1 — это 45-футовый монокорпусный парусник, который представляет собой итог многолетней эволюции и самую серьезную переработку легендарной модели Impression 434 с момента её первого появления в 2004 году. Лодка создавалась с прицелом на взыскательных частных владельцев и суровые условия чартера, поэтому её конструкция отточена до мелочей. Это компромисс, но компромисс великолепный: она сочетает в себе традиционное управление парусами и настоящую плавность хода, оставаясь вместительной и комфортной для длительных автономных переходов.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_tab_title">📊 Технические характеристики</h2>
+          <table class="payment-table" style="margin-top: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem;">
+            <tr><td><strong data-i18n="tab_loa">Длина (LOA)</strong></td><td class="price" style="color: var(--text);">13.85 м (45'6")</td></tr>
+            <tr><td><strong data-i18n="tab_beam">Ширина</strong></td><td class="price" style="color: var(--text);">4.18 м</td></tr>
+            <tr><td><strong data-i18n="tab_draft">Осадка</strong></td><td class="price" style="color: var(--text);">1.9 м</td></tr>
+            <tr><td><strong data-i18n="tab_disp">Водоизмещение</strong></td><td class="price" style="color: var(--text);">10 420 кг</td></tr>
+            <tr><td><strong data-i18n="tab_eng">Двигатель</strong></td><td class="price" style="color: var(--text);">50-75 л.с. (Yanmar)</td></tr>
+            <tr><td><strong data-i18n="tab_cat">Категория CE</strong></td><td class="price" style="color: var(--text);">A — Ocean</td></tr>
+            <tr><td><strong data-i18n="tab_cab">Каюты</strong></td><td class="price" style="color: var(--text);">3 / 4</td></tr>
+          </table>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_gal_title">📸 Фотохроника и интерьер</h2>
+          <div class="review-gallery">
+            <div class="gallery-img-wrapper"><img src="16.jpg" alt="Elan 45.1 under sail"></div>
+            <div class="gallery-img-wrapper"><img src="5_1.jpg" alt="Salon Inside"></div>
+            <div class="gallery-img-wrapper"><img src="5_2.jpg" alt="Galley View"></div>
+            <div class="gallery-img-wrapper"><img src="9.jpg" alt="Fridge Open"></div>
+            <div class="gallery-img-wrapper"><img src="14.jpg" alt="Sofa and Chart table"></div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_sec2_title">👍 Сильные стороны: за что мы ценим этот проект</h2>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev1_h_sail">Ходовые качества и управляемость:</strong> <span data-i18n="rev1_p_sail">Спроектированная легендарным бюро Humphreys Yacht Design, лодка унаследовала гоночную ДНК. На ходу при попутном ветре 12-15 узлов она легко держит скорость 6.5-7.5 узлов. Инженеры оставили схему с большой генуей (135%) и двумя перьями руля, что дает точный и предсказуемый отклик на штурвал. В парусном плане сделана ставка на традиции — здесь полный привод от переднего паруса, который вы сами перебрасываете, что спасает в длительных штилевых переходах.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev1_h_comf">Комфорт и интерьер:</strong> <span data-i18n="rev1_p_comf">Главная фишка — Deck Saloon. Приподнятая рубка и панорамное остекление дают отличную освещенность. Камбуз сдвинут в нос, освобождая центральную часть салона. В трехкаютной версии владельца ждет островной двуспальный блок в носу с огромным пространством для хранения, а большие иллюминаторы в кормовых каютах превращают их в светлые комнаты.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev1_h_build">Качество сборки:</strong> <span data-i18n="rev1_p_build">Словенская школа славится отношением к дереву. Зазоры минимальны, фурнитура посажена плотно. Корпус производится по технологии вакуумной инфузии. Над ватерлинией используется сэндвич из пеноматериала для теплоизоляции, а под ней — монолитный стеклопластик. Слой винилэфирной смолы защищает от осмоса.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev1_h_safe">Безопасность и конкуренты:</strong> <span data-i18n="rev1_p_safe">Категория CE А (Ocean) реальна. Центр тяжести расположен низко, лодка прощает ошибки. На фоне Oceanis 45 и Bavaria 46 словенец интереснее: ценник Elan часто на 5-15% ниже при сопоставимой комплектации. Французы дадут чуть больше объемов, но проиграют на встречной волне, а немцы предложат богатый интерьер, но уступят в остроте контроля.</span></p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_sec3_title">👎 Слабые стороны и болевые точки</h2>
+          <ul>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev1_bad1_h">Спорная эргономика кокпита:</strong> <span data-i18n="rev1_bad1_p">Огромный центральный стол в кокпите физически мешает проходу и заставляет буквально протискиваться на банки. Если любите свободу движений — обратите внимание на этот узел при осмотре.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev1_bad2_h">Слабость электроники (в чартере):</strong> <span data-i18n="rev1_bad2_p">Если берете лодку после аренды, будьте готовы к капризам инверторов, кондиционеров и датчиков уровня топлива. Чартер убивает периферийную технику безжалостно.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev1_bad3_h">Слабоватый мотор:</strong> <span data-i18n="rev1_bad3_p">Штатный Yanmar на 45-50 л.с. — это прожиточный минимум для 10 тонн веса. Против сильного течения или встречного штормового ветра маневра под движком будет не хватать.</span></li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev1_sec4_title">💎 Вердикт</h2>
+          <p data-i18n="rev1_verdict">Elan 45.1 Impression — это рабочая лошадка высшего класса для тех, кому важен активный контроль, традиционная работа с парусами и уверенность, например, при пересечении Бискайского залива. Но если в приоритете пассивный комфорт (стол на 10 человек с подогревом) и пофигизм в управлении — присмотритесь к французским "плавучим кондоминиумам". Эта лодка создана для тех, кто помнит, зачем на яхте вообще нужны паруса.</p>
+          <p style="margin-top: 1rem; font-style: italic;" data-i18n="rev1_ps">PS: При покупке этой модели б/у уделите особое внимание диагностике электроники и проверьте механизм подъема стола в кокпите. Остальное лечится плановым ТО. А детальное устройство систем и инженерную правду мы всегда показываем в технических видеообзорах на нашем канале.</p>
+        </section>
+
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid var(--accent);">
+            <h3 data-i18n="rev1_side_title">Бортовой вердикт</h3>
+            <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="rev1_side_txt">Настоящий Deck Saloon с отличной мореходностью океанского класса А. Идеальный баланс прочности словенской сборки и классического парусного вооружения.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Логика увеличения фото
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.review-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Словари перевода
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        rev1_page_title: 'Обзор яхты: Elan 45.1 Impression',
+        rev1_main_title: 'Честный тест-драйв Elan 45.1 Impression: Инженерный разбор крейсера',
+        rev1_intro: 'Детальный разбор сильных и слабых сторон словенского парусника без прикрас. Взгляд через призму управляемости, качества сборки и реальных морских рисков.',
+        rev1_sec1_title: '⚓️ В двух словах: кто есть кто',
+        rev1_sec1_p1: 'Эта статья написана как навигатор для тех, кто, как и мы, предпочитает за штурвалом не просто красивые картинки, а инженерную ясность и прозрачную оценку рисков. Сегодня под нашим прицелом — словенский крейсер Elan 45.1 Impression. Это детальный разбор его сильных и слабых сторон без прикрас.',
+        rev1_sec1_p2: 'Elan Impression 45.1 — это 45-футовый монокорпусный парусник, который представляет собой итог многолетней эволюции и самую серьезную переработку легендарной модели Impression 434 с момента её первого появления in 2004. Лодка создавалась с прицелом на взыскательных частных владельцев и суровые условия чартера, поэтому её конструкция отточена до мелочей. Это компромисс, но компромисс великолепный: она сочетает в себе традиционное управление парусами и настоящую плавность хода, оставаясь вместительной и комфортной для длительных автономных переходов.',
+        rev1_tab_title: '📊 Технические характеристики',
+        tab_loa: 'Длина (LOA)', tab_beam: 'Ширина', tab_draft: 'Осадка', tab_disp: 'Водоизмещение', tab_eng: 'Двигатель', tab_cat: 'Категория CE', tab_cab: 'Каюты',
+        rev1_gal_title: '📸 Фотохроника и интерьер',
+        rev1_sec2_title: '👍 Сильные стороны: за что мы ценим этот проект',
+        rev1_h_sail: 'Ходовые качества и управляемость:',
+        rev1_p_sail: 'Спроектированная легендарным бюро Humphreys Yacht Design, лодка унаследовала гоночную ДНК. На ходу при попутном ветре 12-15 узлов она легко держит скорость 6.5-7.5 узлов. Инженеры оставили схему с большой генуей (135%) и двумя перьями руля, что дает точный и предсказуемый отклик на штурвал. В парусном плане сделана ставка на традиции — здесь полный привод от переднего паруса, который вы сами перебрасываете, что спасает в длительных штилевых переходах.',
+        rev1_h_comf: 'Комфорт и интерьер:',
+        rev1_p_comf: 'Главная фишка — Deck Saloon. Приподнятая рубка и панорамное остекление дают отличную освещенность. Камбуз сдвинут в нос, освобождая центральную часть салона. В трехкаютной версии владельца ждет островной двуспальный блок в носу с огромным пространством для хранения, а большие иллюминаторы в кормовых каютах превращают их в светлые комнаты.',
+        rev1_h_build: 'Качество сборки:',
+        rev1_p_build: 'Словенская школа славится отношением к дереву. Зазоры минимальны, фурнитура посажена плотно. Корпус производится по технологии вакуумной инфузии. Над ватерлинией используется сэндвич из пеноматериала для теплоизоляции, а под ней — монолитный стеклопластик. Слой винилэфирной смолы защищает от осмоса.',
+        rev1_h_safe: 'Безопасность и конкуренты:',
+        rev1_p_safe: 'Категория CE А (Ocean) реальна. Центр тяжести расположен низко, лодка прощает ошибки. На фоне Oceanis 45 и Bavaria 46 словенец интереснее: ценник Elan часто на 5-15% ниже при сопоставимой комплектации. Французы дадут чуть больше объемов, но проиграют на встречной волне, а немцы предложат богатый интерьер, но уступят в остроте контроля.',
+        rev1_sec3_title: '👎 Слабые стороны и болевые точки',
+        rev1_bad1_h: 'Спорная эргономика кокпита:',
+        rev1_bad1_p: 'Огромный центральный стол в кокпите физически мешает проходу и заставляет буквально протискиваться на банки. Если любите свободу движений — обратите внимание на этот узел при осмотре.',
+        rev1_bad2_h: 'Слабость электроники (в чартере):',
+        rev1_bad2_p: 'Если берете лодку после аренды, будьте готовы к капризам инверторов, кондиционеров и датчиков уровня топлива. Чартер убивает периферийную технику безжалостно.',
+        rev1_bad3_h: 'Слабоватый мотор:',
+        rev1_bad3_p: 'Штатный Yanmar на 45-50 л.с. — это прожиточный минимум для 10 тонн веса. Против сильного течения или встречного штормового ветра маневра под движком будет не хватать.',
+        rev1_sec4_title: '💎 Вердикт',
+        rev1_verdict: 'Elan 45.1 Impression — это рабочая лошадка высшего класса для тех, кому важен активный контроль, традиционная работа с парусами и уверенность, например, при пересечении Бискайского залива. Но если в приоритете пассивный комфорт (стол на 10 человек с подогревом) и пофигизм в управлении — присмотритесь к французским "плавучим кондоминиумам". Эта лодка создана для тех, кто помнит, зачем на яхте вообще нужны паруса.',
+        rev1_ps: 'PS: При покупке этой модели б/у уделите особое внимание диагностике электроники и проверьте механизм подъема стола в кокпите. Остальное лечится плановым ТО. А детальное устройство систем и инженерную правду мы всегда показываем в технических видеообзорах на нашем канале.',
+        rev1_side_title: 'Бортовой вердикт',
+        rev1_side_txt: 'Настоящий Deck Saloon с отличной мореходностью океанского класса А. Идеальный баланс прочности словенской сборки и классического парусного вооружения.',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        rev1_page_title: 'Yacht Review: Elan 45.1 Impression',
+        rev1_main_title: 'Elan 45.1 Impression Honest Test Drive: An Engineer\'s Cruiser Breakdown',
+        rev1_intro: 'A comprehensive review of the Slovenian sailboat\'s strengths and structural flaws. Evaluated through handling characteristics, build quality, and real blue-water risks.',
+        rev1_sec1_title: '⚓️ In a Nutshell: Who is Who',
+        rev1_sec1_p1: 'This article serves as a guide for those who, like us, prefer engineering clarity and transparent risk assessment at the helm rather than glossy pictures. Today, our focus is the Slovenian cruiser Elan 45.1 Impression. This is an unembellished, detailed breakdown of its pros and cons.',
+        rev1_sec1_p2: 'The Elan Impression 45.1 is a 45-foot monohull cruising sailboat representing the culmination of long-term design evolution and the most comprehensive overhaul of the iconic Impression 434 since its initial 2004 launch. Designed with both discerning private owners and demanding charter configurations in mind, its layout is refined to the smallest details. It represents a compromise, but a brilliant one: combining traditional sail handling and smooth seaworthiness while remaining spacious and comfortable for extended autonomous passages.',
+        rev1_tab_title: '📊 Technical Specifications',
+        tab_loa: 'Length (LOA)', tab_beam: 'Beam', tab_draft: 'Draft', tab_disp: 'Displacement', tab_eng: 'Engine', tab_cat: 'CE Category', tab_cab: 'Cabins',
+        rev1_gal_title: '📸 Photo Log & Interior',
+        rev1_sec2_title: '👍 Strengths: What We Value in This Design',
+        rev1_h_sail: 'Sailing Performance & Handling:',
+        rev1_p_sail: 'Designed by the renowned Humphreys Yacht Design studio, this yacht carries a racing pedigree. Under sail in a 12-15 knot breeze, she comfortably maintains a hull speed of 6.5-7.5 knots. Engineers retained the large overlapping genoa setup (135% of sail triangle) and twin rudders, yielding precise and predictable helm feedback. The sail plan focuses on traditional arrangements—delivering full power from the headsail that you control manually, which is a lifesaver during prolonged light-wind calms.',
+        rev1_h_comf: 'Comfort & Accommodations:',
+        rev1_p_comf: 'The standout feature is the Deck Saloon configuration. The raised coachroof and panoramic windows flood the interior with natural light. The galley layout is shifted forward, completely opening up the central saloon space. In the 3-cabin owner layout, a proper island double berth sits forward with expansive stowage, while generous hull ports in the aft cabins turn them into bright guest rooms.',
+        rev1_h_build: 'Build Quality:',
+        rev1_p_build: 'The Slovenian yard is highly regarded for its joinery and woodwork. Tolerances are exceptionally tight, and hardware fittings are solidly mounted. The hull structure is produced via vacuum infusion. A foam core sandwich structure is applied above the waterline for optimal thermal insulation, transitioning to monolithic fiberglass below the waterline. A vinylester resin skin coat provides superior osmotic protection.',
+        rev1_h_safe: 'Safety & Market Competition:',
+        rev1_p_safe: 'The CE Category A (Ocean) rating is fully legitimate. A low center of gravity renders the vessel forgiving of crew errors. Compared to the Oceanis 45 and Bavaria 46, the Slovenian option stands out: pricing is often 5-15% lower for comparable equipment configurations. The French designs give you slightly more interior volume but compromise on head-sea behavior, while the German alternatives offer lavish styling at the cost of steering response in heavy waves.',
+        rev1_sec3_title: '👎 Weaknesses & Pain Points',
+        rev1_bad1_h: 'Questionable Cockpit Ergonomics:',
+        rev1_bad1_p: 'The massive central cockpit table significantly restricts movement, forcing crew to squeeze onto the bench seats. If you value uninhibited traffic flow on deck, check this detail carefully during inspection.',
+        rev1_bad2_h: 'Electrical Frailties (Ex-Charter):',
+        rev1_bad2_p: 'If evaluating a hull coming out of a charter fleet, anticipate issues with inverters, air conditioning systems, and tank gauges. Heavy charter use degrades peripheral marine systems relentlessly.',
+        rev1_bad3_h: 'Underpowered Standard Propulsion:',
+        rev1_bad3_p: 'The standard 45-50 hp Yanmar diesel is the bare minimum for a 10-ton boat. When battling heavy head seas or strong currents, maneuverability under power will feel noticeably lacking.',
+        rev1_sec4_title: '💎 Verdict',
+        rev1_verdict: 'The Elan 45.1 Impression is a premium-tier blue-water workhorse designed for captains who value active control, traditional sail work, and seaworthiness when crossing areas like the Bay of Biscay. However, if your priorities lean toward passive relaxation (a heated cockpit table for ten) and hands-off sailing, consider the latest floating condominiums from French production lines. This yacht belongs to those who still remember why a sailboat has sails in the first place.',
+        rev1_ps: 'PS: When inspecting a pre-owned vessel, prioritize a thorough diagnostic check of the electronics and the cockpit table lift mechanism. The rest is easily sorted with standard marine maintenance. We explore structural systems and engineering truth in depth on our channel\'s technical reviews.',
+        rev1_side_title: 'Shipboard Verdict',
+        rev1_side_txt: 'A true Deck Saloon boasting legitimate Ocean Class A seaworthiness. An ideal intersection of robust Slovenian assembly and traditional sail configuration.',
+        footer_yt: 'YouTube Channel', footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        rev1_page_title: 'Reseña de Yates: Elan 45.1 Impression',
+        rev1_main_title: 'Prueba de Fuego del Elan 45.1 Impression: Análisis de Ingeniería del Crucero',
+        rev1_intro: 'Un examen exhaustivo de los puntos fuertes y los fallos estructurales del velero esloveno. Evaluado a través del manejo, la calidad de construcción y los riesgos reales en alta mar.',
+        rev1_sec1_title: '⚓️ En pocas palabras: Quién es quién',
+        rev1_sec1_p1: 'Este artículo sirve como guía para quienes, como nosotros, prefieren la claridad de ingeniería y la evaluación transparente de riesgos al timón en lugar de imágenes brillantes. Hoy, nuestro enfoque es el crucero esloveno Elan 45.1 Impression. Este es un desglose detallado y sin adornos de sus pros y contras.',
+        rev1_sec1_p2: 'El Elan Impression 45.1 es un velero de crucero monocasco de 45 pies que representa la culminación de la evolución del diseño y la revisión más completa del icónico Impression 434 desde su lanzamiento inicial en 2004. Diseñado tanto para armadores privados exigentes como para configuraciones de chárter, su diseño se refina hasta los detalles más pequeños. Representa un compromiso, pero un compromiso brillante: combina el manejo tradicional de las velas y la navegabilidad suave, al tiempo que sigue siendo espacioso y cómodo para travesías autónomas prolongadas.',
+        rev1_tab_title: '📊 Especificaciones Técnicas',
+        tab_loa: 'Eslora (LOA)', tab_beam: 'Manga', tab_draft: 'Calado', tab_disp: 'Desplazamiento', tab_eng: 'Motor', tab_cat: 'Categoría CE', tab_cab: 'Camarotes',
+        rev1_gal_title: '📸 Bitácora de fotos e interior',
+        rev1_sec2_title: '👍 Puntos Fuertes: Lo que valoramos en este diseño',
+        rev1_h_sail: 'Rendimiento a Vela y Manejo:',
+        rev1_p_sail: 'Diseñado por el renombrado estudio Humphreys Yacht Design, este yate lleva un pedigrí de carreras. A vela con una brisa de 12-15 nudos, mantiene cómodamente una velocidad de 6.5-7.5 nudos. Los ingenieros mantuvieron la gran génova superpuesta (135%) y los timones dobles, lo que produce una respuesta precisa del timón. El plano de velas se centra en los arreglos tradicionales, ofreciendo plena potencia desde la vela de proa que usted controla manualmente, lo que es un salvavidas durante las calmas prolongadas.',
+        rev1_h_comf: 'Confort e Interior:',
+        rev1_p_comf: 'La característica más destacada es la configuración de Deck Saloon. El techo elevado y las ventanas panorámicas inundan el interior de luz natural. El diseño de la cocina se desplaza hacia proa, abriendo por completo el espacio del salón central. En la distribución de 3 camarotes del armador, una litera doble isla adecuada se sitúa a proa con un almacenamiento expansivo, mientras que las generosas ventanas de casco en los camarotes de popa los convierten en luminosas habitaciones.',
+        rev1_h_build: 'Calidad de Construcción:',
+        rev1_p_build: 'El astillero esloveno es muy considerado por su carpintería y ebanistería. Las tolerancias son excepcionalmente estrictas y los herrajes están sólidamente montados. La estructura del casco se produce mediante infusión al vacío. Se aplica una estructura de sándwich de núcleo de espuma por encima de la línea de flotación para un aislamiento térmico óptimo, pasando a fibra de vidrio monolítica por debajo. Una capa de resina de viniléster proporciona una protección osmótica superior.',
+        rev1_h_safe: 'Seguridad y Competencia en el Mercado:',
+        rev1_p_safe: 'La clasificación de Categoría CE A (Océano) es totalmente legítima. Un centro de gravedad bajo hace que la embarcación perdone los errores de la tripulación. En comparación con el Oceanis 45 y el Bavaria 46, la opción eslovena destaca: el precio suele ser entre un 5% y un 15% inferior para configuraciones de equipamiento comparables. Los diseños franceses ofrecen un volumen interior ligeramente superior, pero comprometen el comportamiento con olas de proa, mientras que las alternativas alemanas ofrecen un estilo fastuoso a costa de la respuesta de la dirección con olas grandes.',
+        rev1_sec3_title: '👎 Puntos Débiles y Problemas Críticos',
+        rev1_bad1_h: 'Ergonomía de la Bañera Cuestionable:',
+        rev1_bad1_p: 'La enorme mesa central de la bañera restringe significativamente el movimiento, lo que obliga a la tripulación a apretarse en los bancos. Si valora el flujo de tráfico sin inhibiciones en cubierta, revise este detalle cuidadosamente durante la inspección.',
+        rev1_bad2_h: 'Debilidades Eléctricas (Ex-Chárter):',
+        rev1_bad2_p: 'Si se evalúa un casco procedente de una flota de chárter, hay que anticipar problemas con los inversores, los sistemas de aire acondicionado y los indicadores de los tanques. El uso intensivo en chárter degrada los sistemas marinos periféricos de forma implacable.',
+        rev1_bad3_h: 'Propulsión Estándar de Poca Potencia:',
+        rev1_bad3_p: 'El motor diésel Yanmar estándar de 45-50 CV es el mínimo absoluto para un barco de 10 toneladas. Cuando se lucha contra vientos fuertes o corrientes en contra, la maniobrabilidad bajo motor se sentirá notablemente deficiente.',
+        rev1_sec4_title: '💎 Veredicto',
+        rev1_verdict: 'El Elan 45.1 Impression es una mula de carga de alta mar de nivel premium diseñada para capitanes que valoran el control activo, el trabajo de vela tradicional y la seguridad al cruzar zonas como el Golfo de Vizcaya. Sin embargo, si sus prioridades se inclinan hacia la relajación pasiva (una mesa de bañera con calefacción para diez) y la navegación sin manos, considere los últimos condominios flotantes de las líneas de producción francesas. Este yate pertenece a quienes aún recuerdan por qué un velero tiene velas.',
+        rev1_ps: 'PS: Al inspeccionar un barco usado, priorice una revisión diagnóstica exhaustiva de la electrónica y del mecanismo de elevación de la mesa de la bañera. El resto se soluciona fácilmente con el mantenimiento estándar. Exploramos los sistemas estructurales y la verdad de la ingeniería en profundidad en las revisiones técnicas de nuestro canal.',
+        rev1_side_title: 'Veredicto de a Bordo',
+        rev1_side_txt: 'Un verdadero Deck Saloon que cuenta con una legítima navegabilidad de Clase de Océano A. Una intersección ideal de ensamblaje esloveno robusto y configuración de vela tradicional.',
+        footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
