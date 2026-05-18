@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yacht Comparison: Elan vs Bavaria vs Beneteau — Adventure Horizons" />
+  <title data-i18n="comp_page_title">Сравнение яхт: Elan vs Bavaria vs Beneteau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Стили для адаптивных сравнительных таблиц */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      min-width: 650px;
+    }
+    .comp-table th, .comp-table td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-table th {
+      background: #f8fafc;
+      color: var(--deep-sea);
+      font-weight: 700;
+    }
+    .comp-table tr:last-child td {
+      border-bottom: none;
+    }
+    .comp-table td:first-child {
+      font-weight: 600;
+      color: var(--deep-sea);
+      width: 25%;
+    }
+    .comp-table td {
+      color: var(--text);
+      width: 25%;
+    }
+    .verdict-box {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container" style="max-width: 960px;">
+    <header class="case-header">
+      <span class="tag" style="background: #e2f7ed; color: #15803d;">Comparative Analytics</span>
+      <h1 data-i18n="comp_main_title">Битва крейсеров: Elan 45.1 vs Bavaria 46 vs Beneteau 46.1</h1>
+      <p class="case-intro" data-i18n="comp_intro">Сводный инженерный анализ трех главных конкурентов в сегменте 45–46 футов. Сильные стороны, скрытые дефекты, потеря стоимости и прямые шкиперские рекомендации по выбору лодки.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec1_title">📊 Сравнительная таблица: Паспортные данные</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_param">Параметр</th>
+              <th>Elan Impression 45.1</th>
+              <th>Bavaria Cruiser 46</th>
+              <th>Beneteau Oceanis 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t1_r1">Проектант</td><td>Humphreys Yacht Design</td><td>Farr Yacht Design</td><td>Finot-Conq</td></tr>
+            <tr><td data-i18n="t1_r2">Длина (LOA)</td><td>13.85 м</td><td>14.27 м</td><td>14.60 м</td></tr>
+            <tr><td data-i18n="t1_r3">Ширина</td><td>4.18 м</td><td>4.35 м</td><td>4.50 м</td></tr>
+            <tr><td data-i18n="t1_r4">Осадка (стандарт)</td><td>1.90 м</td><td>2.10 м</td><td>2.10 м</td></tr>
+            <tr><td data-i18n="t1_r5">Водоизмещение</td><td>10 420 кг</td><td>12 600 кг</td><td>10 597 кг</td></tr>
+            <tr><td data-i18n="t1_r6">Двигатель</td><td>Yanmar 50-75 л.с.</td><td>Volvo Penta 55-75 л.с.</td><td>Yanmar 57-80 л.с.</td></tr>
+            <tr><td data-i18n="t1_r7">Топливо / вода</td><td>215–270 л / 1300 л</td><td>210 л / 360–454 л</td><td>200 л / 370 л</td></tr>
+            <tr><td data-i18n="t1_r8">Каюты (макс.)</td><td>3–4 (6–10 чел)</td><td>4–5 (8–10 чел)</td><td>3–5 (6–12 чел)</td></tr>
+            <tr><td data-i18n="t1_r9">Санузлы (макс.)</td><td>2–3</td><td>2–3</td><td>2–3</td></tr>
+            <tr><td data-i18n="t1_r10">Категория CE</td><td>A — Ocean</td><td>A — Ocean</td><td>A — Ocean</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec2_title">💡 Ходовые качества и управляемость</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_char">Характеристика</th>
+              <th>Elan 45.1</th>
+              <th>Bavaria 46</th>
+              <th>Beneteau 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t2_r1">Стиль управления</td><td data-i18n="t2_e1">Традиционный (генуя без автомата)</td><td data-i18n="t2_b1">Спокойный, предсказуемый</td><td data-i18n="t2_f1">Спортивный, живой отклик</td></tr>
+            <tr><td data-i18n="t2_r2">Реакция на руль</td><td data-i18n="t2_e2">Точная, филигранная</td><td data-i18n="t2_b2">Плавная, без сюрпризов</td><td data-i18n="t2_f2">Острая, требует привыкания</td></tr>
+            <tr><td data-i18n="t2_r3">Слабый ветер (&lt;10 уз)</td><td data-i18n="t2_e3">Средняя, идет под генуей</td><td data-i18n="t2_b3">Вялая, просыпается после 10 узлов</td><td data-i18n="t2_f3">Отличная за счет широкой кормы</td></tr>
+            <tr><td data-i18n="t2_r4">Крейсерская скорость</td><td data-i18n="t2_e4">6.5 – 7.5 узлов</td><td data-i18n="t2_b4">6.5 – 7.0 узлов</td><td data-i18n="t2_f4">7.0 – 8.0 узлов (9+ на порывах)</td></tr>
+            <tr><td data-i18n="t2_r5">Острые курсы</td><td data-i18n="t2_e5">Отлично, четко держит курс</td><td data-i18n="t2_b5">Уверенно, немного валкая</td><td data-i18n="t2_f5">Очень хорошо, нужен подруль в порту</td></tr>
+            <tr><td data-i18n="t2_r6">Поведение на волне</td><td data-i18n="t2_e6">Хороший мягкий баланс</td><td data-i18n="t2_b6">Достаточно плавно, мореходно</td><td data-i18n="t2_f6">Динамично, но немного «сухо»</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec3_title">🏡 Интерьер и жилое пространство</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_char">Характеристика</th>
+              <th>Elan 45.1</th>
+              <th>Bavaria 46</th>
+              <th>Beneteau 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t3_r1">Ощущение простора</td><td data-i18n="t3_e1">Уютная, хорошо продуманная</td><td data-i18n="t3_b1">Огромная, «плавучий дом»</td><td data-i18n="t3_f1">Светлая, панорамная</td></tr>
+            <tr><td data-i18n="t3_r2">Дизайн салона</td><td data-i18n="t3_e2">Классический, тёплое дерево</td><td data-i18n="t3_b2">Функциональный, практичный</td><td data-i18n="t3_f2">Итальянский шик (Nauta Design)</td></tr>
+            <tr><td data-i18n="t3_r3">Мастер-каюта</td><td data-i18n="t3_e3">Просторная, островная кровать</td><td data-i18n="t3_b3">Королевская (в 3-каютной версии)</td><td data-i18n="t3_f3">Роскошная, раздельный санузел</td></tr>
+            <tr><td data-i18n="t3_r4">Камбуз</td><td data-i18n="t3_e4">Линейный или Г-образный</td><td data-i18n="t3_b4">Огромный, «лаборатория»</td><td data-i18n="t3_f4">Компактный, эргономичный</td></tr>
+            <tr><td data-i18n="t3_r5">Естественный свет</td><td data-i18n="t3_e5">Хороший (концепция Deck Saloon)</td><td data-i18n="t3_b5">Умеренный, классический</td><td data-i18n="t3_f5">Максимальный (окна в корпусе)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec4_title">🛠️ Качество сборки и надежность</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_char">Характеристика</th>
+              <th>Elan 45.1</th>
+              <th>Bavaria 46</th>
+              <th>Beneteau 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t4_r1">Формование корпуса</td><td data-i18n="t4_e1">Полная вакуумная инфузия</td><td data-i18n="t4_b1">Контактное формование + инфузия</td><td data-i18n="t4_f1">Инфузия + структурная сетка</td></tr>
+            <tr><td data-i18n="t4_r2">Материалы отделки</td><td data-i18n="t4_e2">Высококачественное дерево, фанера</td><td data-i18n="t4_b2">Морской шпон, ДСП элементы</td><td data-i18n="t4_f2">Шпон, мягкие стеновые панели</td></tr>
+            <tr><td data-i18n="t4_r3">Надёжность деталей</td><td data-i18n="t4_e3">Высокая, фурнитура сидит плотно</td><td data-i18n="t4_b3">Средняя (бюджетные замки)</td><td data-i18n="t4_f3">Средняя (капризные защелки)</td></tr>
+            <tr><td data-i18n="t4_r4">Характерные болячки</td><td data-i18n="t4_e4">Износ электрики и инверторов</td><td data-i18n="t4_b4">Протечки леерных стоек, датчики</td><td data-i18n="t4_f4">Люфты баллера руля, индикаторы</td></tr>
+            <tr><td data-i18n="t4_r5">Усталость в чартере</td><td data-i18n="t4_e5">Переносит нагрузки хорошо</td><td data-i18n="t4_b5">Высокий износ мебели и сантехники</td><td data-i18n="t4_f5">Средний износ, требует ухода</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec5_title">💰 Цена и ликвидность</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_char">Характеристика</th>
+              <th>Elan 45.1</th>
+              <th>Bavaria 46</th>
+              <th>Beneteau 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t5_r1">Цена новой (база)</td><td>~220–250 тыс. €</td><td>~200–230 тыс. €</td><td>~240–280 тыс. €</td></tr>
+            <tr><td data-i18n="t5_r2">Цена б/у (3-5 лет)</td><td>~160–190 тыс. €</td><td>~130–160 тыс. €</td><td>~170–210 тыс. €</td></tr>
+            <tr><td data-i18n="t5_r3">Потеря цены (5 лет)</td><td>~25–30%</td><td>~30–35%</td><td>~20–25%</td></tr>
+            <tr><td data-i18n="t5_r4">Ликвидность б/у</td><td data-i18n="t5_e4">Хорошая (для ценителей)</td><td data-i18n="t5_b4">Очень высокая (масс-маркет)</td><td data-i18n="t5_f4">Максимальная (абсолютный хит)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp_sec6_title">🎯 Матрица выбора: Кому что подходит</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_target">Если ваша цель...</th>
+              <th>Elan 45.1</th>
+              <th>Bavaria 46</th>
+              <th>Beneteau 46.1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t6_r1">Спортивный азарт и работа с парусами</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes">✅ Идеально</td><td style="color: #dc2626; font-weight: bold;" data-i18n="no">❌ Нет</td><td data-i18n="maybe">🤔 Можно (First Line)</td></tr>
+            <tr><td data-i18n="t6_r2">Комфортный семейный отпуск с детьми</td><td data-i18n="narrow">🤔 Узковата в корме</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes_ok">✅ Отлично</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes_ok">✅ Отлично</td></tr>
+            <tr><td data-i18n="t6_r3">Коммерческий чартерный бизнес</td><td style="color: #dc2626; font-weight: bold;" data-i18n="bad_choice">❌ Слабый выбор</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes_ok">✅ Отлично</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes_ok">✅ Отлично</td></tr>
+            <tr><td data-i18n="t6_r4">Минимум обслуживания после покупки</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes">✅ Идеально</td><td data-i18n="need_work">🤔 Требует доработок</td><td data-i18n="check_rudder">🤔 Внимание к рулю</td></tr>
+            <tr><td data-i18n="t6_r5">Дальние океанские экспедиции (CE A)</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes">✅ Идеально</td><td data-i18n="not_comf">🤔 Можно, но жестко</td><td style="color: #16a34a; font-weight: bold;" data-i18n="yes">✅ Идеально</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="verdict-box">
+      <h3 style="margin-top: 0; color: var(--deep-sea);" data-i18n="comp_v_title">💎 Итоговый инженерный вывод</h3>
+      <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;" data-i18n="comp_v_txt">Elan 45.1 — выбор парусных пуристов, ценящих ручной контроль и монолитную словенскую сборку. Bavaria 46 — это честный, вместительный, но лишенный эмоций «автобус» для больших чартерных компаний, где каждый евроцент посчитан. Beneteau Oceanis 46.1 — триумф французского компромисса: быстрая, технологичная и статусная лодка для тех, кто хочет брать от ходовых качеств и итальянского стиля максимум, не оглядываясь на ценник обслуживания на вторичном рынке.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        comp_page_title: 'Сравнение яхт: Elan vs Bavaria vs Beneteau',
+        comp_main_title: 'Битва крейсеров: Elan 45.1 vs Bavaria 46 vs Beneteau 46.1',
+        comp_intro: 'Сводный инженерный анализ трех главных конкурентов в сегменте 45–46 футов. Сильные стороны, скрытые дефекты, потеря стоимости и прямые шкиперские рекомендации по выбору лодки.',
+        comp_sec1_title: '📊 Сравнительная таблица: Паспортные данные',
+        th_param: 'Параметр', th_char: 'Характеристика', th_target: 'Если ваша цель...',
+        t1_r1: 'Проектант', t1_r2: 'Длина (LOA)', t1_r3: 'Ширина', t1_r4: 'Осадка (стандарт)', t1_r5: 'Водоизмещение', t1_r6: 'Двигатель', t1_r7: 'Топливо / вода', t1_r8: 'Каюты (макс.)', t1_r9: 'Санузлы (макс.)', t1_r10: 'Категория CE',
+        comp_sec2_title: '💡 Ходовые качества и управляемость',
+        t2_r1: 'Стиль управления', t2_e1: 'Традиционный (генуя без автомата)', t2_b1: 'Спокойный, предсказуемый', t2_f1: 'Спортивный, живой отклик',
+        t2_r2: 'Реакция на руль', t2_e2: 'Точная, филигранная', t2_b2: 'Плавная, без сюрпризов', t2_f2: 'Острая, требует привыкания',
+        t2_r3: 'Слабый ветер (<10 уз)', t2_e3: 'Средняя, идет под генуей', t2_b3: 'Вялая, просыпается после 10 узлов', t2_f3: 'Отличная за счет широкой кормы',
+        t2_r4: 'Крейсерская скорость', t2_e4: '6.5 – 7.5 узлов', t2_b4: '6.5 – 7.0 узлов', t2_f4: '7.0 – 8.0 узлов (9+ на порывах)',
+        t2_r5: 'Острые курсы', t2_e5: 'Отлично, четко держит курс', t2_b5: 'Уверенно, немного валкая', t2_f5: 'Очень хорошо, нужен подруль в порту',
+        t2_r6: 'Поведение на волне', t2_e6: 'Хороший мягкий баланс', t2_b6: 'Достаточно плавно, мореходно', t2_f6: 'Динамично, но немного «сухо»',
+        comp_sec3_title: '🏡 Интерьер и жилое пространство',
+        t3_r1: 'Ощущение простора', t3_e1: 'Уютная, хорошо продуманная', t3_b1: 'Огромная, «плавучий дом»', t3_f1: 'Светлая, панорамная',
+        t3_r2: 'Дизайн салона', t3_e2: 'Классический, тёплое дерево', t3_b2: 'Функциональный, практичный', t3_f2: 'Итальянский шик (Nauta Design)',
+        t3_r3: 'Мастер-каюта', t3_e3: 'Просторная, островная кровать', t3_b3: 'Королевская (в 3-каютной версии)', t3_f3: 'Роскошная, раздельный санузел',
+        t3_r4: 'Камбуз', t3_e4: 'Линейный или Г-образный', t3_b4: 'Огромный, «лаборатория»', t3_f4: 'Компактный, эргономичный',
+        t3_r5: 'Естественный свет', t3_e5: 'Хороший (концепция Deck Saloon)', t3_b5: 'Умеренный, классический', t3_f5: 'Максимальный (окна в корпусе)',
+        comp_sec4_title: '🛠️ Качество сборки и надежность',
+        t4_r1: 'Формование корпуса', t4_e1: 'Полная вакуумная инфузия', t4_b1: 'Контактное формование + инфузия', t4_f1: 'Инфузия + структурная сетка',
+        t4_r2: 'Материалы отделки', t4_e2: 'Высококачественное дерево, фанера', t4_b2: 'Морской шпон, ДСП элементы', t4_f2: 'Шпон, мягкие стеновые панели',
+        t4_r3: 'Надёжность деталей', t4_e3: 'Высокая, фурнитура сидит плотно', t4_b3: 'Средняя (бюджетные замки)', t4_f3: 'Средняя (капризные защелки)',
+        t4_r4: 'Характерные болячки', t4_e4: 'Износ электрики и инверторов', t4_b4: 'Протечки леерных стоек, датчики', t4_f4: 'Люфты баллера руля, индикаторы',
+        t4_r5: 'Усталость в чартере', t4_e5: 'Переносит нагрузки хорошо', t4_b5: 'Высокий износ мебели и сантехники', t4_f5: 'Средний износ, требует ухода',
+        comp_sec5_title: '💰 Цена и ликвидность',
+        t5_r1: 'Цена новой (база)', t5_r2: 'Цена б/у (3-5 лет)', t5_r3: 'Потеря цены (5 лет)', t5_r4: 'Ликвидность б/у',
+        t5_e4: 'Хорошая (для ценителей)', t5_b4: 'Очень высокая (масс-маркет)', t5_f4: 'Максимальная (абсолютный хит)',
+        comp_sec6_title: '🎯 Матрица выбора: Кому что подходит',
+        t6_r1: 'Спортивный азарт и работа с парусами', t6_r2: 'Комфортный семейный отпуск с детьми', t6_r3: 'Коммерческий чартерный бизнес', t6_r4: 'Минимум обслуживания после покупки', t6_r5: 'Дальние океанские экспедиции (CE A)',
+        yes: '✅ Идеально', no: '❌ Нет', maybe: '🤔 Можно (First Line)', narrow: '🤔 Узковата в корме', yes_ok: '✅ Отлично', bad_choice: '❌ Слабый выбор', need_work: '🤔 Требует доработок', check_rudder: '🤔 Внимание к рулю', not_comf: '🤔 Можно, но жестко',
+        comp_v_title: '💎 Итоговый инженерный вывод',
+        comp_v_txt: 'Elan 45.1 — выбор парусных пуристов, ценящих ручной контроль и монолитную словенскую сборку. Bavaria 46 — это честный, вместительный, но лишенный эмоций «автобус» для больших чартерных компаний, где каждый евроцент посчитан. Beneteau Oceanis 46.1 — триумф французского компромисса: быстрая, технологичная и статусная лодка для тех, кто хочет брать от ходовых качеств и итальянского стиля максимум, не оглядываясь на ценник обслуживания на вторичном рынке.',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        comp_page_title: 'Yacht Comparison: Elan vs Bavaria vs Beneteau',
+        comp_main_title: 'Battle of Cruisers: Elan 45.1 vs Bavaria 46 vs Beneteau 46.1',
+        comp_intro: 'A unified engineering breakdown of the three main 45–46ft competitors. Strengths, structural issues, depreciation rates, and direct skipper selection tips.',
+        comp_sec1_title: '📊 Comparison Matrix: Technical Specifications',
+        th_param: 'Parameter', th_char: 'Characteristic', th_target: 'If your goal is...',
+        t1_r1: 'Naval Architect', t1_r2: 'Length (LOA)', t1_r3: 'Beam', t1_r4: 'Draft (standard)', t1_r5: 'Displacement', t1_r6: 'Engine', t1_r7: 'Fuel / Water', t1_r8: 'Cabins (max)', t1_r9: 'Heads (max)', t1_r10: 'CE Category',
+        comp_sec2_title: '💡 Sailing Performance & Helm Handling',
+        t2_r1: 'Steering Style', t2_e1: 'Traditional (large genoa, no self-tacker)', t2_b1: 'Calm, predictable', t2_f1: 'Sporty, vivid feedback',
+        t2_r2: 'Helm Response', t2_e2: 'Precise, sensitive', t2_b2: 'Smooth, no surprises', t2_f2: 'Sharp, requires focus',
+        t2_r3: 'Light Wind (<10 kn)', t2_e3: 'Moderate, relies on genoa', t2_b3: 'Sluggish, wakes up after 10 knots', t2_f3: 'Excellent due to wide stern lines',
+        t2_r4: 'Cruising Speed', t2_e4: '6.5 – 7.5 knots', t2_b4: '6.5 – 7.0 knots', t2_f4: '7.0 – 8.0 knots (9+ in gusts)',
+        t2_r5: 'Upwind Trajectories', t2_e5: 'Excellent, locks onto a groove', t2_b5: 'Steady, slightly tender', t2_f5: 'Very good, needs thruster in marinas',
+        t2_r6: 'Wave Comfort', t2_e6: 'Good soft balance', t2_b6: 'Quite smooth, seaworthy', t2_f6: 'Dynamic, but slightly rigid',
+        comp_sec3_title: '🏡 Interior & Living Space',
+        t3_r1: 'Perceived Volume', t3_e1: 'Cozy, highly practical ergonomics', t3_b1: 'Enormous, a floating home', t3_f1: 'Bright, panoramic views',
+        t3_r2: 'Salon Architecture', t3_e2: 'Classic, warm timber feel', t3_b2: 'Functional, plain utility', t3_f2: 'Italian chic style (Nauta Design)',
+        t3_r3: 'Master Cabin', t3_e3: 'Spacious, proper island berth', t3_b3: 'Regal size (inside 3-cabin configuration)', t3_f3: 'Luxurious, split head configuration',
+        t3_r4: 'Galley Layout', t3_e4: 'Linear or L-shaped option', t3_b4: 'Enormous, laboratory format', t3_f4: 'Compact, high ergonomics',
+        t3_r5: 'Natural Lighting', t3_e5: 'Good (Deck Saloon engineering)', t3_b5: 'Moderate, classic setups', t3_f5: 'Maximum (large hull portlights)',
+        comp_sec4_title: '🛠️ Structural Integrity & Assembly Quality',
+        t4_r1: 'Hull Fabrication', t4_e1: 'Full vacuum resin infusion', t4_b1: 'Hand-layup + partial infusion frames', t4_f1: 'Infusion skin + structural inner grid',
+        t4_r2: 'Interior Woodwork', t4_e2: 'High-grade timber, marine plywood', t4_b2: 'Marine veneer, MDF core panels', t4_f2: 'Veneer, soft-touch wall linings',
+        t4_r3: 'Hardware Reliability', t4_e3: 'High, solid fittings alignment', t4_b3: 'Average (budget hatch locks)', t4_f3: 'Average (fussy locking tabs)',
+        t4_r4: 'Common Deficiencies', t4_e4: 'Electrical wear and inverter strain', t4_b4: 'Stanchion base leaks, bad tank monitors', t4_f4: 'Rudder stock play, gauge fading',
+        t4_r5: 'Charter Fleet Wear', t4_e5: 'Absorbs systematic stress well', t4_b5: 'High degradation of woodwork & heads', f5: 'Moderate wear, demands regular service',
+        comp_sec5_title: '💰 Financial Depreciation & Liquidity',
+        t5_r1: 'New Base Pricing', t5_r2: 'Pre-owned (3-5 Years)', t5_r3: '5-Year Depreciation', t5_r4: 'Resale Liquidity',
+        t5_e4: 'Good (appeals to purists)', t5_b4: 'Very high (mass market asset)', t5_f4: 'Maximum (absolute volume leader)',
+        comp_sec6_title: '🎯 Selection Grid: Ideal Matches',
+        t6_r1: 'Sporting enthusiasm & manual sail tuning', t6_r2: 'Comfortable family cruises with kids', t6_r3: 'Commercial charter configurations', t6_r4: 'Minimal repair investment after buying', t6_r5: 'Extended blue-water voyages (CE A)',
+        yes: '✅ Ideal Match', no: '❌ Unsuited', maybe: '🤔 Conditional (First Line)', narrow: '🤔 Narrow aft run sections', yes_ok: '✅ Excellent', bad_choice: '❌ Suboptimal', need_work: '🤔 Requires aftermarket yard refits', check_rudder: '🤔 Track rudder bearings', not_comf: '🤔 Viable, but rigid motion',
+        comp_v_title: '💎 Ultimate Structural Conclusion',
+        comp_v_txt: 'The Elan 45.1 belongs to sailing purists who demand structural feedback, active sheet handling, and dense Slovenian composite structures. The Bavaria 46 functions as an honest, spacious, yet emotionally flat commuter vessel built for high-occupancy charter operations where every cent is itemized. The Beneteau Oceanis 46.1 represents the triumph of French compromises: fast, highly technical, and prestigious, optimizing cruising velocities and Italian styling without fearing high secondary-market listing price tags.',
+        footer_yt: 'YouTube Channel', footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        comp_page_title: 'Comparativa de Yates: Elan vs Bavaria vs Beneteau',
+        comp_main_title: 'Batalla de Cruceros: Elan 45.1 vs Bavaria 46 vs Beneteau 46.1',
+        comp_intro: 'Análisis técnico unificado de los tres principales rivales en el rango de 45–46 pies. Fortalezas, defectos comunes, depreciación naval y criterios directos del patrón.',
+        comp_sec1_title: '📊 Matriz Comparativa: Datos de Ficha Técnica',
+        th_param: 'Parámetro', th_char: 'Característica', th_target: 'Si su objetivo es...',
+        t1_r1: 'Arquitecto Naval', t1_r2: 'Eslora (LOA)', t1_r3: 'Manga', t1_r4: 'Calado (estándar)', t1_r5: 'Desplazamiento', t1_r6: 'Motor', t1_r7: 'Combustible / Agua', t1_r8: 'Camarotes (máx)', t1_r9: 'Baños (máx)', t1_r10: 'Categoría CE',
+        comp_sec2_title: '💡 Rendimiento Náutico y Reacción al Timón',
+        t2_r1: 'Estilo de Navegación', t2_e1: 'Tradicional (génova grande sin autovirante)', t2_b1: 'Tranquilo, predecible', t2_f1: 'Deportivo, alta respuesta',
+        t2_r2: 'Tacto de Rueda', t2_e2: 'Preciso, de alta sensibilidad', t2_b2: 'Suave, libre de sorpresas', t2_f2: 'Afilado, exige concentración',
+        t2_r3: 'Viento Ligero (<10 kn)', t2_e3: 'Aceptable, depende del génova', t2_b3: 'Perezoso, reacciona pasados 10 nudos', t2_f3: 'Excelente por las secciones de popa',
+        t2_r4: 'Velocidad de Crucero', t2_e4: '6.5 – 7.5 nudos', t2_b4: '6.5 – 7.0 nudos', t2_f4: '7.0 – 8.0 nudos (9+ en rachas)',
+        t2_r5: 'Rumbos de Ceñida', t2_e5: 'Excelente, se estabiliza solo', t2_b5: 'Firme, un poco tierno', t2_f5: 'Muy bueno, exige hélice de proa',
+        t2_r6: 'Paso de Ola', t2_e6: 'Buen equilibrio noble', t2_b6: 'Bastante suave, marinero', t2_f6: 'Dinámico, pero un tanto rígido',
+        comp_sec3_title: '🏡 Interior y Habitabilidad a Bordo',
+        t3_r1: 'Volumen Percibido', t3_e1: 'Acogedor, ergonomía muy lógica', t3_b1: 'Inmenso, un auténtico piso flotante', t3_f1: 'Luminoso, vistas panorámicas',
+        t3_r2: 'Diseño del Salón', t3_e2: 'Clásico, maderas cálidas', t3_b2: 'Funcional, utilitario básico', t3_f2: 'Estilo italiano sofisticado (Nauta)',
+        t3_r3: 'Camarote Principal', t3_e3: 'Espacioso, cama en isla accesible', t3_b3: 'Tamaño descomunal (versión 3 cabinas)', t3_f3: 'Lujoso, baño con suite dividida',
+        t3_r4: 'Cocina', t3_e4: 'Configuración lineal o en L', t3_b4: 'Inmensa, formato "laboratorio"', t3_f4: 'Compacta, alta ergonomía útil',
+        t3_r5: 'Iluminación Natural', t3_e5: 'Buena (gracias al Deck Saloon)', t3_b5: 'Moderada, esquemas clásicos', t3_f5: 'Máxima (grandes ventanas de casco)',
+        comp_sec4_title: '🛠️ Calidad Estructural y Ensamblaje',
+        t4_r1: 'Laminado del Casco', t4_e1: 'Infusión al vacío de resina completa', t4_b1: 'Moldeo manual + infusión parcial', t4_f1: 'Infusión + contra molde estructural',
+        t4_r2: 'Ebanistería Interior', t4_e2: 'Madera selecta, contrachapado marino', t4_b2: 'Chapa marina, núcleos de DM', t4_f2: 'Chapa fina, paneles de tacto suave',
+        t4_r3: 'Herrajes y Detalles', t4_e3: 'Alta, fijaciones sólidas y estancas', t4_b3: 'Media (cierres de escotilla económicos)', t4_f3: 'Media (pestañas plásticas finas)',
+        t4_r4: 'Defectos Recurrentes', t4_e4: 'Fatiga eléctrica y estrés de inversor', t4_b4: 'Filtraciones en candeleros, sensores', t4_f4: 'Holguras en mecha de timón, pantallas',
+        t4_r5: 'Desgaste en Chárter', t4_e5: 'Soporta bien el uso continuado', t4_b5: 'Alto deterioro en maderas y aseos', t4_f5: 'Desgaste moderado, exige cuidados',
+        comp_sec5_title: '💰 Valores de Mercado y Liquidez',
+        t5_r1: 'Precio Base Nuevo', t5_r2: 'Ocasión (3-5 Años)', t5_r3: 'Depreciación (5 Años)', t5_r4: 'Liquidez de Reventa',
+        t5_e4: 'Buena (enfocado a puristas)', t5_b4: 'Muy alta (activo de mercado masivo)', t5_f4: 'Máxima (líder absoluto en volumen)',
+        comp_sec6_title: '🎯 Cuadrícula de Selección: Perfiles Ideales',
+        t6_r1: 'Espíritu deportivo y trimado manual', t6_r2: 'Cruceros familiares cómodos con niños', t6_r3: 'Operaciones comerciales de chárter', t6_r4: 'Mínima inversión en astillero post-compra', t6_r5: 'Grandes travesías oceánicas (CE A)',
+        yes: '✅ Perfil Ideal', no: '❌ No Apto', maybe: '🤔 Condicional (First Line)', narrow: '🤔 Popa algo estrecha en formas', yes_ok: '✅ Excelente', bad_choice: '❌ Subóptimo', need_work: '🤔 Exige mejoras en el mercado auxiliar', check_rudder: '🤔 Revisar cojinetes de timón', not_comf: '🤔 Viable, pero movimiento seco',
+        comp_v_title: '💎 Conclusión Naval Definitiva',
+        comp_v_txt: 'El Elan 45.1 es el territorio de los puristas del viento que exigen sensaciones en rueda, trimado activo y estructuras de composite sólidas de cuño esloveno. El Bavaria 46 opera como un autobús marítimo honesto y espacioso, pero plano en emociones, ideal para flotas donde cada céntimo de euro está fiscalizado. El Beneteau Oceanis 46.1 representa el triunfo del compromiso francés: rápido, altamente tecnológico y con estatus, que optimiza las velocidades y el estilo italiano sin temer las altas etiquetas de precio del mercado de ocasión.',
+        footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
