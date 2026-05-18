@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium Blue-Water Comparison: Hallberg-Rassy vs Amel — Adventure Horizons" />
+  <title data-i18n="comp2_page_title">Сравнение яхт: Hallberg-Rassy vs Amel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Стили для адаптивных сравнительных таблиц */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 1.5rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background: var(--surface);
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+      min-width: 700px;
+    }
+    .comp-table th, .comp-table td {
+      padding: 1rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .comp-table th {
+      background: #f8fafc;
+      color: var(--deep-sea);
+      font-weight: 700;
+    }
+    .comp-table tr:last-child td {
+      border-bottom: none;
+    }
+    .comp-table td:first-child {
+      font-weight: 600;
+      color: var(--deep-sea);
+      width: 28%;
+    }
+    .comp-table td {
+      color: var(--text);
+    }
+    .verdict-box {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-top: 2rem;
+    }
+    /* Интерактивная галерея */
+    .review-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-img-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+      aspect-ratio: 16 / 10;
+    }
+    .gallery-img-wrapper:hover {
+      transform: scale(1.02);
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Модальное окно лайтбокса */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container" style="max-width: 960px;">
+    <header class="case-header">
+      <span class="tag" style="background: #fef3c7; color: #d97706;">Blue-Water Analytics</span>
+      <h1 data-i18n="comp2_main_title">Океанские тяжеловесы: Hallberg-Rassy 412 vs Amel 55 vs Super Maramu</h1>
+      <p class="case-intro" data-i18n="comp2_intro">Трезвый инженерный разбор легендарных парусных кораблей высшего эшелона надежности. Скрытые дефекты, специфика обслуживания закрытых кокпитов, реальная стоимость владения и ликвидность на вторичном рынке.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <section class="case-section">
+      <h2 data-i18n="comp2_sec1_title">⚓️ В двух словах: кто есть кто</h2>
+      <p data-i18n="comp2_sec1_p1">Премиальные экспедиционные лодки — это совершенно иная лига судостроения. Спрос на них на вторичном рынке колоссален, а цены на ухоженные экземпляры с возрастом легко конкурируют со стоимостью новых современных масс-маркет судов. Их ценят за исключительную автономность, монолитную жесткость конструкций и готовность к экстремальным штормовым условиям, а не за изменчивой интерьерной модой.</p>
+    </section>
+
+    <section class="case-section">
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_param">Параметр</th>
+              <th>Hallberg-Rassy 412</th>
+              <th>Amel 55</th>
+              <th>Amel Super Maramu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t1_r1">Проектировщик</td><td>German Frers / HR</td><td>Amel (Henri Amel)</td><td>Amel</td></tr>
+            <tr><td data-i18n="t1_years">Годы выпуска</td><td>2011 – 2021</td><td>2010 – 2017</td><td>1990 – 2009</td></tr>
+            <tr><td data-i18n="t1_r2">Длина (LOA)</td><td>12.61 <span data-i18n="unit_m">м</span></td><td>17.30 <span data-i18n="unit_m">м</span></td><td>15.86 <span data-i18n="unit_m">м</span></td></tr>
+            <tr><td data-i18n="t1_r3">Ширина</td><td>4.11 <span data-i18n="unit_m">м</span></td><td>4.99 <span data-i18n="unit_m">м</span></td><td>4.60 <span data-i18n="unit_m">м</span></td></tr>
+            <tr><td data-i18n="t1_r4">Осадка</td><td>1.99 <span data-i18n="unit_m">м</span></td><td>2.10 – 2.30 <span data-i18n="unit_m">м</span></td><td>2.10 <span data-i18n="unit_m">м</span></td></tr>
+            <tr><td data-i18n="t1_r5">Водоизмещение</td><td>11 100 <span data-i18n="unit_kg">кг</span></td><td>17 000 <span data-i18n="unit_kg">кг</span></td><td>16 000 <span data-i18n="unit_kg">кг</span></td></tr>
+            <tr><td data-i18n="t1_ballast">Балласт (киль)</td><td>4 000 <span data-i18n="unit_kg">кг</span> (свинец)</td><td>5 000 <span data-i18n="unit_kg">кг</span></td><td>5 000 <span data-i18n="unit_kg">кг</span></td></tr>
+            <tr><td data-i18n="t1_r6">Двигатель</td><td>Volvo Penta 75 <span data-i18n="unit_hp">л.с.</span></td><td>Yanmar / Volvo 110-160 <span data-i18n="unit_hp">л.с.</span></td><td>Perkins / Volvo 75-100 <span data-i18n="unit_hp">л.с.</span></td></tr>
+            <tr><td data-i18n="t1_r8">Каюты</td><td>2 / 3</td><td>3</td><td>3</td></tr>
+            <tr><td data-i18n="t1_r7">Топливо / вода</td><td>350 <span data-i18n="unit_l">л</span> / 600 <span data-i18n="unit_l">л</span></td><td>950 <span data-i18n="unit_l">л</span> / 900 <span data-i18n="unit_l">л</span></td><td>500 <span data-i18n="unit_l">л</span> / 850 <span data-i18n="unit_l">л</span></td></tr>
+            <tr><td data-i18n="t5_r1">Цена новая (база)</td><td data-i18n="p_hr_new">~480 тыс. €</td><td data-i18n="p_a55_new">~900 тыс. €</td><td data-i18n="p_sm_new">~400 тыс. €</td></tr>
+            <tr><td data-i18n="t5_r2">Цена б/у</td><td data-i18n="p_hr_used">350–450 тыс. €</td><td data-i18n="p_a55_used">500–800 тыс. €</td><td data-i18n="p_sm_used">150–250 тыс. €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="comp2_gal_title">📸 Фотохроника моделей</h2>
+      <div class="review-gallery">
+        <div class="gallery-img-wrapper"><img src="halberg_1.jpg" alt="Hallberg-Rassy 412 under sail"></div>
+        <div class="gallery-img-wrapper"><img src="maramu_1.jpg" alt="Amel Super Maramu under sail ketch"></div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h3 style="color: var(--deep-sea);">🇸🇪 Hallberg-Rassy 412: Шведская королева</h3>
+      <p data-i18n="hr_txt1">Настоящий внедорожник представительского класса на воде. Вопреки стереотипам о медлительности тяжелых скандинавских судов, обводы от German Frers и эффективное парусное вооружение площадью 90 кв.м позволяют лодке уверенно держать ход. При 12 узлах истинного ветра крейсер стабильно развивает 7.5 узлов, демонстрируя острый угол лавировки и мягкий шаг на встречной волне.</p>
+      <p style="margin-top: 0.5rem;" data-i18n="hr_txt2">Вся проводка бегучего такелажа скрыта под палубными пазами и выведена напрямую к эргономичному полузакрытому кокпиту под защитное ветровое стекло, что позволяет без труда управлять лодкой в одиночку. Интерьер выполнен вручную из массива красного тика — это полноценная мебельная архитектура. Интегральная силовая сетка и трехслойное формование с Divinycell обеспечивают корпусу феноменальную жесткость.</p>
+      <ul style="margin-top: 0.8rem; padding-left: 1.2rem;">
+        <li><strong data-i18n="pros_label">Плюсы:</strong> <span data-i18n="hr_pros">Эталонный безопасный центральный или глубокий кормовой кокпит с круговой защитой от брызг; безупречный доступ к двигателю и ключевым узлам прямо из салона; высочайшая остаточная стоимость.</span></li>
+        <li><strong data-i18n="cons_label">Минусы:</strong> <span data-i18n="hr_cons">Натуральный тиковый настил палубы требует регулярной дорогой заботы; скромный размер ахтерпика (тендер более 2.5 метров убрать проблематично); узкий гостевой проход при двухкаютной планировке.</span></li>
+      </ul>
+    </section>
+
+    <section class="case-section" style="margin-top: 2.5rem;">
+      <h3 style="color: var(--deep-sea);">🇫🇷 Amel 55 & Super Maramu: Французские линкоры автономии</h3>
+      <p data-i18n="amel_txt1">Философия Анри Амеля — это абсолютное уединение в океане без оглядки на береговую инфраструктуру. Эти двухмачтовые кечи спроектированы как монолитные штормовые шлюпы с четырьмя полноценными водонепроницаемыми переборками. Глубокий защищенный кокпит полностью закрыт жестким хардтопом и остеклением, формируя герм-рубку для вахты.</p>
+      <p style="margin-top: 0.5rem;" data-i18n="amel_txt2">Управление парусами тотально автоматизировано: закрутки грота, бизани и стакселей оснащены мощными электроприводами с дублированием ручного резерва. Уникальная черта трансмиссии Amel — гребной винт интегрирован непосредственно в обтекатель фальшкиля. Намотать на него обрывки сетей или швартовный конец физически невозможно.</p>
+      <ul style="margin-top: 0.8rem; padding-left: 1.2rem;">
+        <li><strong data-i18n="pros_label">Плюсы:</strong> <span data-i18n="amel_pros">Легендарная неуязвимость движителя в киле; управление всей парусной площадью кнопками с поста рулевого в одиночку; баки на 1000 литров топлива; фирменная палуба Amel Teak (не гниющий пластиковый спец-палубный настил).</span></li>
+        <li><strong data-i18n="cons_label">Минусы:</strong> <span data-i18n="amel_cons">Обратная связь на штурвале практически отсутствует (руль тяжеловат в свежий ветер); высокая сложность разветвленной бортовой электрики; дефицит предложений на вторичном рынке.</span></li>
+      </ul>
+    </section>
+
+    <section class="case-section" style="margin-top: 2.5rem;">
+      <h2 data-i18n="th_direct_comp">⚔️ Лобовое сравнение: Шведский пуризм против французского линкора</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_char">Характеристика</th>
+              <th>Hallberg-Rassy 412</th>
+              <th>Amel 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="t2_r1">Класс</td><td data-i18n="t2_hr_class">Люксовый экспедиционный круизёр</td><td data-i18n="t2_am_class">Специализированный океанский крейсер</td></tr>
+            <tr><td data-i18n="t4_r1">Тип вооружения</td><td data-i18n="t2_hr_rig">Бермудский шлюп</td><td data-i18n="t2_am_rig">Двухмачтовый кеч</td></tr>
+            <tr><td data-i18n="t1_r10">Кокпит</td><td data-i18n="t2_hr_cock">Защищенный глубокий с ветровым стеклом</td><td data-i18n="t2_am_cock">Центральный закрытый хардтоп-кокон</td></tr>
+            <tr><td data-i18n="t2_r7">Переборки безопасности</td><td>2</td><td>4 (полностью водонепроницаемые)</td></tr>
+            <tr><td data-i18n="t1_tanks">Автономность</td><td data-i18n="t2_hr_aut">Средняя (топливный бак ~350 л)</td><td data-i18n="t2_am_aut">Абсолютная (топливный бак до 1000 л)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2 data-i18n="th_costs_title">🩺 Содержание легенды: О чем умалчивают брокеры</h2>
+      <div class="table-container">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_cost_item">Статья ежегодного / планового бюджета</th>
+              <th>Hallberg-Rassy 412</th>
+              <th>Amel 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="c_r1">Базовое годовое ТО систем у официалов</td><td data-i18n="c_hr1">7 000 – 10 000 €</td><td data-i18n="c_am1">10 000 – 15 000 €</td></tr>
+            <tr><td data-i18n="c_r2">Замена стоячего такелажа (раз в 10 лет)</td><td data-i18n="c_hr2">12 000 – 18 000 €</td><td data-i18n="c_am2">18 000 – 25 000 € (две мачты)</td></tr>
+            <tr><td data-i18n="c_r3">Уход за палубным покрытием</td><td data-i18n="c_hr3">3 000 – 5 000 € (шлифовка/перепрессовка тика)</td><td data-i18n="yes_ok" style="color:#16a34a; font-weight:bold;">0 € (Спецпластик Amel Teak)</td></tr>
+            <tr><td data-i18n="c_r4">Капитальный рефит электрики и приводов (15 лет)</td><td data-i18n="c_hr4">40 000 – 60 000 €</td><td data-i18n="c_am4">50 000 – 80 000 € (множество редукторов)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="verdict-box">
+      <h3 style="margin-top: 0; color: var(--deep-sea);" data-i18n="comp2_v_title">💎 Итоговый шкиперский вердикт</h3>
+      <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;" data-i18n="comp2_v_txt">Эти лодки не покупают на сезон — это выбор на десятилетия. Hallberg-Rassy 412 — идеальный выбор для парусных аристократов, ценящих безупречную классическую плотницкую работу, чистую ручную обратную связь на руле и готовность к сложной северной волне. Семейство Amel (55 и легендарный Super Maramu) — это бескомпромиссные штормовые линкоры для кругосветных автономий, где управление огромной парусностью сведено к нажатию кнопок в сухом закрытом коконе. Если бюджет ограничен, но мечта об океане требует премиум-прочности — ищите живой Amel Super Maramu, его неубиваемый силовой каркас простит любые шторма.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size Comparison Picture">
+  </div>
+
+  <script>
+    // Логика Лайтбокса
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.review-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Языковые базы данных сайта
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        comp2_page_title: 'Сравнение яхт: Hallberg-Rassy vs Amel',
+        comp2_main_title: 'Океанские тяжеловесы: Hallberg-Rassy 412 vs Amel 55 vs Super Maramu',
+        comp2_intro: 'Трезвый инженерный разбор легендарных парусных кораблей высшего эшелона надежности. Скрытые дефекты, специфика обслуживания закрытых кокпитов, реальная стоимость владения и ликвидность на вторичном рынке.',
+        comp2_sec1_title: '⚓️ В двух словах: кто есть кто',
+        th_param: 'Параметр', th_char: 'Характеристика', th_cost_item: 'Статья ежегодного / планового бюджета',
+        t1_r1: 'Проектировщик', t1_years: 'Годы выпуска', t1_r2: 'Длина (LOA)', t1_r3: 'Ширина', t1_r4: 'Осадка', t1_r5: 'Водоизмещение', t1_ballast: 'Балласт (киль)', t1_r6: 'Двигатель', t1_r8: 'Каюты', t1_r7: 'Топливо / вода', t5_r1: 'Цена новая (база)', t5_r2: 'Цена б/у',
+        unit_m: 'м', unit_kg: 'кг', unit_hp: 'л.с.', unit_l: 'л', unit_pers: 'чел.', cat_ocean: 'A — Океан',
+        p_hr_new: '~480 тыс. €', p_a55_new: '~900 тыс. €', p_sm_new: '~400 тыс. €', p_hr_used: '350–450 тыс. €', p_a55_used: '500–800 тыс. €', p_sm_used: '150–250 тыс. €',
+        comp2_gal_title: '📸 Фотохроника моделей',
+        hr_txt1: 'Настоящий внедорожник представительского класса на воде. Вопреки стереотипам о медлительности тяжелых скандинавских судов, обводы от German Frers и эффективное парусное вооружение площадью 90 кв.м позволяют лодки уверенно держать ход. При 12 узлах истинного ветра крейсер стабильно развивает 7.5 узлов, демонстрируя острый угол лавировки и мягкий шаг на встречной волне.',
+        hr_txt2: 'Вся проводка бегучего такелажа скрыта под палубными пазами и выведена напрямую к эргономичному полузакрытому кокпиту под защитное ветровое стекло, что позволяет без труда управлять лодкой в одиночку. Интерьер выполнен вручную из массива красного тика — это полноценная мебельная архитектура. Интегральная силовая сетка и трехслойное формование с Divinycell обеспечивают корпусу феноменальную жесткость.',
+        pros_label: 'Плюсы:', cons_label: 'Минусы:',
+        hr_pros: 'Эталонный безопасный центральный или глубокий кормовой кокпит с круговой защитой от брызг; безупречный доступ к двигателю и ключевым узлам прямо из салона; высочайшая остаточная стоимость.',
+        hr_cons: 'Натуральный тиковый настил палубы требует регулярной дорогой заботы; скромный размер ахтерпика (тендер более 2.5 метров убрать проблематично); узкий гостевой проход при двухкаютной планировке.',
+        amel_txt1: 'Философия Анри Амеля — это абсолютное уединение в океане без оглядки на береговую инфраструктуру. Эти двухмачтовые кечи спроектированы как монолитные штормовые шлюпы с четырьмя полноценными водонепроницаемыми переборками. Глубокий защищенный кокпит полностью закрыт жестким хардтопом и остеклением, формируя герм-рубку для вахты.',
+        amel_txt2: 'Управление парусами тотально автоматизировано: закрутки грота, бизани и стакселей оснащены мощными электроприводами с дублированием ручного резерва. Уникальная черта трансмиссии Amel — гребной винт интегрирован непосредственно в обтекатель фальшкиля. Намотать на него обрывки сетей или швартовный конец физически невозможно.',
+        amel_pros: 'Легендарная неуязвимость движителя в киле; управление всей парусной площадью кнопками с поста рулевого в одиночку; баки на 1000 литров топлива; фирменная палуба Amel Teak (не гниющий пластиковый спец-палубный настил).',
+        amel_cons: 'Обратная связь на штурвале практически отсутствует (руль тяжеловат в свежий ветер); высокая сложность разветвленной бортовой электрики; дефицит предложений на вторичном рынке.',
+        th_direct_comp: '⚔️ Лобовое сравнение: Шведский пуризм против французского линкора',
+        t2_r1: 'Класс', t2_hr_class: 'Люксовый экспедиционный круизёр', t2_am_class: 'Специализированный океанский крейсер',
+        t4_r1: 'Тип вооружения', t2_hr_rig: 'Бермудский шлюп', t2_am_rig: 'Двухмачтовый кеч',
+        t1_r10: 'Кокпит', t2_hr_cock: 'Защищенный глубокий с ветровым стеклом', t2_am_cock: 'Центральный закрытый хардтоп-кокон',
+        t2_r7: 'Переборки безопасности', t1_tanks: 'Автономность', t2_hr_aut: 'Средняя (топливный бак ~350 л)', t2_am_aut: 'Абсолютная (топливный бак до 1000 л)',
+        th_costs_title: '🩺 Содержание легенды: О чем умалчивают брокеры',
+        c_r1: 'Базовое годовое ТО систем у официалов', c_hr1: '7 000 – 10 000 €', c_am1: '10 000 – 15 000 €',
+        c_r2: 'Замена стоячего такелажа (раз в 10 лет)', c_hr2: '12 000 – 18 000 €', c_am2: '18 000 – 25 000 € (две мачты)',
+        c_r3: 'Уход за палубным покрытием', c_hr3: '3 000 – 5 000 € (шлифовка/перепрессовка тика)', yes_ok: '0 € (Спецпластик Amel Teak)',
+        c_r4: 'Капитальный рефит электрики и приводов (15 лет)', c_hr4: '40 000 – 60 000 €', c_am4: '50 000 – 80 000 € (множество редукторов)',
+        comp2_v_title: '💎 Итоговый шкиперский вердикт',
+        comp2_v_txt: 'Эти лодки не покупают на сезон — это выбор на десятилетия. Hallberg-Rassy 412 — идеальный выбор для парусных аристократов, ценящих безупречную классическую плотницкую работу, чистую ручную обратную связь на руле и готовность к сложной северной волне. Семейство Amel (55 и легендарный Super Maramu) — это бескомпромиссные штормовые линкоры для кругосветных автономий, где управление огромной парусностью сведено к нажатию кнопок в сухом закрытом коконе. Если бюджет ограничен, но мечта об океане требует премиум-прочности — ищите живой Amel Super Maramu, его неубиваемый силовой каркас простит любые шторма.',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        comp2_page_title: 'Yacht Comparison: Hallberg-Rassy vs Amel',
+        comp2_main_title: 'Ocean Heavyweights: Hallberg-Rassy 412 vs Amel 55 vs Super Maramu',
+        comp2_intro: 'A clear engineering review of legendary luxury offshore sailing yachts. Hidden flaws, central cockpit maintenance traits, real-world ownership budgets, and secondary market liquidity values.',
+        comp2_sec1_title: '⚓️ In a Nutshell: Who is Who',
+        th_param: 'Parameter', th_char: 'Characteristic', th_cost_item: 'Annual / Scheduled Budget Item',
+        t1_r1: 'Naval Architect', t1_years: 'Production Years', t1_r2: 'Length (LOA)', t1_r3: 'Beam', t1_r4: 'Draft', t1_r5: 'Displacement', t1_ballast: 'Ballast (Keel)', t1_r6: 'Engine', t1_r8: 'Cabins', t1_r7: 'Fuel / Water', t5_r1: 'New Price (Base)', t5_r2: 'Used Price',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'hp', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Ocean',
+        p_hr_new: '~480k €', p_a55_new: '~900k €', p_sm_new: '~400k €', p_hr_used: '350–450k €', p_a55_used: '500–800k €', p_sm_used: '150–250k €',
+        comp2_gal_title: '📸 Yacht Photo Chronicles',
+        hr_txt1: 'The Mercedes G-Class of the seas. Defying stereotypes regarding heavy Scandinavian hulls being slow, German Frers lines and an efficient 90 sq.m sailplan enable excellent velocity parameters. In 12 knots of true breeze, she confidently locks into 7.5 knots, showing sharp upwind point tracking and a soft motion over waves.',
+        hr_txt2: 'All running rigging lines are cleanly recessed under deck tracks, running straight to a highly ergonomic helm station shielded behind a thick glass windscreen. Short-handed sailing is effortless. The interior is crafted from fine solid mahogany timber woodwork. An integrated hull grid layout and three-layer Divinycell foam infusion provide immense structural rigidity.',
+        pros_label: 'Pros:', cons_label: 'Cons:',
+        hr_pros: 'Benchmark ultra-safe sheltered cockpit layouts with robust green water protection; pristine engine access vectors directly from the main salon; exceptional historical value retention.',
+        hr_cons: 'Natural teak decks demand constant expensive chemical care in sunny climates; modest lazarette clearances (tenders over 2.5 m are tough to store); restricted cabin access tracks in 2-cabin layouts.',
+        amel_txt1: 'Henri Amel\'s core philosophy centers on total blue-water autonomy independent of marina infrastructure. These multi-rigged ketches are built like bulletproof tanks with four independent watertight bulkheads. The deep, isolated helm sector is completely protected by a hardtop enclosure, creating a secure command capsule.',
+        amel_txt2: 'Sail management is totally motorized: mainsail, mizzen, and headsail reefing operate via electrical drives backed up by manual reserve override configurations. A legendary Amel engineering trait puts the propeller drive directly inside the solid keel skeg profile, making rope line entanglement completely impossible.',
+        amel_pros: 'Indestructible skeg-mounted propeller drive; solo sail tuning from dry helm consoles; 1000L bunker fuel volumes; signature synthetic Amel Teak decks that do not rot or dry out.',
+        amel_cons: 'Sailing helm feedback is practically absent (steering feels heavy in intense weather); high wiring density across secondary onboard networks; restricted availability on global luxury classifieds.',
+        th_direct_comp: '⚔️ Frontal Comparison: Swedish Purism vs French Battleship Dynamics',
+        t2_r1: 'Class', t2_hr_class: 'Premium Blue-Water Cruiser', t2_am_class: 'Specialized Blue-Water Ocean Liner',
+        t4_r1: 'Rig Type', t2_hr_rig: 'Bermudan Sloop', t2_am_rig: 'Two-Masted Ketch',
+        t1_r10: 'Cockpit Format', t2_hr_cock: 'Deep sheltered layout with fixed windscreen', t2_am_cock: 'Central rigid hardtop capsule shell',
+        t2_r7: 'Safety Bulkheads', t1_tanks: 'Autonomy', t2_hr_aut: 'Moderate (fuel tank capacities ~350L)', t2_am_aut: 'Absolute (fuel storage expanding to 1000L)',
+        th_costs_title: '🩺 Maintaining a Legend: Brokerage Secrets Exposted',
+        c_r1: 'Standard annual service via official technicians', c_hr1: '7,000 – 10,000 €', c_am1: '10,000 – 15,000 €',
+        c_r2: 'Standing rigging replacement (10-year cycle)', c_hr2: '12,000 – 18,000 €', c_am2: '18,000 – 25,000 € (two masts setup)',
+        c_r3: 'Teak deck surfacing maintenance', c_hr3: '3,000 – 5,000 € (re-caulking natural wood plots)', yes_ok: '0 € (Synthetic Amel Teak)',
+        c_r4: 'Full refit of drive engines & motor units (15 years)', c_hr4: '40,000 – 60 000 €', c_am4: '50,000 – 80,000 € (multiple gear assemblies)',
+        comp2_v_title: '💎 Ultimate Skipper Verdict',
+        comp2_v_txt: 'These vessels are decades-long lifecycle assets. The Hallberg-Rassy 412 is built for blue-water traditionalists who worship impeccable carpentry, authentic helm tracking feedback, and heavy northern sea security. The Amel brand (55 and the iconic Super Maramu) represents fortress-like storm cruisers for global autonomy where vast canvas squares collapse via toggle controls inside dry capsules. If budgets are locked but the globe calls, hunt for an uncompromised Amel Super Maramu; its indestructible frame will absorb any storm.',
+        footer_yt: 'YouTube Channel', footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        comp2_page_title: 'Comparativa de Yates: Hallberg-Rassy vs Amel',
+        comp2_main_title: 'Pesos Pesados del Océano: Hallberg-Rassy 412 vs Amel 55 vs Super Maramu',
+        comp2_intro: 'Examen de ingeniería riguroso de veleros de altura de la máxima categoría de solidez. Puntos críticos, mantenimiento de bañeras centrales protegidas, costes reales de propiedad y liquidez de reventa.',
+        comp2_sec1_title: '⚓️ En pocas palabras: Quién es quién',
+        th_param: 'Parámetro', th_char: 'Característica', th_cost_item: 'Concepto de presupuesto anual / planificado',
+        t1_r1: 'Arquitecto Naval', t1_years: 'Años de construcción', t1_r2: 'Eslora (LOA)', t1_r3: 'Manga', t1_r4: 'Calado', t1_r5: 'Desplazamiento', t1_ballast: 'Lastre (Quilla)', t1_r6: 'Motor', t1_r8: 'Camarotes', t1_r7: 'Combustible / Agua', t5_r1: 'Precio nuevo (Base)', t5_r2: 'Precio de ocasión',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'cv', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Océano',
+        p_hr_new: '~480 mil €', p_a55_new: '~900 mil €', p_sm_new: '~400 mil €', p_hr_used: '350–450 mil €', p_a55_used: '500–800 mil €', p_sm_used: '150–250 mil €',
+        comp2_gal_title: '📸 Bitácora visual de modelos',
+        hr_txt1: 'El Mercedes Clase G de los mares. Rompiendo mitos sobre la lentitud de los cascos escandinavos pesados, el diseño de German Frers y una superficie de vela de 90 m² permiten mantener velocidades notables. Con 12 nudos de viento real, promedia 7.5 nudos de corredera, exhibiendo un ángulo de ceñida afilado y un paso de ola sumamente noble.',
+        hr_txt2: 'La maniobra discurre oculta bajo canales de cubierta reenviada directamente a una bañera semi-protegida por un parabrisas de cristal templado. El gobierno en solitario resulta muy cómodo. El interior es de caoba maciza tallada a mano, alta ebanistería. Una rejilla estructural unificada y laminado con Divinycell confieren una rigidez de casco extraordinaria.',
+        pros_label: 'Pros:', cons_label: 'Contras:',
+        hr_pros: 'Bañera central o de popa profunda ultra segura con protección perimetral contra rociones; magnífico acceso al motor principal desde el salón; valor de reventa imbatible.',
+        hr_cons: 'La teca natural de cubierta exige cuidados constantes y costosos bajo climas cálidos; espacio de lazareto ajustado (difícil estibar ténders de más de 2.5 m); pasillos de camarotes algo angostos en 2 cabinas.',
+        amel_txt1: 'La filosofía de Henri Amel radica en el aislamiento oceánico absoluto sin depender de marinas. Estos queches de dos palos están concebidos como buques de tormenta blindados con cuatro mamparos estancos. El puesto de mando central se resguarda bajo un techo rígido (hardtop), creando una cabina de guardia climatizada.',
+        amel_txt2: 'La gestión de las velas está totalmente motorizada: los enrolladores eléctricos de mayor, mesana y génova cuentan con respaldos manuales. El rasgo de ingeniería de Amel sitúa la hélice de transmisión empotrada en el skeg de la orza, imposibilitando enganchar cabos o redes a la deriva.',
+        amel_pros: 'Hélice protegida e invulnerable en la quilla; control total del aparejo mediante pulsadores desde el abrigo de la bitácora; tanques de 1000L de gasóleo; cubierta sintética Amel Teak que no se pudre.',
+        amel_cons: 'Tacto de rueda neutro y filtrado (la dirección se siente pesada con rasca); alta densidad de sistemas eléctricos secundarios; oferta muy escasa en mercados internacionales.',
+        th_direct_comp: '⚔️ Comparativa Directa: Purismo Escandinavo frente al Acorazado Oceánico Francés',
+        t2_r1: 'Clase', t2_hr_class: 'Crucero de Expedición de Lujo', t2_am_class: 'Crucero Oceánico de Altura Especializado',
+        t4_r1: 'Aparejo', t2_hr_rig: 'Sloop Bermudiano', t2_am_rig: 'Queche de Dos Mástiles',
+        t1_r10: 'Bañera', t2_hr_cock: 'Profunda y protegida con parabrisas rígido', t2_am_cock: 'Cápsula central con hardtop estanco',
+        t2_r7: 'Mamparos de seguridad', t1_tanks: 'Autonomía', t2_hr_aut: 'Moderada (combustible ~350L)', t2_am_aut: 'Absoluta (combustible de hasta 1000L)',
+        th_costs_title: '🩺 Mantener un Mito: Lo que los brókers no confiesan',
+        c_r1: 'Mantenimiento técnico anual básico con talleres oficiales', c_hr1: '7.000 – 10.000 €', c_am1: '10.000 – 15.000 €',
+        c_r2: 'Reemplazo de jarcia fija (ciclo de 10 años)', c_hr2: '12,000 – 18,000 €', c_am2: '18,000 – 25,000 € (aparejo de dos palos)',
+        c_r3: 'Tratamiento de superficies de teca', c_hr3: '3.000 – 5.000 € (Lijado y calafateado de madera natural)', yes_ok: '0 € (Cubierta sintética Amel Teak)',
+        c_r4: 'Refit general de sistemas eléctricos y motores (15 años)', c_hr4: '40,000 – 60,000 €', c_am4: '50,000 – 80,000 € (múltiples reductores y motores)',
+        comp2_v_title: '💎 Veredicto Marítimo Definitivo',
+        comp2_v_txt: 'Estas embarcaciones son activos concebidos para durar generaciones. El Hallberg-Rassy 412 es para puristas del mar que valoran la carpintería clásica maciza, una rueda comunicativa y un navegar suave en mares duros. La familia Amel (55 y el eterno Super Maramu) representa acorazados de altura para autonomías globales donde desplegar metros de vela es cuestión de pulsar botones en un entorno seco. Si el presupuesto es ajustado pero el océano llama, busque un Amel Super Maramu bien cuidado; su robusto esqueleto perdonará cualquier tormenta.',
+        footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
