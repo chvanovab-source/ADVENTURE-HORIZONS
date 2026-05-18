@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yacht Review: Jeanneau Sun Odyssey 490 — Adventure Horizons" />
+  <title data-i18n="rev5_page_title">Обзор яхты: Jeanneau Sun Odyssey 490</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Интерактивная галерея обзора */
+    .review-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-img-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease;
+      aspect-ratio: 16 / 10;
+    }
+    .gallery-img-wrapper:hover {
+      transform: scale(1.03);
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Модальное окно лайтбокса */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+    /* Список характеристик без использования таблиц */
+    .specs-list {
+      margin-top: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .specs-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    .specs-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #daf4ff; color: #006a8f;">Yacht Review #5</span>
+      <h1 data-i18n="rev5_main_title">Честный тест-драйв Jeanneau Sun Odyssey 490: Палубная революция и скрытые риски</h1>
+      <p class="case-intro" data-i18n="rev5_intro">Детальный инженерный разбор флагмана линейки Sun Odyssey. Инновационная концепция Walk Around от Филиппа Бриана, трансформируемый кокпит и анализ громкой отзывной кампании.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <section class="case-section">
+          <h2 data-i18n="rev5_sec1_title">⚓️ В двух словах: кто есть кто</h2>
+          <p data-i18n="rev5_sec1_p1">Jeanneau Sun Odyssey 490 — это 49-футовая (14.42 м) парусная яхта, созданная в 2018 году как флагман обновлённой линейки Sun Odyssey. Её проектированием занимался знаменитый архитектор Филипп Бриан (Philippe Briand), известный по работе с America‘s Cup и дизайном суперъяхт. Интерьеры разработало бюро Piaton Bonet.</p>
+          <p data-i18n="rev5_sec1_p2" style="margin-top: 1rem;">К 2020 году модель уже успела собрать урожай наград: Miami Innovation Award 2018 и Cruising World Boat of the Year 2019. И это не случайно — именно Sun Odyssey 490 ворвалась на рынок с концепцией «Walk Around», которая кардинально изменила представление о том, как мы перемещаемся по палубе.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev5_tab_title">📊 Технические характеристики</h2>
+          <div class="specs-list">
+            <div class="specs-row"><strong data-i18n="tab_loa">Длина (LOA)</strong><span style="color: var(--text);">14.42–14.80 <span data-i18n="unit_m">м</span></span></div>
+            <div class="specs-row"><strong data-i18n="tab_beam">Ширина</strong><span style="color: var(--text);">4.49 <span data-i18n="unit_m">м</span></span></div>
+            <div class="specs-row"><strong data-i18n="tab_draft">Осадка (стандарт)</strong><span style="color: var(--text);">2.24 <span data-i18n="unit_m">м</span></span></div>
+            <div class="specs-row"><strong data-i18n="tab_disp">Водоизмещение (сухое)</strong><span style="color: var(--text);">11 290 <span data-i18n="unit_kg">кг</span></span></div>
+            <div class="specs-row"><strong data-i18n="tab_eng">Двигатель</strong><span style="color: var(--text);">Yanmar 57–80 <span data-i18n="unit_hp">л.с.</span></span></div>
+            <div class="specs-row"><strong data-i18n="tab_cat">Категория CE</strong><span style="color: var(--text);" data-i18n="cat_ocean">A — Ocean</span></div>
+            <div class="specs-row"><strong data-i18n="tab_cab">Каюты</strong><span style="color: var(--text);">2 / 3 / 4 / 5</span></div>
+            <div class="specs-row"><strong data-i18n="tab_tanks">Баки (вода/топливо)</strong><span style="color: var(--text);">640 <span data-i18n="unit_l">л</span> / 240 <span data-i18n="unit_l">л</span></span></div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev5_gal_title">📸 Фотохроника и палубная эргономика</h2>
+          <div class="review-gallery">
+            <div class="gallery-img-wrapper"><img src="janneu_1.jpg" alt="Jeanneau Sun Odyssey 490 under sail"></div>
+            <div class="gallery-img-wrapper"><img src="janneu_2.jpg" alt="Jeanneau Sun Odyssey 490 cockpit walk around"></div>
+            <div class="gallery-img-wrapper"><img src="janneu_3.jpg" alt="Jeanneau Sun Odyssey 490 saloon interior"></div>
+          </div>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev5_sec2_title">👍 Сильные стороны: за что мы ценим Jeanneau 490</h2>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev5_h_walk">Walk Around Deck — революция на палубе:</strong> <span data-i18n="rev5_p_walk">На Sun Odyssey 490 боковые палубы плавно спускаются к кокпиту без единой ступеньки. Вы можете пройти от транца вокруг рулевого поста до носа, ни разу не переступая комингс. Рулевые посты вынесены вперёд — можно сидеть лицом вперёд и комфортно управлять лодкой.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev5_h_trans">Кокпит-трансформер:</strong> <span data-i18n="rev5_p_trans">Сиденья поднимаются и превращаются в шезлонги. Задняя часть кокпита со столом опускается, образуя огромную платформу. В кормовом диване спрятан гриль, а в столе — охлаждаемый ящик для продуктов. На стоянке яхта превращается в полноценную пляжную террасу.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev5_h_space">Кастомизация интерьера (от 2 до 5 кают):</strong> <span data-i18n="rev5_p_space">Владельческая версия предлагает настоящую «suite parentale» с кроватью 1.60 х 2 метра, гардеробной и отдельным санузлом с раздельной душевой. Салон залит светом благодаря панорамному остеклению, а центральный П-образный камбуз максимально удобен при готовке на ходу.</span></p>
+          <p style="margin-bottom: 0.8rem;"><strong data-i18n="rev5_h_perf">Ходовые качества и управляемость:</strong> <span data-i18n="rev5_p_perf">Жёсткий скуловой киль по всей длине и два пера руля обеспечивают отличную остойчивость. В средний ветер (14–16 узлов) яхта уверенно выходит на 8.1 узла под 60 градусов. Лебёдки Harken вынесены на тумбы вперёд — экипаж работает лицом к парусам и полностью контролирует ситуацию.</span></p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev5_sec3_title">👎 Слабые стороны и болевые точки</h2>
+          <ul>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev5_bad1_h">⚠️ Риски подруливающего устройства (Recall):</strong> <span data-i18n="rev5_bad1_p">В 2023–2024 годах верфь провела крупный отзыв моделей Sun Odyssey из-за дефекта фиксации фланца выдвижной подрульки Sleipner. Разрушение узла могло привести к быстрому затоплению лодки. При осмотре бортов этих лет проверка усиления конструкции обязательна.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev5_bad2_h">Капризная электроника:</strong> <span data-i18n="rev5_bad2_p">Встречаются системные жалобы владельцев на сбои многофункциональных дисплеев Raymarine (глюки тачскрина на солнце) и отказы автоматики подруливающего механизма.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev5_bad3_h">Теснота в узких маринах:</strong> <span data-i18n="rev5_bad3_p">Из-за огромной ширины (4.49 м) лодка требует повышенной концентрации при швартовках задним ходом в тесных старых гаванях Европы. Смещённый стол кокпита иногда мешает сквозному проходу.</span></li>
+            <li style="margin-bottom: 0.5rem;"><strong data-i18n="rev5_bad4_h">Ценовой порог:</strong> <span data-i18n="rev5_bad4_p">Это дорогая лодка премиального сегмента серийных круизеров. Стоимость укомплектованных вариантов на вторичном рынке прочно держится в диапазоне от €300,000 до $500,000+.</span></li>
+          </ul>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="rev5_sec4_title">💎 Вердикт</h2>
+          <p data-i18n="rev5_verdict">Jeanneau Sun Odyssey 490 — инженерная декларация о том, что скука в круизном классе отменяется. Она создана дарить радость от пилотирования и комфорт премиум-класса в равной мере. Она идеальна для семейных переходов или опытных шкиперов, ценящих прогресс. Но за инновации, сложную гидравлику и габариты приходится платить полную цену.</p>
+          <p style="margin-top: 1rem; font-style: italic;" data-i18n="rev5_ps">PS: При осмотре конкретного борта строго требуйте документальное подтверждение прохождения официального отзыва по фланцу подрульки. Проверьте тачскрин Raymarine и механизмы трансформации стола в кокпите.</p>
+        </section>
+
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid var(--accent);">
+            <h3 data-i18n="rev5_side_title">Бортовой вердикт</h3>
+            <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="rev5_side_txt">Главный инноватор индустрии. Абсолютная свобода перемещения благодаря палубе Walk Around, два пера руля от Филиппа Бриана и люксовый комфорт интерьеров Piaton Bonet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size Review Picture">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroybereg" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Логика Лайтбокса
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.review-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Языковая база данных сайта
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        rev5_page_title: 'Обзор яхты: Jeanneau Sun Odyssey 490',
+        rev5_main_title: 'Честный тест-драйв Jeanneau Sun Odyssey 490: Палубная революция и скрытые риски',
+        rev5_intro: 'Детальный инженерный разбор флагмана линейки Sun Odyssey. Инновационная концепция Walk Around от Филиппа Бриана, трансформируемый кокпит и анализ громкой отзывной кампании.',
+        rev5_sec1_title: '⚓️ В двух словах: кто есть кто',
+        rev5_sec1_p1: 'Jeanneau Sun Odyssey 490 — это 49-футовая (14.42 м) парусная яхта, созданная в 2018 году как флагман обновлённой линейки Sun Odyssey. Её проектированием занимался знаменитый архитектор Филипп Бриан (Philippe Briand), известный по работе с America‘s Cup и дизайном суперъяхт. Интерьеры разработало бюро Piaton Bonet.',
+        rev5_sec1_p2: 'К 2020 году модель уже успела собрать урожай наград: Miami Innovation Award 2018 и Cruising World Boat of the Year 2019. И это не случайно — именно Sun Odyssey 490 ворвалась на рынок с концепцией «Walk Around», которая кардинально изменила представление о том, как мы перемещаемся по палубе.',
+        rev5_tab_title: '📊 Технические характеристики',
+        tab_loa: 'Длина (LOA)', tab_beam: 'Ширина', tab_draft: 'Осадка (стандарт)', tab_disp: 'Водоизмещение (сухое)', tab_eng: 'Двигатель', tab_cat: 'Категория CE', tab_cab: 'Каюты', tab_tanks: 'Баки (вода/топливо)',
+        unit_m: 'м', unit_kg: 'кг', unit_hp: 'л.с.', unit_l: 'л', unit_pers: 'чел', cat_ocean: 'A — Ocean',
+        rev5_gal_title: '📸 Фотохроника и палубная эргономика',
+        rev5_sec2_title: '👍 Сильные стороны: за что мы ценим Jeanneau 490',
+        rev5_h_walk: 'Walk Around Deck — революция на палубе:',
+        rev5_p_walk: 'На Sun Odyssey 490 боковые палубы плавно спускаются к кокпиту без единой ступеньки. Вы можете пройти от транца вокруг рулевого поста до носа, ни разу не переступая комингс. Рулевые посты вынесены вперёд — можно сидеть лицом вперёд и комфортно управлять лодкой.',
+        rev5_h_trans: 'Кокпит-трансформер:',
+        rev5_p_trans: 'Сиденья поднимаются и превращаются в шезлонги. Задняя часть кокпита со столом опускается, образуя огромную платформу. В кормовом диване спрятан гриль, а в столе — охлаждаемый ящик для продуктов. На стоянке яхта превращается в полноценную пляжную террасу.',
+        rev5_h_space: 'Кастомизация интерьера (от 2 до 5 кают):',
+        rev5_p_space: 'Владельческая версия предлагает настоящую «suite parentale» с кроватью 1.60 х 2 метра, гардеробной и отдельным санузлом с раздельной душевой. Салон залит светом благодаря панорамному остеклению, а центральный П-образный камбуз максимально удобен при готовке на ходу.',
+        rev5_h_perf: 'Ходовые качества и управляемость:',
+        rev5_p_perf: 'Жёсткий скуловой киль по всей длине и два пера руля обеспечивают отличную остойчивость. В средний ветер (14–16 узлов) яхта уверенно выходит на 8.1 узла под 60 градусов. Лебёдки Harken вынесены на тумбы вперёд — экипаж работает лицом к парусам и полностью контролирует ситуацию.',
+        rev5_sec3_title: '👎 Слабые стороны и болевые точки',
+        rev5_bad1_h: '⚠️ Риски подруливающего устройства (Recall):',
+        rev5_bad1_p: 'В 2023–2024 годах верфь провела крупный отзыв моделей Sun Odyssey из-за дефекта фиксации фланца выдвижной подрульки Sleipner. Разрушение узла могло привести к быстрому затоплению лодки. При осмотре бортов этих лет проверка усиления конструкции обязательна.',
+        rev5_bad2_h: 'Капризная электроника:',
+        rev5_bad2_p: 'Встречаются системные жалобы владельцев на сбои многофункциональных дисплеев Raymarine (глюки тачскрина на солнце) и отказы автоматики подруливающего механизма.',
+        rev5_bad3_h: 'Теснота в узких маринах:',
+        rev5_bad3_p: 'Из-за огромной ширины (4.49 м) лодка требует повышенной концентрации при швартовках задним ходом в тесных старых гаванях Европы. Смещённый стол кокпита иногда мешает сквозному проходу.',
+        rev5_bad4_h: 'Ценовой порог:',
+        rev5_bad4_p: 'Это дорогая лодка премиального сегмента серийных круизеров. Стоимость укомплектованных вариантов на вторичном рынке прочно держится в диапазоне от €300,000 до $500,000+.',
+        rev5_sec4_title: '💎 Вердикт',
+        rev5_verdict: 'Jeanneau Sun Odyssey 490 — инженерная декларация о том, что скука в круизном классе отменяется. Она создана дарить радость от пилотирования и комфорт премиум-класса в равной мере. Она идеальна для семейных переходов или опытных шкиперов, ценящих прогресс. Но за инновации, сложную гидравлику и габариты приходится платить полную цену.',
+        rev5_ps: 'PS: При осмотре конкретного борта б/у обязательно уточните версию (Easy / Ocean / Performance). Тщательно проверьте люфты в рулевой системе баллеров и состояние гидравлического привода транцевой платформы. Остальное лечится плановым ТО.',
+        rev5_side_title: 'Бортовой вердикт',
+        rev5_side_txt: 'Главный инноватор индустрии. Абсолютная свобода перемещения благодаря палубе Walk Around, два пера руля от Филиппа Бриана и люксовый комфорт интерьеров Piaton Bonet.',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        rev5_page_title: 'Yacht Review: Jeanneau Sun Odyssey 490',
+        rev5_main_title: 'Jeanneau Sun Odyssey 490 Honest Test Drive: Deck Revolution & Hidden Risks',
+        rev5_intro: 'A detailed engineering review of the Sun Odyssey flagship. The innovative walk-around concept by Philippe Briand, convertible cockpit features, and recall campaign analysis.',
+        rev5_sec1_title: '⚓️ In a Nutshell: Who is Who',
+        rev5_sec1_p1: 'The Jeanneau Sun Odyssey 490 is a 49-foot (14.42 m) cruising yacht introduced in 2018 as the flagship of the updated Sun Odyssey line. She was designed by naval architect Philippe Briand, famous for his America\'s Cup involvement and superyacht portfolio, with interiors styled by Piaton Bonet.',
+        rev5_sec1_p2: 'By 2020, the boat swept top awards including the 2018 Miami Innovation Award and 2019 Cruising World Boat of the Year. This praise was driven by the "Walk Around" layout concept, which completely redefined deck ergonomics and movement.',
+        rev5_tab_title: '📊 Technical Specifications',
+        tab_loa: 'Length (LOA)', tab_beam: 'Beam', tab_draft: 'Draft (standard)', tab_disp: 'Displacement (dry)', tab_eng: 'Engine', tab_cat: 'CE Category', tab_cab: 'Cabins', tab_tanks: 'Tanks (water/fuel)',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'hp', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Ocean',
+        rev5_gal_title: '📸 Photo Log & Deck Ergonomics',
+        rev5_sec2_title: '👍 Strengths: Why We Value the Sun Odyssey 490',
+        rev5_h_walk: 'Walk Around Deck Architecture:',
+        rev5_p_walk: 'The side decks slope gently directly into the cockpit floor level without a single step. You can walk from the transom around the helms to the bow without climbing over coamings. Helm stations are shifted forward, allowing helmsmen to sit forward-facing and maintain clear sail sightlines comfortably.',
+        rev5_h_trans: 'Convertible Cockpit Options:',
+        rev5_p_trans: 'Cockpit coaming backrests flip up into proper lounge sunbeds. The cockpit table drops down to level out into a massive swim terrace structure. An integrated grill is stowed inside the aft seat, and the table houses a 12V refrigerated compartment. At anchor, the cockpit transforms into an absolute beach club terrace.',
+        rev5_h_space: 'Modular Cabins (2 to 5 Configurations):',
+        rev5_p_space: 'The owner\'s version features a proper "suite parentale" forward with a 1.60 x 2.00 m bed, walk-in storage, and an isolated head with a fully separated shower stall. The main salon feels immensely bright thanks to panoramic skylights, and the central U-shaped galley remains secure for cooking under way.',
+        rev5_h_perf: 'Sailing Performance & Helm Handling:',
+        rev5_p_perf: 'A full-length hull chine paired with twin rudders yields rock-solid directional stability. In a 14–16 knot breeze, she confidently locks into 8.1 knots at 60 degrees. Harken winches are positioned forward onto dedicated pedestals, ensuring the crew works facing the sails with total visibility.',
+        rev5_sec3_title: '👎 Weaknesses & Structural Pain Points',
+        rev5_bad1_h: '⚠️ Thruster Structural Recall Issues:',
+        rev5_bad1_p: 'Between 2023–2024, the shipyard initiated a major recall affecting hulls built from 2020–2022 due to structural bonding flaws on the Sleipner drop-down thruster flange. A structural failure threatened rapid water tracking. Verifying document records for this yard modification is critical during brokerage inspections.',
+        rev5_bad2_h: 'Peripheral Electronics Quirks:',
+        rev5_bad2_p: 'Owners systematically log complaints regarding Raymarine multi-functional displays experiencing thermal touchscreen lockouts in intense sunlight, alongside erratic drop-down thruster mechanism sensors.',
+        rev5_bad3_h: 'Older Marina Footprint:',
+        rev5_bad3_p: 'With her beam touching 4.49 m, she demands strict concentration when backing into narrow classic Mediterranean berths. The offset cockpit table layout can occasionally impede straightforward companionway access paths.',
+        rev4_bad4_h: 'Premium Pricing Tier:',
+        rev5_bad4_p: 'This is a premium serially-produced cruising vessel. Secondary market prices hold exceptionally firm, consistently floating within the €300,000 to $500,000+ range based on equipment lists.',
+        rev5_sec4_title: '💎 Verdict',
+        rev5_verdict: 'The Jeanneau Sun Odyssey 490 is an engineering declaration that cruising hulls don\'t have to be boring. It blends steering engagement and premium living comfort into an equal balance. She is ideal for shorthanded couples or technical owners who appreciate modern architectural advancement, though this level of hydraulic customization and beam footprint demands its full price.',
+        rev5_ps: 'PS: When checking a used hull, always demand formal warranty records proving the structural thruster flange repair was completed. Inspect the Raymarine touch screen responses and the mechanical hinges of the lowering cockpit table.',
+        rev5_side_title: 'Shipboard Verdict',
+        rev5_side_txt: 'The industry\'s top innovator. Total freedom of deck movement via the walk-around configuration, twin rudder tracking by Philippe Briand, and luxury interior design by Piaton Bonet.'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        rev5_page_title: 'Reseña de Yates: Jeanneau Sun Odyssey 490',
+        rev5_main_title: 'Prueba de Fuego del Jeanneau Sun Odyssey 490: Revolución en Cubierta y Riesgos Ocultos',
+        rev5_intro: 'Análisis de ingeniería detallado del buque insignia Sun Odyssey. El concepto innovador walk-around de Philippe Briand, la bañera convertible y los detalles de su campaña de revisión.',
+        rev5_sec1_title: '⚓️ En pocas palabras: Quién es quién',
+        rev5_sec1_p1: 'El Jeanneau Sun Odyssey 490 es un velero de 49 pies (14.42 m) lanzado en 2018 como el buque insignia de la renovada gama Sun Odyssey. Su diseño exterior lleva la firma del prestigioso arquitecto Philippe Briand, célebre por sus proyectos en la America\'s Cup y superyates, con interiores a cargo de Piaton Bonet.',
+        rev5_sec1_p2: 'Hacia 2020, acumulaba galardones clave como el Miami Innovation Award 2018 y el Cruising World Boat of the Year 2019. Este éxito se debió a su cubierta "Walk Around", que redefinió por completo la ergonomía de circulación a bordo.',
+        rev5_tab_title: '📊 Especificaciones Técnicas',
+        tab_loa: 'Eslora (LOA)', tab_beam: 'Manga', tab_draft: 'Calado (estándar)', tab_disp: 'Desplazamiento (seco)', tab_eng: 'Motor', tab_cat: 'Categoría CE', tab_cab: 'Camarotes', tab_tanks: 'Tanques (agua/combustible)',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'cv', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Océano',
+        rev5_gal_title: '📸 Bitácora de fotos y ergonomía de cubierta',
+        rev5_sec2_title: '👍 Puntos Fuertes: Lo que valoramos en el Sun Odyssey 490',
+        rev5_h_walk: 'Arquitectura de Cubierta Walk Around:',
+        rev5_p_walk: 'Las bandas laterales descienden suavemente hasta el nivel del piso de la bañera sin escalones. Es posible caminar desde la popa hasta la proa rodeando las bitácoras sin saltar sobre brazolas. Los puestos de mando se adelantan, permitiendo gobernar sentados de cara a proa con total comodidad y control visual.',
+        rev5_h_trans: 'Bañera Convertible Modular:',
+        rev5_p_trans: 'Los respaldos de la bañera se abaten transformándose en amplios soláriums. La mesa central desciende para nivelar una enorme terraza de baño. Dispone de barbacoa integrada en el asiento de popa y nevera de 12V en la mesa. En fondeo, la bañera se convierte en un auténtico club de playa.',
+        rev5_h_space: 'Camarotes Modulares (versiones de 2 a 5 cabinas):',
+        rev5_p_space: 'La versión de armador cuenta con una verdadera "suite parentale" en proa con cama de 1.60 x 2.00 m, vestidor y un baño privado con cabina de ducha independiente. El salón principal destaca por su luminosidad gracias a los vitrales panorámicos, y la cocina en U central ofrece total seguridad navegando.',
+        rev5_h_perf: 'Cualidades Náuticas y Tacto de Timón:',
+        rev5_p_perf: 'El pantoque vivo integral combinado con la doble pala de timón asegura una estabilidad de rumbo soberbia. Con vientos medios (14–16 nudos), mantiene promedios firmes de 8.1 nudos a 60 grados. Los winches Harken se adelantan sobre pedestales específicos, permitiendo trabajar de cara a las velas.',
+        rev5_sec3_title: '👎 Puntos Débiles y Detalles de Mantenimiento',
+        rev5_bad1_h: '⚠️ Alerta por Campaña de Revisión (Recall):',
+        rev5_bad1_p: 'Durante 2023–2024, el astillero emitió una alerta de seguridad estructural que afectó a unidades construidas entre 2020–2022 debido a fallos de unión en el túnel de la hélice de proa retráctil Sleipner. Un fallo aquí comprometía la flotabilidad. Es vital exigir el certificado de reparación oficial.',
+        rev5_bad2_h: 'Detalles en Electrónica Periférica:',
+        rev5_bad2_p: 'Existen reportes de usuarios sobre pantallas Raymarine que sufren bloqueos térmicos en el táctil bajo exposición solar intensa, así como fallos en los sensores del mecanismo de la hélice retráctil.',
+        rev5_bad3_h: 'Dimensiones en Puertos Angostos:',
+        rev5_bad3_p: 'Su manga de 4.49 m exige precisión al amarrar de popa en pantalanes mediterráneos antiguos. La disposición de la mesa descentrada puede entorpecer ocasionalmente el pasillo directo hacia la cabina.',
+        rev5_bad4_h: 'Umbral de Precio:',
+        rev5_bad4_p: 'Se sitúa en el segmento premium de la gran producción de cruceros. Los precios de ocasión se mantienen firmes, oscilando de forma constante entre los €300,000 y más de $500,000 según inventario.',
+        rev5_sec4_title: '💎 Veredicto',
+        rev5_verdict: 'El Jeanneau Sun Odyssey 490 demuestra que los cruceros familiares no tienen por qué ser aburridos. Equilibra las sensaciones al timón con el confort habitable de alto nivel. Es perfecto para parejas o patrones técnicos que aprecian la innovación constructiva, aunque este despliegue de sistemas hidráulicos y manga requiere asumir su coste.',
+        rev5_ps: 'PS: Al revisar una unidad usada, exija registros que demuestren la ejecución de la reforma de garantía del túnel de proa. Compruebe las respuestas táctiles de Raymarine y las bisagras de la mesa de bañera.',
+        rev5_side_title: 'Veredicto de a Bordo',
+        rev5_side_txt: 'El mayor innovador de la gran serie. Libertad total de movimientos gracias a los pasillos Walk Around, doble timón noble de Philippe Briand e interiores de lujo firmados por Piaton Bonet.'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
