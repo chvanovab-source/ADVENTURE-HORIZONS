@@ -39,6 +39,34 @@
       color: var(--text);
       line-height: 1.6;
     }
+    /* Модальное окно лайтбокса (Теперь всё на месте!) */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-modal img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
   </style>
 </head>
 <body class="case-page">
@@ -203,7 +231,7 @@
         tech5_sec5_title: '💎 Verdict',
         tech5_verdict: 'This structural failure is a direct consequence of design negligence by shipyard engineers, not standard mechanical wear. However, the mechanism can be completely corrected using modern isolation compounds. Sealing the threads once to yachting standards closes this issue for years, ensuring Elan 45.1 revenues fund good champagne after winning regattas instead of clear white oxide removal.',
         tech5_side_title: 'Technical Verdict',
-        tech5_side_txt: 'Node: Folding swim platform roller assembly (Elan 45.1). Failure Mode: Complete stripping of aluminum threads caused by galvanic cell creation with a stainless steel fastener. Correction: Drilling out oxide buildup, installing Helicoil inserts or Devcon compound, and applying absolute dielectric isolation using Tef-Gel paste and nylon shoulder bushings.',
+        tech5_side_txt: 'Component: Folding swim platform roller assembly (Elan 45.1). Failure Mode: Complete stripping of aluminum threads caused by galvanic cell creation with a stainless steel fastener. Correction: Drilling out oxide buildup, installing Helicoil inserts or Devcon compound, and applying absolute dielectric isolation using Tef-Gel paste and nylon shoulder bushings.',
         unit_m: 'm', unit_kg: 'kg', unit_hp: 'hp', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Ocean',
         footer_yt: 'YouTube Channel', footer_top: 'Top'
       },
@@ -212,25 +240,27 @@
         tech5_page_title: 'Rigging Técnico: Corrosión Galvánica en Plataforma',
         tech5_main_title: 'Plataforma de baño del Elan 45.1: Cero en Física y Suspenso en Química para el astillero',
         tech5_intro: 'Análisis de un fallo crítico por par galvánico en el mecanismo de la plataforma abatible. Teoría electroquímica del desgaste del aluminio, métodos de recuperación de roscas y refit con barreras de Tef-Gel.',
-        tech5_sec1_title: '🧪 Lección de Física и Química para el Fabricante: Qué pasó aquí',
+        tech5_sec1_title: '🧪 Lección de Física y Química para el Fabricante: Qué pasó aquí',
         tech5_sec1_p1: 'Que un tornillo de acero inoxidable se enrosque directo sobre una pletina de aluminio expuesta al agua de mar es el ejemplo de manual de cómo crear un par galvánico destructivo. En el astillero Elan se saltaron esa clase, y ahora lo pagan los operadores de chárter. La mecánica del desastre bajo el agua es simple:',
-        tech5_chem_1: 'Diferencia de potencial: El aluminio и el acero inoxidable tienen potenciales electroquímicos opuestos; el aluminio es mucho más activo. En agua de mar (un electrolito perfecto), el potencial del aluminio cae a unos -760 mV, mientras que el del acero ronda los -100...+200 mV. Esta diferencia de casi 1000 mV activa la corrosión.',
+        tech5_chem_1: 'Diferencia de potencial: El aluminio y el acero inoxidable tienen potenciales electroquímicos opuestos; el aluminio es mucho más activo. En agua de mar (un electrolito perfecto), el potencial del aluminio cae a unos -760 mV, mientras que el del acero ronda los -100...+200 mV. Esta diferencia de casi 1000 mV activa la corrosión.',
         tech5_chem_2: 'Batería Galvánica: Al tocarse directamente, ambos metales forman un circuito cerrado. El aluminio actúa como ánodo, sacrificándose y oxidándose hasta convertirse en un polvo blanco y blando.',
-        tech5_chem_3: 'Relación de superficies: El problema empeora por una relación de áreas crítica. Un ánodo minúsculo (la rosca del aluminio) debe dar soporte a un cátodo enorme (el tornillo de acero). La corrosión en el punto de contacto se acelera, destruyendo la rosca hasta что el rodillo de la plataforma se desprende.',
+        tech5_chem_3: 'Relación de superficies: El problema empeora por una relación de áreas crítica. Un ánodo minúsculo (la rosca del aluminio) debe dar soporte a un cátodo enorme (el tornillo de acero). La corrosión en el punto de contacto se acelera, destruyendo la rosca hasta que el rodillo de la plataforma se desprende.',
         tech5_sec2_title: '🛠️ Hoja de Ruta del Rescate: De Apaños en el Mar a Refits de Astillero',
         tech5_sec2_p1: 'Dependiendo de si el fallo ocurre en la base durante el invierno o en mitad de una semana de chárter con mar de popa, existen dos estrategias de actuación:',
         tech5_sub1: 'Fase 1. Reparación de Emergencia en Temporada:',
-        tech5_sub1_p: 'Si la rosca del aluminio está barrida y necesita usar la plataforma, repase el orificio con cuidado. Instale un inserto roscado de acero inoxidable (tipo Helicoil). Fije el inserto con fijador de roscas de alta resistencia (como Loctite 2701) для aislar las espiras del aluminio. Otra opción rápida es agrandar el agujero, rellenarlo con resina epoxi con carga metálica (Devcon Plastic Steel Putty) y, tras curar, roscar de nuevo sobre esa base polimérica químicamente inerte.',
+        tech5_sub1_p: 'Si la rosca del aluminio está barrida y necesita usar la plataforma, repase el orificio con cuidado. Instale un inserto roscado de acero inoxidable (tipo Helicoil). Fije el inserto con fijador de roscas de alta resistencia (como Loctite 2701) para aislar las espiras del aluminio. Otra opción rápida es agrandar el agujero, rellenarlo con resina epoxi con carga metálica (Devcon Plastic Steel Putty) y, tras curar, roscar de nuevo sobre esa base polimérica químicamente inerte.',
         tech5_sub2: 'Fase 2. Refit Corrector Completo y Aislamiento Preventivo:',
-        tech5_sub2_p: 'Para solucionar el error de diseño para siempre, elimine cualquier contacto directo entre el aluminio y el tornillo de acero A4. Desmonte el conjunto и limpie los restos de óxido blanco con un cepillo de alambre. Consiga casquillos de nylon (arandelas con cuello) y juntas de EPDM para las cabezas de los tornillos. Al montar, embale las roscas и el interior de los casquillos con pasta de teflón Tef-Gel o compuesto Duralac. Los componentes de Tef-Gel bloquean la entrada de agua salada en la rosca, rompiendo el circuito eléctrico и evitando la soldadura en frío. Selle el exterior con poliuretano marino Sikaflex-291.',
+        tech5_sub2_p: 'Para solucionar el error de diseño para siempre, elimine cualquier contacto directo entre el aluminio y el tornillo de acero A4. Desmonte el conjunto y limpie los restos de óxido blanco con un cepillo de alambre. Consiga casquillos de nylon (arandelas con cuello) y juntas de EPDM para las cabezas de los tornillos. Al montar, embale las roscas y el interior de los casquillos con pasta de teflón Tef-Gel o compuesto Duralac. Los componentes de Tef-Gel bloquean la entrada de agua salada en la rosca, rompiendo el circuito eléctrico y evitando la soldadura en frío. Selle el exterior con poliuretano marino Sikaflex-291.',
         tech5_sec3_title: '💡 Acciones Complementarias: Ingeniería contra la Corrosión',
         tech5_sec3_p1: 'Durante el refit, compruebe que el mecanismo de las bisagras no tenga cavidades donde el agua quede estancada días. Si es posible, realice taladros de drenaje en los puntos más bajos del perfil. A largo plazo, la solución definitiva es sustituir la pieza de aluminio por una réplica idéntica mecanizada en acero inoxidable AISI 316. Sin metales distintos, no hay celda galvánica.',
         tech5_sec4_title: '🧰 Kit de Supervivencia para Operadores de Chárter',
-        tech5_sec4_p1: 'Para que este fallo no le pille desprevenido en barcos gemelos, mantenga un kit fijo en su caja de herramientas: un tubo o jeringa de Tef-Gel original, un surtido de arandelas y casquillos de nylon de varios diámetros, poliuretano Sikaflex, cinta de butilo, tornillería de repuesto AISI 316 (Clase A4) и una barra de soldadura en frío epoxi bicomponente para reconstruir roscas.',
+        tech5_sec4_p1: 'Para que este fallo no le pille desprevenido en barcos gemelos, mantenga un kit fijo en su caja de herramientas: un tubo o jeringa de Tef-Gel original, un surtido de arandelas y casquillos de nylon de varios diámetros, poliuretano Sikaflex, cinta de butilo, tornillería de repuesto AISI 316 (Clase A4) y una barra de soldadura en frío epoxi bicomponente para reconstruir roscas.',
         tech5_sec5_title: '💎 Veredicto',
         tech5_verdict: 'Este fallo estructural es una consecuencia directa de la negligencia de diseño de los ingenieros del astillero, no de un desgaste mecánico normal. Sin embargo, el mecanismo puede corregirse por completo usando compuestos de aislamiento modernos. Sellar las roscas bajo estándares náuticos soluciona este problema para siempre, garantizando que los ingresos del Elan 45.1 se destinen a un buen champán tras ganar regatas en lugar de a limpiar óxido blanco.',
         tech5_side_title: 'Veredicto Técnico',
-        tech5_side_txt: 'Componente: Conjunto de rodillos de la plataforma de baño abatible (Elan 45.1). Tipo de fallo: Destrucción completa de las roscas de aluminio debido a un par galvánico con tornillo de acero inoxidable. Solución: Limpieza de óxido, instalación de insertos Helicoil o compuesto Devcon, и aislamiento dieléctrico absoluto con pasta Tef-Gel y casquillos de nylon.'
+        tech5_side_txt: 'Componente: Conjunto de rodillos de la plataforma de baño abatible (Elan 45.1). Tipo de fallo: Destrucción completa de las roscas de aluminio debido a un par galvánico con tornillo de acero inoxidable. Solución: Limpieza de óxido, instalación de insertos Helicoil o compuesto Devcon, y aislamiento dieléctrico absoluto con pasta Tef-Gel y casquillos de nylon.',
+        unit_m: 'm', unit_kg: 'кг', unit_hp: 'cv', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Océano',
+        footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
       }
     };
 
