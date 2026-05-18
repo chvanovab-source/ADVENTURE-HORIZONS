@@ -3,18 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sailing Log: First Departure with Vitaliy Elagin — Adventure Horizons" />
-  <title data-i18n="log1_page_title">Путевые дневники: Возвращение в стихию</title>
+  <meta name="description" content="Sailing Chronicle 2021: From Departure to Storm Mooring — Adventure Horizons" />
+  <title data-i18n="log1_page_title">Путевые дневники: Хроника одного похода (2021)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Стили для видеоплеера путевых заметок */
-    .video-wrapper {
-      width: 100%;
-      max-width: 720px;
+    /* Стили для хронологического мультимедиа-таймлайна */
+    .timeline {
+      position: relative;
       margin: 2rem 0;
+      padding-left: 2rem;
+      border-left: 2px solid var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-marker {
+      position: absolute;
+      left: calc(-2rem - 6px);
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--background);
+      box-shadow: 0 0 0 3px rgba(0, 106, 143, 0.2);
+    }
+    .timeline-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--deep-sea);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .video-container {
+      width: 100%;
+      max-width: 640px;
+      margin: 1rem 0;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
@@ -22,14 +55,18 @@
       background: #000;
       aspect-ratio: 4 / 3;
     }
-    .video-wrapper video {
+    .video-container video {
       width: 100%;
       height: 100%;
       display: block;
     }
-    .diary-text {
-      font-size: 1.1rem;
-      line-height: 1.7;
+    .quote-block {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      padding: 0.8rem 1rem;
+      margin: 0.8rem 0;
+      font-style: italic;
+      font-size: 0.95rem;
       color: var(--text);
     }
   </style>
@@ -50,39 +87,91 @@
     </div>
   </nav>
 
-  <main class="case-main container">
+  <main class="case-main container" style="max-width: 800px;">
     <header class="case-header">
-      <span class="tag" style="background: #e0f2fe; color: #0369a1;">Sailing Log #1</span>
-      <h1 data-i18n="log1_main_title">Путевая зарисовка 2021: Первый выход и уроки взаимного доверия</h1>
-      <p class="case-intro" data-i18n="log1_intro">Воспоминания о первом выходе в море после очень долгого перерыва. Знакомство с Виталием Елагиным, законы естественного отбора в яхтинге и философия абсолютной надежности тех, кто идет с тобой на одном борту.</p>
+      <span class="tag" style="background: #e0f2fe; color: #0369a1;">Sailing Chronicle</span>
+      <h1 data-i18n="log1_main_title">Хроника похода 2021: Возвращение в стихию и уроки Виталия Елагина</h1>
+      <p class="case-intro" data-i18n="log1_intro">Полный видеодневник одного знакового выхода в море после долгого перерыва. Шесть глав сквозь штормовое предупреждение, встречу с дельфинами и навальную швартовку к законам морского братства.</p>
     </header>
 
     <hr class="case-divider">
 
-    <div class="case-grid">
-      <div class="case-content-left">
-        
-        <section class="case-section">
-          <h2 data-i18n="log1_sec1_title">⚓️ Точка невозврата: Как отсеиваются лишние</h2>
-          <div class="diary-text">
-            <p data-i18n="log1_p1">Путевая зарисовка 2021 года — мой первый после очень и очень долгого перерыва выход на яхте, первый раз с Виталием Елагиным, который стал потом моим наставником в парусном мире и большим другом. Тогда я по-настоящему понял — в яхтинге плохих людей не бывает. Они просто отсеиваются, потому что в море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Как-то так. Без вариантов, как говорится.</p>
-          </div>
-        </section>
+    <div class="timeline">
 
-        <div class="video-wrapper">
-          <video src="1.mp4" controls preload="metadata" poster="banner_1.png"></video>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 1:</span> <span data-i18n="ch1_title">Готовность к отходу и фиксация обстановки</span></h3>
+        <p data-i18n="ch1_desc">Тот самый момент старта после затяжного перерыва на берегу. Первое знакомство с будущим наставником, близким другом и легендой парусного мира — Виталием Елагиным. Оценка погоды перед выходом из гавани.</p>
+        <div class="video-container">
+          <video src="1.mp4" controls preload="metadata"></video>
         </div>
-
-      </div>
-
-      <div class="case-content-right">
-        <div class="sticky-sidebar">
-          <div class="sidebar-block" style="border-left: 4px solid var(--accent);">
-            <h3 data-i18n="log1_side_title">Закон моря</h3>
-            <p style="font-size: 1rem; line-height: 1.6; font-style: italic;" data-i18n="log1_side_txt">«В море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов.»</p>
-          </div>
+        <div class="quote-block">
+          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch1_quote">«Ну вот это я, готовый к отходу... Сейчас зафиксирую обстановочку и пойдем.»</span>
         </div>
       </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 2:</span> <span data-i18n="ch2_title">Внезапное штормовое предупреждение</span></h3>
+        <p data-i18n="ch2_desc">Море мгновенно проверяет на прочность тех, кто переступил линию причала. Не успели выйти за волнорез, как береговые службы передали штормовое предупреждение. Волна поднимается, проверяем страховку.</p>
+        <div class="video-container">
+          <video src="2_1.mp4" controls preload="metadata"></video>
+        </div>
+        <div class="quote-block">
+          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch2_quote">«Не успели выйти, как дали штормовое предупреждение! Внимание, аккуратно держимся все! Ну вообще картина такая... бедовая, прямо скажем. Ну, нормально потренировались.»</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 3:</span> <span data-i18n="ch3_title">Попутчики в открытом море</span></h3>
+        <p data-i18n="ch3_desc">Короткая передышка среди волн. Стая дельфинов выходит на перерез и долго сопровождает судно, устроив настоящие гонки с носовым волнорезом под самым бушпритом.</p>
+        <div class="video-container">
+          <video src="4.mp4" controls preload="metadata"></video>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 4:</span> <span data-i18n="ch4_title">Подход к Стрелецкой бухте</span></h3>
+        <p data-i18n="ch4_desc">Непогода усиливается, небо плотно затягивают штормовые тучи. Подходим к защищенной Стрелецкой бухте, пробиваясь сквозь волну. Наблюдаем за местными рыбаками на рейдовых лодках.</p>
+        <div class="video-container">
+          <video src="5.mp4" controls preload="metadata"></video>
+        </div>
+        <div class="quote-block">
+          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch4_quote">«Подходим к Стрелецкой бухте. Это вот у нас тут рыбачки... такие героические люди в такую погоду...»</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 5:</span> <span data-i18n="ch5_title">Навальная швартовка лагом под прижимным ветром</span></h3>
+        <p data-i18n="ch5_desc">Экзамен на точность пилотирования. Заходим к причалу бортом (лагом). Сильный шквалистый ветер бьет прямо в борт, наваливая 12-тонную лодку на пирс. Требуется ювелирная координация работы бака и рулевого.</p>
+        <div class="video-container">
+          <video src="3.mp4" controls preload="metadata"></video>
+        </div>
+        <div class="quote-block">
+          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch5_quote">«Идем на швартовку лагом. Ветер прижимной, навальный... Расстояние! Расстояние! Пять!... Три!... Пошел на носовой!»</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <h3 class="timeline-title"><span>Chapter 6:</span> <span data-i18n="ch6_title">Вечерний дебрифинг в салоне и «осадочек»</span></h3>
+        <p data-i18n="ch6_desc">Швартовы заведены, лодка в безопасности. Вечерний разбор полетов в уютной кают-компании под шкиперский юмор. Едва не потеряли важнейший судовой документ, но всё закончилось благополучно.</p>
+        <div class="video-container">
+          <video src="6.mp4" controls preload="metadata"></video>
+        </div>
+        <div class="quote-block">
+          <strong data-i18n="quote_label">Бортовой журнал:</strong> <span data-i18n="ch6_quote">«В общем дошли-то нормально. Но чуть не потеряли вот этот документ. Он правда нашелся... Но осадочек остался. Чего вы ржете? Осадочек! Спасите четверых товарищей...»</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="background: var(--surface); border-left: 4px solid var(--accent); padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); margin-top: 3rem;">
+      <h3 style="margin-top: 0; color: var(--deep-sea);" data-i18n="log1_v_title">💎 Главный вывод возвращения</h3>
+      <p style="font-size: 1.05rem; line-height: 1.6; font-style: italic; margin-bottom: 0;" data-i18n="log1_v_txt">«Именно в этом походе я по-настоящему понял — в яхтинге плохих людей не бывает. Они просто отсеиваются стихией. Потому что в море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов, как говорится.»</p>
     </div>
   </main>
 
@@ -97,39 +186,86 @@
   </footer>
 
   <script>
-    // Языковая база данных страницы
     const translations = {
       ru: {
         back_to_main: '← На главную',
-        log1_page_title: 'Путевые дневники: Возвращение в стихию',
-        log1_main_title: 'Путевая зарисовка 2021: Первый выход и уроки взаимного доверия',
-        log1_intro: 'Воспоминания о первом выходе в море после очень долгого перерыва. Знакомство с Виталием Елагиным, законы естественного отбора в яхтинге и философия абсолютной надежности тех, кто идет с тобой на одном борту.',
-        log1_sec1_title: '⚓️ Точка невозврата: Как отсеиваются лишние',
-        log1_p1: 'Путевая зарисовка 2021 года — мой первый после очень и очень долгого перерыва выход на яхте, первый раз с Виталием Елагиным, который стал потом моим наставником в парусном мире и большим другом. Тогда я по-настоящему понял — в яхтинге плохих людей не бывает. Они просто отсеиваются, потому что в море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Как-то так. Без вариантов, как говорится.',
-        log1_side_title: 'Закон моря',
-        log1_side_txt: '«В море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов.»',
+        log1_page_title: 'Путевые дневники: Хроника одного похода (2021)',
+        log1_main_title: 'Хроника похода 2021: Возвращение в стихию и уроки Виталия Елагина',
+        log1_intro: 'Полный видеодневник одного знакового выхода в море после долгого перерыва. Шесть глав сквозь штормовое предупреждение, встречу с дельфинами и навальную швартовку к законам морского братства.',
+        ch1_title: 'Готовность к отходу и фиксация обстановки',
+        ch1_desc: 'Тот самый момент старта после затяжного перерыва на берегу. Первое знакомство с будущим наставником, близким другом и легендой парусного мира — Виталием Елагиным. Оценка погоды перед выходом из гавани.',
+        quote_label: 'Бортовой журнал:',
+        ch1_quote: '«Ну вот это я, готовый к отходу... Сейчас зафиксирую обстановочку и пойдем.»',
+        ch2_title: 'Внезапное штормовое предупреждение',
+        ch2_desc: 'Море мгновенно проверяет на прочность тех, кто переступил линию причала. Не успели выйти за волнорез, как береговые службы передали штормовое предупреждение. Волна поднимается, проверяем страховку.',
+        ch2_quote: '«Не успели выйти, как дали штормовое предупреждение! Внимание, аккуратно держимся все! Ну вообще картина такая... бедовая, прямо скажем. Ну, нормально потренировались.»',
+        ch3_title: 'Попутчики в открытом море',
+        ch3_desc: 'Короткая передышка среди волн. Стая дельфинов выходит на перерез и долго сопровождает судно, устроив настоящие гонки с носовым волнорезом под самым бушпритом.',
+        ch4_title: 'Подход к Стрелецкой бухте',
+        ch4_desc: 'Непогода усиливается, небо плотно затягивают штормовые тучи. Подходим к защищенной Стрелецкой бухте, пробиваясь сквозь волну. Наблюдаем за местными рыбаками на рейдовых лодках.',
+        ch4_quote: '«Подходим к Стрелецкой бухте. Это вот у нас тут рыбачки... такие героические люди в такую погоду...»',
+        ch5_title: 'Навальная швартовка лагом под прижимным ветром',
+        ch5_desc: 'Экзамен на точность пилотирования. Заходим к причалу бортом (лагом). Сильный шквалистый ветер бьет прямо в борт, наваливая 12-тонную лодку на пирс. Требуется ювелирная координация работы бака и рулевого.',
+        ch5_quote: '«Идем на швартовку лагом. Ветер прижимной, навальный... Расстояние! Расстояние! Пять!... Три!... Пошел на носовой!»',
+        ch6_title: 'Вечерний дебрифинг в салоне и «осадочек»',
+        ch6_desc: 'Швартовы заведены, лодка в безопасности. Вечерний разбор полетов в уютной кают-компании под шкиперский юмор. Едва не потеряли важнейший судовой документ, но всё закончилось благополучно.',
+        ch6_quote: '«В общем дошли-то нормально. Но чуть не потеряли вот этот документ. Он правда нашелся... Но осадочек остался. Чего вы ржете? Осадочек! Спасите четверых товарищей...»',
+        log1_v_title: '💎 Главный вывод возвращения',
+        log1_v_txt: '«Именно в этом походе я по-настоящему понял — в яхтинге плохих людей не бывает. Они просто отсеиваются стихией. Потому что в море надеяться можно только на того, кто рядом с тобой. Точно так же, как и тот, кто рядом с тобой, надеется на тебя. Без вариантов, как говорится.»',
         footer_yt: 'YouTube-канал', footer_top: 'Наверх'
       },
       en: {
         back_to_main: '← Main Page',
-        log1_page_title: 'Sailing Logs: Return to the Elements',
-        log1_main_title: '2021 Travel Sketch: The First Departure & Lessons of Mutual Trust',
-        log1_intro: 'Memories of returning to the sea after a very extended break. Meeting Vitaliy Elagin, the laws of natural filtering in sailing, and the philosophy of absolute reliance on those sharing your deck.',
-        log1_sec1_title: '⚓️ Point of No Return: How the Wrong Ones Filter Out',
-        log1_p1: 'A travel sketch from 2021—my first time out on a yacht after a very, very long break, and my first time sailing with Vitaliy Elagin, who later became my mentor in the sailing world and a great friend. That was when I truly realized that there are no bad people in yachting. They simply filter out, because out at sea, you can only rely on the person next to you. Just as the person next to you relies completely on you. That\'s just how it is. No options around it, as they say.',
-        log1_side_title: 'The Law of the Sea',
-        log1_side_txt: '"At sea, you can only rely on the person next to you. Just as the person next to you relies completely on you. No options around it."',
+        log1_page_title: 'Sailing Diaries: 2021 Cruise Chronicle',
+        log1_main_title: '2021 Voyage Chronicle: Return to the Elements & Vitaliy Elagin\'s Lessons',
+        log1_intro: 'A complete video diary of a hallmark offshore passage after an extended break. Six chapters spanning a sudden gale warning, dolphin encounters, and a crosswind mooring log.',
+        ch1_title: 'Pre-Departure Checks & Context Capture',
+        ch1_desc: 'The exact moment of restarting after a prolonged period on land. Meeting my future mentor, close friend, and sailing world legend—Vitaliy Elagin. Assessing harbor conditions.',
+        quote_label: 'Logbook Entry:',
+        ch1_quote: '"Well, this is me, ready for departure... I\'ll log the current situation now and then off we go."',
+        ch2_title: 'Sudden Gale Warning at Sea',
+        ch2_desc: 'The sea immediately tests those who cross the harbor line. Right past the breakwater, coastal radio broadcasted a storm alert. Heavy swell building up, securing safety tethers.',
+        ch2_quote: '"We barely cleared the harbor when a storm warning was issued! Attention, everyone hold on tight! To be honest, the conditions look... rather troublesome, let\'s be fair. Well, at least it was a proper training run."',
+        ch3_title: 'Offshore Dynamic Companions',
+        ch3_desc: 'A brief window of grace among stormy crests. A pod of dolphins cuts across our path, riding the bow wave and racing right beneath the bowsprit line for a long distance.',
+        ch4_title: 'Approaching Streletskaya Bay',
+        ch4_desc: 'Weather deteriorates further as heavy low-lying gale clouds close in. Pounding through head seas to seek shelter inside Streletskaya Bay. Observing local fishermen in small open boats.',
+        ch4_quote: '"Approaching Streletskaya Bay. Look at the fishermen out here... truly heroic folks to be out in this kind of weather..."',
+        ch5_title: 'Side-to Mooring Under Intense Onshore Crosswind',
+        ch5_desc: 'A pure handling examination. Approaching the concrete pier broadside (alongside). Strong squally gusts strike the beam, pinning the 12-ton hull against the dock. Demands seamless bowman-helm synchronization.',
+        ch5_quote: '"Approaching for a side-to mooring. The wind is completely onshore, pinning us... Distance! Distance! Five!... Three!... Get on the bow line!"',
+        ch6_title: 'Evening Cabin Debrief & "The Aftertaste"',
+        ch6_desc: 'Lines secured, the yacht is safe. Post-passage analysis inside a warm salon driven by classic skipper humor. We almost lost a critical ship document, but it ended well.',
+        ch6_quote: '"All in all, we made it in fine. But we almost lost this document here. It turned up eventually... but a lingering aftertaste remains. What are you laughing at? An aftertaste! Go save four comrades whose keel..."',
+        log1_v_title: '💎 The Ultimate Realization of the Cruise',
+        log1_v_txt: '"It was during this exact voyage that I truly understood—there are no bad people in yachting. The elements simply filter them out. Because at sea, you can only rely on the person right next to you. Just as that person relies entirely on you. No options around it, as they say."',
         footer_yt: 'YouTube Channel', footer_top: 'Top'
       },
       es: {
         back_to_main: '← Inicio',
-        log1_page_title: 'Diarios de Viaje: Regreso a los Elementos',
-        log1_main_title: 'Esbozo de Viaje 2021: La Primera Salida y Lecciones de Confianza Mutua',
-        log1_intro: 'Recuerdos de la primera navegación tras un larguísimo parón. El encuentro con Vitaliy Elagin, las leyes del filtro natural en la navegación y la filosofía de la confianza absoluta en quienes comparten tu cubierta.',
-        log1_sec1_title: '⚓️ Punto de No Retorno: Cómo se filtra la gente',
-        log1_p1: 'Un esbozo de viaje de 2021: mi primera vez en un yate después de un largo, larguísimo descanso, y la primera vez con Vitaliy Elagin, quien más tarde se convirtió en mi mentor en el mundo de la vela y en un gran amigo. Fue entonces cuando comprendí de verdad que no hay gente mala en el mundo de la navegación. Simplemente se filtran, porque en el mar solo puedes confiar en la persona que está a tu lado. De la misma manera que la persona que está a tu lado confía plenamente en ti. Es así. Sin más opciones, como se suele decir.',
-        log1_side_title: 'La Ley del Mar',
-        log1_side_txt: '"En el mar solo puedes confiar en la persona que está a tu lado. De la misma manera que la persona que está a tu lado confía plenamente en ti. Sin más opciones."',
+        log1_page_title: 'Diarios de a Bordo: Crónica de una Travesía (2021)',
+        log1_main_title: 'Crónica Náutica 2021: Regreso a los Elementos y Lecciones de Vitaliy Elagin',
+        log1_intro: 'El diario de video completo de una navegación crucial tras un largo letargo. Seis capítulos que recorren alertas por temporal, delfines en proa y una maniobra de amarre crítica con viento de través.',
+        ch1_title: 'Preparativos de Salida y Captura de Entorno',
+        ch1_desc: 'El momento exacto del reinicio tras un largo letargo en tierra. El primer encuentro con mi futuro mentor, gran amigo y leyenda del mundo de la vela: Vitaliy Elagin.',
+        quote_label: 'Cuaderno de Bitácora:',
+        ch1_quote: '"Bueno, este soy yo, listo para zarpar... Voy a registrar la situación actual y nos ponemos en marcha."',
+        ch2_title: 'Alerta de Temporal Repentina',
+        ch2_desc: 'El mar pone a prueba de inmediato a quienes cruzan la bocana. Justo al pasar el espigón, los servicios emitieron un aviso por tormenta. El oleaje crece, revisamos arneses.',
+        ch2_quote: '"¡Apenas salimos y ya dieron aviso de temporal! ¡Atención, sujétense con cuidado todos! En realidad, el panorama está... bastante feo, para ser sinceros. Bueno, al menos ha sido un buen entrenamiento."',
+        ch3_title: 'Compañeros de Rumbo en Mar Abierto',
+        ch3_desc: 'Un breve respiro entre las crestas. Una manada de delfines intercepta nuestro rumbo, jugando a surfear la ola de proa directamente bajo el botalón durante un largo tramo.',
+        ch4_title: 'Aproximación a la Bahía de Streletskaya',
+        ch4_desc: 'El temporal arrecia y nubes bajas de tormenta cubren el cielo. Avanzamos contra la ola buscando el refugio de la bahía. Observamos a los pescadores locales en botes expuestos.',
+        ch4_quote: '"Nos acercamos a la bahía de Streletskaya. Miren a los pescadores aquí... gente realmente heroica para estar fuera con este clima..."',
+        ch5_title: 'Atraque de Costado Crítico con Viento de Través',
+        ch5_desc: 'Un examen puro de pericia al timón. Aproximación al muelle de costado (abarloado). Rachas fuertes golpean la banda, empujando el casco de 12 toneladas contra el hormigón. Coordinación milimétrica.',
+        ch5_quote: '"Vamos a amarrar de costado. El viento es completamente racheado hacia el muelle... ¡Distancia! ¡Distancia! ¡Cinco!... ¡Tres!... ¡Atento a la línea de proa!"',
+        ch6_title: 'Debriefing Nocturno en el Salón y "El Regusto"',
+        ch6_desc: 'Cabos firmes, el yate está a salvo. Análisis de la jornada en la calidez de la cabina con humor marinero. Casi perdemos un documento crucial del barco, pero todo acabó bien.',
+        ch6_quote: '"En general, la travesía fue bien. Pero casi perdemos este documento de aquí. Apareció al final... pero queda un cierto regusto. ¿De qué se ríen? ¡Un regusto! Vayan a salvar a cuatro camarotas cuya quilla..."',
+        log1_v_title: '💎 La Conclusión Fundamental del Viaje',
+        log1_v_txt: '"Fue en esta travesía donde comprendí de verdad que no hay gente mala en el mundo de la vela. Los elementos simplemente los filtran. Porque en el mar solo puedes confiar en la persona que está a tu lado. De la misma manera que ella confía plenamente en ti. No hay más opciones, como suele decirse."',
         footer_yt: 'Canal de YouTube', footer_top: 'Volver arriba'
       }
     };
