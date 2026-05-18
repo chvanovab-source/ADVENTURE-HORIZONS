@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical Rigging: Galvanic Corrosion on Swim Platform — Adventure Horizons" />
+  <title data-i18n="tech5_page_title">Технический яхтинг: Гальваническая коррозия платформы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Специфические стили для технического лога */
+    .featured-image-wrapper {
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0;
+      width: 100%;
+      max-height: 480px;
+    }
+    .featured-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+    .featured-image-wrapper:hover img {
+      transform: scale(1.01);
+    }
+    .tech-step-list {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    .tech-step-list li {
+      margin-bottom: 0.8rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body class="case-page">
+
+  <nav class="top-nav container">
+    <a href="index.html" class="logo">ADVENTURE HORIZONS</a>
+    <div class="nav-right">
+      <a class="nav-link" href="index.html" data-i18n="back_to_main">← На главную</a>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <span>|</span>
+        <button class="lang-btn" data-lang="es" type="button">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="case-main container">
+    <header class="case-header">
+      <span class="tag" style="background: #fee2e2; color: #991b1b;">Technical Rigging Log</span>
+      <h1 data-i18n="tech5_main_title">Купальная платформа Elan 45.1: двойка по физике и неуд по химии конструкторам верфи</h1>
+      <p class="case-intro" data-i18n="tech5_intro">Разбор критической ошибки гальванической пары металлов в механизме откидной платформы. Электрохимическая теория процесса разрушения алюминия, методы аварийного восстановления резьбы и пошаговый капремонт с барьерами Tef-Gel.</p>
+    </header>
+
+    <hr class="case-divider">
+
+    <div class="case-grid">
+      <div class="case-content-left">
+        
+        <section class="case-section">
+          <h2 data-i18n="tech5_sec1_title">🧪 Урок физики и химии для производителя: что здесь произошло</h2>
+          <p data-i18n="tech5_sec1_p1">Ситуация, когда стальной винт крепления ролика вкручен напрямую в алюминиевую пластину в агрессивной морской среде — это хрестоматийный пример создания разрушительной гальванической пары. На верфи Elan, видимо, решительно прогуляли эти лекции, за что теперь приходится расплачиваться владельцам чартерных бортов. Суть разрушительного процесса под водой проста:</p>
+          <ul class="tech-step-list">
+            <li data-i18n="tech5_chem_1"><strong>Разность потенциалов:</strong> У алюминия и нержавеющей стали абсолютно разный электрохимический потенциал. Алюминий гораздо активнее. В соленой морской воде, которая выступает идеальным электролитом, потенциал алюминия составляет примерно -760 мВ, в то время как у нержавеющей стали он колеблется около -100...+200 мВ. Эта колоссальная разница почти в 1000 мВ и запускает коррозию.</li>
+            <li data-i18n="tech5_chem_2"><strong>Гальваническая батарейка:</strong> Соединяясь напрямую, два металла образуют замкнутый контур. Алюминий в этой паре становится анодом и начинает принудительно жертвовать собой, окисляясь в рыхлый белый порошок.</li>
+            <li data-i18n="tech5_chem_3"><strong>Соотношение площадей:</strong> Ситуацию усугубляет критическое соотношение площадей. Крошечный анод (резьбовое отверстие в алюминии) вынужден обслуживать огромный катод (стальной винт). Коррозия в точке контакта идет лавинообразно, резьба полностью исчезает, и весь силовой ролик платформы вываливается наружу.</li>
+          </ul>
+        </section>
+
+        <div class="featured-image-wrapper">
+          <img src="2.jpg" alt="Elan 45.1 swim platform galvanic corrosion failure">
+        </div>
+
+        <section class="case-section">
+          <h2 data-i18n="tech5_sec2_title">🛠️ План спасения: от скорой помощи до капремонта</h2>
+          <p data-i18n="tech5_sec2_p1">В зависимости от того, где застала вас эта поломка — на базе во время межсезонья или посреди чартерной недели на косой волне, действовать нужно по двум стратегиям:</p>
+          
+          <h4 style="margin-top: 1rem; color: var(--deep-sea);" data-i18n="tech5_sub1">Этап 1. Экстренная помощь посреди сезона:</h4>
+          <p data-i18n="tech5_sub1_p">Если резьба в алюминии полностью уничтожена, а платформой нужно пользоваться, аккуратно рассверлите отверстие. Установите резьбовую вставку из нержавеющей стали (типа Helicoil). Винт вставки обязательно посадите на анаэробный фиксатор высокой прочности (например, Loctite 2701), чтобы изолировать витки от алюминия. Другой быстрый вариант — рассверлить отверстие с запасом, заполнить его металлонаполненным эпоксидным компаундом (Devcon Plastic Steel Putty) и после полимеризации нарезать резьбу заново в этом химически инертном полимерном основании.</p>
+
+          <h4 style="margin-top: 1rem; color: var(--deep-sea);" data-i18n="tech5_sub2">Этап 2. Капитальный ремонт по уму и правильная профилактика:</h4>
+          <p data-i18n="tech5_sub2_p">Чтобы исправить косяк инженеров раз и навсегда, нужно полностью ликвидировать прямой контакт между алюминием и сталью А4. Полностью демонтируйте узел и вычистите щеткой весь белый налет оксида. Приобретите нейлоновые изолирующие втулки (плечевые шайбы) и EPDM-прокладки под головки винтов. Перед сборкой обильно, не жалея, нанесите на резьбу и внутреннюю полость втулок специализированную ПТФЭ-пасту Tef-Gel или антикоррозийный состав Duralac. Компоненты Tef-Gel намертво блокируют доступ соленой воды к резьбе, разрывают электрическую цепь и предотвращают закисание металлов. Снаружи узел дополнительно герметизируется полиуретановым морским герметиком Sikaflex-291.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech5_sec3_title">💡 Дополнительные меры и дизайн против коррозии</h2>
+          <p data-i18n="tech5_sec3_p1">При капремонте убедитесь, что в конструкции откидного механизма нет слепых зон, где морская вода может застаиваться днями. Если есть возможность, просверлите дополнительные дренажные отверстия в нижней части профиля. В долгосрочной перспективе лучшим инженерным решением будет полная замена ответной алюминиевой пластины на аналогичную деталь, вырезанную из нержавеющей стали AISI 316. Нет разных металлов — нет электрохимической батарейки.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech5_sec4_title">🧰 Комплект спасения для владельца чартерной лодки</h2>
+          <p data-i18n="tech5_sec4_p1">Чтобы этот дефект не застал вас врасплох на систершипах, сформируйте в бортовом ремнаборе постоянный комплект: тюбик или шприц оригинального Tef-Gel, набор нейлоновых шайб и изолирующих плечевых втулок разных диаметров, полиуретановый Sikaflex, рулон бутилкаучуковой ленты, запасной нержавеющий крепеж AISI 316 (класс А4) и брусок двухкомпонентной «холодной сварки» для экстренного восстановления резьбовых гнезд.</p>
+        </section>
+
+        <section class="case-section">
+          <h2 data-i18n="tech5_sec5_title">💎 Резюме</h2>
+          <p data-i18n="tech5_verdict">Данная поломка — чистый результат конструкторской халатности проектировщиков верфи, а не естественный износ. Но узел полностью доводится до ума с помощью современных изоляционных материалов. Защитив резьбу один раз по шкиперскому стандарту, вы закроете этот вопрос на годы, а доходы от чартера Elan 45.1 будут уходить не на ликвидацию белых окислов, а на хорошее шампанское после победных гонок.</p>
+        </section>
+
+      </div>
+
+      <div class="case-content-right">
+        <div class="sticky-sidebar">
+          <div class="sidebar-block" style="border-left: 4px solid #b91c1c;">
+            <h3 data-i18n="tech5_side_title">Технический вердикт</h3>
+            <p style="font-size: 0.95rem; line-height: 1.5;" data-i18n="tech5_side_txt">Узел: Механизм роликов откидной купальной платформы Elan 45.1. Поломка: Полное разрушение алюминиевой резьбы из-за образования скрытой гальванической пары с винтом из нержавеющей стали. Устранение: Высверливание оксидов, установка вставок Helicoil или компаунда Devcon, полная диэлектрическая изоляция пастой Tef-Gel и нейлоновыми втулками.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container container">
+      <p class="copyright">© 2026 ADVENTURE HORIZONS</p>
+      <div class="footer-actions">
+        <a href="https://www.youtube.com/@vtoroyберег" target="_blank" class="footer-btn" data-i18n="footer_yt">YouTube-канал</a>
+        <a href="#top" class="footer-btn footer-btn--alt" data-i18n="footer_top">Наверх</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Full Size Galvanic Corrosion Picture">
+  </div>
+
+  <script>
+    // Логика Лайтбокса
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    document.querySelector('.featured-image-wrapper img').addEventListener('click', (e) => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = e.target.src;
+    });
+
+    closeBtn.addEventListener('click', () => { lightbox.style.display = 'none'; });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) lightbox.style.display = 'none'; });
+
+    // Языковые базы данных локализации страницы
+    const translations = {
+      ru: {
+        back_to_main: '← На главную',
+        tech5_page_title: 'Технический яхтинг: Гальваническая коррозия платформы',
+        tech5_main_title: 'Купальная платформа Elan 45.1: двойка по физике и неуд по химии конструкторам верфи',
+        tech5_intro: 'Разбор критической ошибки гальванической пары металлов в механизме откидной платформы. Электрохимическая теория процесса разрушения алюминия, методы аварийного восстановления резьбы и пошаговый капремонт с барьерами Tef-Gel.',
+        tech5_sec1_title: '🧪 Урок физики и химии для производителя: что здесь произошло',
+        tech5_sec1_p1: 'Ситуация, когда стальной винт крепления ролика вкручен напрямую в алюминиевую пластину в агрессивной морской среде — это хрестоматийный пример создания разрушительной гальванической пары. На верфи Elan, видимо, решительно прогуляли эти лекции, за что теперь приходится расплачиваться владельцам чартерных бортов. Суть разрушительного процесса под водой проста:',
+        tech5_chem_1: 'Разность потенциалов: У алюминия и нержавеющей стали абсолютно разный электрохимический потенциал. Алюминий гораздо активнее. В соленой морской воде, которая выступает идеальным электролитом, потенциал алюминия составляет примерно -760 мВ, в то время как у нержавеющей стали он колеблется около -100...+200 мВ. Эта колоссальная разница почти в 1000 мВ и запускает коррозию.',
+        tech5_chem_2: 'Гальваническая батарейка: Соединяясь напрямую, два металла образуют замкнутый контур. Алюминий в этой паре становится анодом и начинает принудительно жертвовать собой, окисляясь в рыхлый белый порошок.',
+        tech5_chem_3: 'Соотношение площадей: Ситуацию усугубляет критическое соотношение площадей. Крошечный анод (резьбовое отверстие в алюминии) вынужден обслуживать огромный катод (стальной винт). Коррозия в точке контакта идет лавинообразно, резьба полностью исчезает, и весь силовой ролик платформы вываливается наружу.',
+        tech5_sec2_title: '🛠️ План спасения: от скорой помощи до капремонта',
+        tech5_sec2_p1: 'В зависимости от того, где застала вас эта поломка — на базе во время межсезонья или посреди чартерной недели на косой волне, действовать нужно по двум стратегиям:',
+        tech5_sub1: 'Этап 1. Экстренная помощь посреди сезона:',
+        tech5_sub1_p: 'If резьба в алюминии полностью уничтожена, а платформой нужно пользоваться, аккуратно рассверлите отверстие. Установите резьбовую вставку из нержавеющей стали (типа Helicoil). Винт вставки обязательно посадите на анаэробный фиксатор высокой прочности (например, Loctite 2701), чтобы изолировать витки от алюминия. Другой быстрый вариант — рассверлить отверстие с запасом, заполнить его металлонаполненным эпоксидным компаундом (Devcon Plastic Steel Putty) и после полимеризации нарезать резьбу заново в этом химически инертном полимерном основании.',
+        tech5_sub2: 'Этап 2. Капитальный ремонт по уму и правильная профилактика:',
+        tech5_sub2_p: 'Чтобы исправить косяк инженеров раз и навсегда, нужно полностью ликвидировать прямой контакт между алюминием и сталью А4. Полностью демонтируйте узел и вычистите щеткой весь белый налет оксида. Приобретите нейлоновые изолирующие втулки (плечевые шайбы) и EPDM-прокладки под головки винтов. Перед сборкой обильно, не жалея, нанесите на резьбу и внутреннюю полость втулок специализированную ПТФЭ-пасту Tef-Gel или антикоррозийный состав Duralac. Компоненты Tef-Gel намертво блокируют доступ соленой воды к резьбе, разрывают электрическую цепь и предотвращают закисание металлов. Снаружи узел дополнительно герметизируется полиуретановым морским герметиком Sikaflex-291.',
+        tech5_sec3_title: '💡 Дополнительные меры и дизайн против коррозии',
+        tech5_sec3_p1: 'При капремонте убедитесь, что в конструкции откидного механизма нет слепых зон, где морская вода может застаиваться днями. Если есть возможность, просверлите дополнительные дренажные отверстия в нижней части профиля. В долгосрочной перспективе лучшим инженерным решением будет полная замена ответной алюминиевой пластины на аналогичную деталь, вырезанную из нержавеющей стали AISI 316. Нет разных металлов — нет электрохимической батарейки.',
+        tech5_sec4_title: '🧰 Комплект спасения для владельца чартерной лодки',
+        tech5_sec4_p1: 'Чтобы этот дефект не застал вас врасплох на систершипах, сформируйте в бортовом ремнаборе постоянный комплект: тюбик или шприц оригинального Tef-Gel, набор нейлоновых шайб и изолирующих плечевых втулок разных диаметров, полиуретановый Sikaflex, рулон бутилкаучуковой ленты, запасной нержавеющий крепеж AISI 316 (класс А4) и брусок двухкомпонентной «холодной сварки» для экстренного восстановления резьбовых гнезд.',
+        tech5_sec5_title: '💎 Резюме',
+        tech5_verdict: 'Данная поломка — чистый результат конструкторской халатности проектировщиков верфи, а не естественный износ. Но узел полностью доводится до ума с помощью современных изоляционных материалов. Защитив резьбу один раз по шкиперскому стандарту, вы закроете этот вопрос на годы, а доходы от чартера Elan 45.1 будут уходить не на ликвидацию белых окислов, а на хорошее шампанское после победных гонок.',
+        tech5_side_title: 'Технический вердикт',
+        tech5_side_txt: 'Узел: Механизм роликов откидной купальной платформы Elan 45.1. Поломка: Полное разрушение алюминиевой резьбы из-за образования скрытой гальванической пары с винтом из нержавеющей стали. Устранение: Высверливание оксидов, установка вставок Helicoil или компаунда Devcon, полная диэлектрическая изоляция пастой Tef-Gel и нейлоновыми втулками.',
+        unit_m: 'м', unit_kg: 'кг', unit_hp: 'л.с.', unit_l: 'л', unit_pers: 'чел', cat_ocean: 'A — Ocean',
+        footer_yt: 'YouTube-канал', footer_top: 'Наверх'
+      },
+      en: {
+        back_to_main: '← Main Page',
+        tech5_page_title: 'Technical Rigging: Swim Platform Galvanic Corrosion',
+        tech5_main_title: 'Elan 45.1 Swim Platform: F in Physics and D in Chemistry for the Shipyard Engineers',
+        tech5_intro: 'Analysis of a critical galvanic metal pairing flaw within the folding platform mechanism. Electrochemical theory behind aluminum degradation, emergency thread restoration methods, and step-by-step refits utilizing Tef-Gel isolation barriers.',
+        tech5_sec1_title: '🧪 Physics and Chemistry Lecture for the Manufacturer: What Happened Here',
+        tech5_sec1_p1: 'A scenario where a steel roller mounting screw is threaded directly into an aluminum plate within an aggressive marine environment is a textbook example of generating a destructive galvanic couple. At the Elan shipyard, these lectures were clearly skipped, a mistake charter fleet owners now pay for. The mechanics of sub-surface breakdown are straightforward:',
+        tech5_chem_1: 'Potential Difference: Aluminum and stainless steel carry completely distinct electrochemical potentials; aluminum is far more active. In saltwater acting as an ideal electrolyte, aluminum\'s potential drops around -760 mV, while stainless steel hovers near -100...+200 mV. This immense difference of nearly 1000 mV triggers galvanic corrosion.',
+        tech5_chem_2: 'Galvanic Battery: Connected directly, the two metals form a closed circuit loop. Aluminum acts as the anode, sacrificing itself and oxidizing into a brittle white powder.',
+        tech5_chem_3: 'Surface Area Ratio: The situation is worsened by a critical area ratio. A tiny anode (the threaded hole inside the aluminum profile) is forced to support a massive cathode area (the stainless screw). Corrosion at the contact point cascades, completely erasing the threads until the platform roller falls out.',
+        tech5_sec2_title: '🛠️ Salvation Roadmap: From Field Fixes to Full Refits',
+        tech5_sec2_p1: 'Depending on whether this failure occurs at the base during off-season maintenance or mid-week during a charter run in heavy chop, execute one of two strategies:',
+        tech5_sub1: 'Stage 1. In-Season Emergency Field Repairs:',
+        tech5_sub1_p: 'If the aluminum threads are completely stripped and the platform must remain operational, carefully drill out the hole. Install a stainless steel threaded insert (such as a Helicoil). Bed the insert using high-strength anaerobic threadlocker (e.g., Loctite 2701) to isolate the coils from the aluminum wall. Alternatively, over-drill the hole, pack it with a metal-filled epoxy compound (Devcon Plastic Steel Putty), and tap new threads into this chemically inert polymer base once cured.',
+        tech5_sub2: 'Stage 2. Full Corrective Refits & Preventative Isolation:',
+        tech5_sub2_p: 'To correct the engineering flaw permanently, eliminate all direct contact between the aluminum and the A4 stainless steel hardware. Disassemble the entire node and clean away all traces of white oxide powder using a wire brush. Source nylon shoulder washers (bushings) and EPDM gaskets for under the screw heads. Prioritize packing the threads and inner bushing voids with specialized PTFE-based Tef-Gel or anti-corrosive Duralac compound. Tef-Gel components completely block saltwater tracking into the threads, breaking the electrical circuit and preventing cold welding. Seal the exterior assembly with a marine-grade polyurethane sealant like Sikaflex-291.',
+        tech5_sec3_title: '💡 Supplementary Actions: Engineering Against Corrosion',
+        tech5_sec3_p1: 'During the refit, verify that the folding hinge mechanism has no blind cavities where saltwater traps for days. If possible, drill supplementary drainage holes at the lowest profile points. Long-term, the ultimate engineering fix is replacing the backing aluminum block entirely with a matching component machined from solid AISI 316 stainless steel. Eliminating dissimilar metals kills the galvanic cell.',
+        tech5_sec4_title: '🧰 Fleet Survival Kit for Charter Operators',
+        tech5_sec4_p1: 'To prevent this defect from catching you off guard on sisterships, maintain a permanent kit in your mobile tool chest: a tube or syringe of authentic Tef-Gel, an assortment of nylon washers and isolating shoulder bushings, polyurethane Sikaflex, a roll of butyl tape, spare AISI 316 (Class A4) stainless fasteners, and a stick of two-part steel-reinforced epoxy putty for emergency thread reconstruction.',
+        tech5_sec5_title: '💎 Verdict',
+        tech5_verdict: 'This structural failure is a direct consequence of design negligence by shipyard engineers, not standard mechanical wear. However, the mechanism can be completely corrected using modern isolation compounds. Sealing the threads once to yachting standards closes this issue for years, ensuring Elan 45.1 revenues fund good champagne after winning regattas instead of clear white oxide removal.',
+        tech5_side_title: 'Technical Verdict',
+        tech5_side_txt: 'Node: Folding swim platform roller assembly (Elan 45.1). Failure Mode: Complete stripping of aluminum threads caused by galvanic cell creation with a stainless steel fastener. Correction: Drilling out oxide buildup, installing Helicoil inserts or Devcon compound, and applying absolute dielectric isolation using Tef-Gel paste and nylon shoulder bushings.',
+        unit_m: 'm', unit_kg: 'kg', unit_hp: 'hp', unit_l: 'l', unit_pers: 'pax', cat_ocean: 'A — Ocean',
+        footer_yt: 'YouTube Channel', footer_top: 'Top'
+      },
+      es: {
+        back_to_main: '← Inicio',
+        tech5_page_title: 'Rigging Técnico: Corrosión Galvánica en Plataforma',
+        tech5_main_title: 'Plataforma de baño del Elan 45.1: Cero en Física y Suspenso en Química para el astillero',
+        tech5_intro: 'Análisis de un fallo crítico por par galvánico en el mecanismo de la plataforma abatible. Teoría electroquímica del desgaste del aluminio, métodos de recuperación de roscas y refit con barreras de Tef-Gel.',
+        tech5_sec1_title: '🧪 Lección de Física и Química para el Fabricante: Qué pasó aquí',
+        tech5_sec1_p1: 'Que un tornillo de acero inoxidable se enrosque directo sobre una pletina de aluminio expuesta al agua de mar es el ejemplo de manual de cómo crear un par galvánico destructivo. En el astillero Elan se saltaron esa clase, y ahora lo pagan los operadores de chárter. La mecánica del desastre bajo el agua es simple:',
+        tech5_chem_1: 'Diferencia de potencial: El aluminio и el acero inoxidable tienen potenciales electroquímicos opuestos; el aluminio es mucho más activo. En agua de mar (un electrolito perfecto), el potencial del aluminio cae a unos -760 mV, mientras que el del acero ronda los -100...+200 mV. Esta diferencia de casi 1000 mV activa la corrosión.',
+        tech5_chem_2: 'Batería Galvánica: Al tocarse directamente, ambos metales forman un circuito cerrado. El aluminio actúa como ánodo, sacrificándose y oxidándose hasta convertirse en un polvo blanco y blando.',
+        tech5_chem_3: 'Relación de superficies: El problema empeora por una relación de áreas crítica. Un ánodo minúsculo (la rosca del aluminio) debe dar soporte a un cátodo enorme (el tornillo de acero). La corrosión en el punto de contacto se acelera, destruyendo la rosca hasta что el rodillo de la plataforma se desprende.',
+        tech5_sec2_title: '🛠️ Hoja de Ruta del Rescate: De Apaños en el Mar a Refits de Astillero',
+        tech5_sec2_p1: 'Dependiendo de si el fallo ocurre en la base durante el invierno o en mitad de una semana de chárter con mar de popa, existen dos estrategias de actuación:',
+        tech5_sub1: 'Fase 1. Reparación de Emergencia en Temporada:',
+        tech5_sub1_p: 'Si la rosca del aluminio está barrida y necesita usar la plataforma, repase el orificio con cuidado. Instale un inserto roscado de acero inoxidable (tipo Helicoil). Fije el inserto con fijador de roscas de alta resistencia (como Loctite 2701) для aislar las espiras del aluminio. Otra opción rápida es agrandar el agujero, rellenarlo con resina epoxi con carga metálica (Devcon Plastic Steel Putty) y, tras curar, roscar de nuevo sobre esa base polimérica químicamente inerte.',
+        tech5_sub2: 'Fase 2. Refit Corrector Completo y Aislamiento Preventivo:',
+        tech5_sub2_p: 'Para solucionar el error de diseño para siempre, elimine cualquier contacto directo entre el aluminio y el tornillo de acero A4. Desmonte el conjunto и limpie los restos de óxido blanco con un cepillo de alambre. Consiga casquillos de nylon (arandelas con cuello) y juntas de EPDM para las cabezas de los tornillos. Al montar, embale las roscas и el interior de los casquillos con pasta de teflón Tef-Gel o compuesto Duralac. Los componentes de Tef-Gel bloquean la entrada de agua salada en la rosca, rompiendo el circuito eléctrico и evitando la soldadura en frío. Selle el exterior con poliuretano marino Sikaflex-291.',
+        tech5_sec3_title: '💡 Acciones Complementarias: Ingeniería contra la Corrosión',
+        tech5_sec3_p1: 'Durante el refit, compruebe que el mecanismo de las bisagras no tenga cavidades donde el agua quede estancada días. Si es posible, realice taladros de drenaje en los puntos más bajos del perfil. A largo plazo, la solución definitiva es sustituir la pieza de aluminio por una réplica idéntica mecanizada en acero inoxidable AISI 316. Sin metales distintos, no hay celda galvánica.',
+        tech5_sec4_title: '🧰 Kit de Supervivencia para Operadores de Chárter',
+        tech5_sec4_p1: 'Para que este fallo no le pille desprevenido en barcos gemelos, mantenga un kit fijo en su caja de herramientas: un tubo o jeringa de Tef-Gel original, un surtido de arandelas y casquillos de nylon de varios diámetros, poliuretano Sikaflex, cinta de butilo, tornillería de repuesto AISI 316 (Clase A4) и una barra de soldadura en frío epoxi bicomponente para reconstruir roscas.',
+        tech5_sec5_title: '💎 Veredicto',
+        tech5_verdict: 'Este fallo estructural es una consecuencia directa de la negligencia de diseño de los ingenieros del astillero, no de un desgaste mecánico normal. Sin embargo, el mecanismo puede corregirse por completo usando compuestos de aislamiento modernos. Sellar las roscas bajo estándares náuticos soluciona este problema para siempre, garantizando que los ingresos del Elan 45.1 se destinen a un buen champán tras ganar regatas en lugar de a limpiar óxido blanco.',
+        tech5_side_title: 'Veredicto Técnico',
+        tech5_side_txt: 'Componente: Conjunto de rodillos de la plataforma de baño abatible (Elan 45.1). Tipo de fallo: Destrucción completa de las roscas de aluminio debido a un par galvánico con tornillo de acero inoxidable. Solución: Limpieza de óxido, instalación de insertos Helicoil o compuesto Devcon, и aislamiento dieléctrico absoluto con pasta Tef-Gel y casquillos de nylon.'
+      }
+    };
+
+    function setLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll('.lang-btn').forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+      localStorage.setItem('site_lang', lang);
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage(localStorage.getItem('site_lang') || 'en');
+  </script>
+</body>
+</html>
