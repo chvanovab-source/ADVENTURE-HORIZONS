@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ADVENTURE HORIZONS — flota, formación y travesías marítimas." />
   <title>ADVENTURE HORIZONS — La Segunda Orilla</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,17 +10,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <style>
+    .hero { position: relative; height: 100vh; overflow: hidden; }
+    .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 2; display: flex; align-items: center; }
+    .hero-overlay .container { color: #fff; }
+    .hero-manifesto { font-size: 28px; font-weight: 600; margin-top: 20px; }
+    .hero-sub { opacity: 0.85; margin-top: 10px; }
+  </style>
 </head>
 
-<body id="top">
+<body>
 
 <header class="site-header">
   <div class="navbar container">
-
-    <a class="brand" href="index.html">
-      ADVENTURE HORIZONS
-      <span>La Segunda Orilla</span>
-    </a>
+    <a class="brand" href="index.html">ADVENTURE HORIZONS <span>La Segunda Orilla</span></a>
 
     <nav class="nav-links">
       <a href="fleet.html">Flota</a>
@@ -36,20 +40,17 @@
         <a href="../en/index.html">EN</a>
         <a class="is-active" href="../es/index.html">ES</a>
       </div>
-
     </nav>
   </div>
 </header>
 
 <section class="hero">
-
   <video autoplay muted loop playsinline class="hero-video">
     <source src="../storm.mp4" type="video/mp4">
   </video>
 
   <div class="hero-overlay">
     <div class="container">
-
       <h1>ADVENTURE HORIZONS</h1>
       <h2>La Segunda Orilla</h2>
 
@@ -61,22 +62,9 @@
       <p class="hero-sub">
         Flota · formación · travesías · práctica marítima real
       </p>
-
-      <a class="hero-button" href="fleet.html">Flota</a>
-
     </div>
   </div>
-
 </section>
-
-<main>
-<section class="section">
-  <div class="container">
-    <h2>Proyecto</h2>
-    <p>Sistema real de formación y navegación con flota operativa.</p>
-  </div>
-</section>
-</main>
 
 </body>
 </html>
