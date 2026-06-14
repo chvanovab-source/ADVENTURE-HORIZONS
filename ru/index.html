@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ADVENTURE HORIZONS — морской проект: флот, обучение, переходы." />
+  <meta name="description" content="ADVENTURE HORIZONS — флот, обучение, переходы и морская практика." />
   <title>ADVENTURE HORIZONS — Второй берег</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <style>
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay .container {
+      color: white;
+    }
+
+    .hero-manifesto {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: 20px;
+    }
+
+    .hero-sub {
+      margin-top: 15px;
+      opacity: 0.85;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 18px;
+      background: #00a3c7;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -36,8 +89,8 @@
         <a href="../en/index.html">EN</a>
         <a href="../es/index.html">ES</a>
       </div>
-
     </nav>
+
   </div>
 </header>
 
@@ -70,12 +123,12 @@
 </section>
 
 <main>
-<section class="section">
-  <div class="container">
-    <h2>Проект</h2>
-    <p>Система морской практики и обучения на реальных яхтах.</p>
-  </div>
-</section>
+  <section class="section">
+    <div class="container">
+      <h2>Проект</h2>
+      <p>Система морской практики и обучения на реальных яхтах.</p>
+    </div>
+  </section>
 </main>
 
 </body>
